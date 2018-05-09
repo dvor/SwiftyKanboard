@@ -1,0 +1,7 @@
+for_platform :ios do
+  app_identifier "me.dvor.Kanboard-iOS"
+end
+
+for_platform :mac do
+  app_identifier "me.dvor.Kanboard-macOS"
+end
