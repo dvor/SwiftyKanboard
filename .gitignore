@@ -26,3 +26,5 @@ xcshareddata
 #
 # Exclude AppCode files
 .idea
+
+Pods

@@ -17,6 +17,10 @@
 		11F85F3C20A3018C0060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F3B20A3018C0060536B /* Assets.xcassets */; };
 		11F85F3F20A3018C0060536B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F3D20A3018C0060536B /* MainMenu.xib */; };
 		11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F4A20A3018C0060536B /* Kanboard_macOSTests.swift */; };
+		55B78D9883660D7AD387C169 /* Pods_Kanboard_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */; };
+		5617B72A3B40834072356FC7 /* Pods_Kanboard_macOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */; };
+		C461C85F7CBE652E9FB41439 /* Pods_Kanboard_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */; };
+		EE138FBD0D07043316A8BDA0 /* Pods_Kanboard_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,17 @@
 		11F85F4620A3018C0060536B /* Kanboard macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanboard macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F4A20A3018C0060536B /* Kanboard_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanboard_macOSTests.swift; sourceTree = "<group>"; };
 		11F85F4C20A3018C0060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		200A1A596793B970A8715663 /* Pods-Kanboard macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOSTests/Pods-Kanboard macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FEE6A01E362B30A4734E54 /* Pods-Kanboard macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOSTests/Pods-Kanboard macOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B112A5F559C1DB84F0EE9 /* Pods-Kanboard macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS.release.xcconfig"; sourceTree = "<group>"; };
+		F7140E7C8DEF8F0DB714F500 /* Pods-Kanboard iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C461C85F7CBE652E9FB41439 /* Pods_Kanboard_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE138FBD0D07043316A8BDA0 /* Pods_Kanboard_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B78D9883660D7AD387C169 /* Pods_Kanboard_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5617B72A3B40834072356FC7 /* Pods_Kanboard_macOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +118,8 @@
 				11F85F3820A3018B0060536B /* Kanboard macOS */,
 				11F85F4920A3018C0060536B /* Kanboard macOSTests */,
 				11F85F1320A301750060536B /* Products */,
+				35461B4F1A1F55F0F6780E5E /* Pods */,
+				680DAFF6C967F4718E90C21A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +177,32 @@
 			path = "Kanboard macOSTests";
 			sourceTree = "<group>";
 		};
+		35461B4F1A1F55F0F6780E5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */,
+				F7140E7C8DEF8F0DB714F500 /* Pods-Kanboard iOS.release.xcconfig */,
+				0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */,
+				513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */,
+				200A1A596793B970A8715663 /* Pods-Kanboard macOS.debug.xcconfig */,
+				B43B112A5F559C1DB84F0EE9 /* Pods-Kanboard macOS.release.xcconfig */,
+				5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */,
+				80FEE6A01E362B30A4734E54 /* Pods-Kanboard macOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		680DAFF6C967F4718E90C21A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */,
+				8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */,
+				3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */,
+				63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F85F2D20A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOS" */;
 			buildPhases = (
+				F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */,
 				11F85F0E20A301750060536B /* Sources */,
 				11F85F0F20A301750060536B /* Frameworks */,
 				11F85F1020A301750060536B /* Resources */,
@@ -179,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F85F3020A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOSTests" */;
 			buildPhases = (
+				37624BA2062F076823DC57C0 /* [CP] Check Pods Manifest.lock */,
 				11F85F2220A301770060536B /* Sources */,
 				11F85F2320A301770060536B /* Frameworks */,
 				11F85F2420A301770060536B /* Resources */,
@@ -197,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F85F4D20A3018C0060536B /* Build configuration list for PBXNativeTarget "Kanboard macOS" */;
 			buildPhases = (
+				AA235EB051E95ADD59012DF4 /* [CP] Check Pods Manifest.lock */,
 				11F85F3320A3018B0060536B /* Sources */,
 				11F85F3420A3018B0060536B /* Frameworks */,
 				11F85F3520A3018B0060536B /* Resources */,
@@ -214,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F85F5020A3018C0060536B /* Build configuration list for PBXNativeTarget "Kanboard macOSTests" */;
 			buildPhases = (
+				23DA2C2773DEFA7770AAD76E /* [CP] Check Pods Manifest.lock */,
 				11F85F4220A3018C0060536B /* Sources */,
 				11F85F4320A3018C0060536B /* Frameworks */,
 				11F85F4420A3018C0060536B /* Resources */,
@@ -310,6 +362,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23DA2C2773DEFA7770AAD76E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard macOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37624BA2062F076823DC57C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA235EB051E95ADD59012DF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11F85F0E20A301750060536B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -401,6 +528,7 @@
 		};
 		11F85F2E20A301770060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -454,11 +582,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
@@ -467,12 +592,13 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		11F85F2F20A301770060536B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7140E7C8DEF8F0DB714F500 /* Pods-Kanboard iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -520,11 +646,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,13 +655,14 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		11F85F3120A301770060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -594,11 +718,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
@@ -614,6 +734,7 @@
 		};
 		11F85F3220A301770060536B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -663,11 +784,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,6 +800,7 @@
 		};
 		11F85F4E20A3018C0060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200A1A596793B970A8715663 /* Pods-Kanboard macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -738,10 +856,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -756,6 +871,7 @@
 		};
 		11F85F4F20A3018C0060536B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43B112A5F559C1DB84F0EE9 /* Pods-Kanboard macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -805,10 +921,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOS";
@@ -822,6 +935,7 @@
 		};
 		11F85F5120A3018C0060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -877,11 +991,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -897,6 +1007,7 @@
 		};
 		11F85F5220A3018C0060536B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FEE6A01E362B30A4734E54 /* Pods-Kanboard macOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -946,11 +1057,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOSTests";
