@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11221BA420A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
+		11221BA520A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
+		11221BA620A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
+		11221BA720A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
+		11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
+		11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
+		11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
+		11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
+		11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
+		11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
+		11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
+		11221BC220A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
+		11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
+		11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
+		11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
+		11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
+		11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
+		11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
+		11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
+		11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -42,6 +66,13 @@
 
 /* Begin PBXFileReference section */
 		0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11221BA320A31436003888E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11221BA820A31B32003888E2 /* Kanboard macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kanboard macOS.entitlements"; sourceTree = "<group>"; };
+		11221BB920A36D01003888E2 /* RemoteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProject.swift; sourceTree = "<group>"; };
+		11221BBE20A36D6E003888E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		11221BCE20A3A123003888E2 /* AbstractRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
+		11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRequests.swift; sourceTree = "<group>"; };
+		11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRequests.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,9 +141,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11221B9B20A310CE003888E2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				11221B9D20A313AB003888E2 /* Networking */,
+				11221BA320A31436003888E2 /* Constants.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		11221B9D20A313AB003888E2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				11221BC320A3A0C8003888E2 /* Requests */,
+				11221BA920A35B22003888E2 /* Objects */,
+				11221BBE20A36D6E003888E2 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		11221BA920A35B22003888E2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				11221BB920A36D01003888E2 /* RemoteProject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		11221BC320A3A0C8003888E2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				11221BCE20A3A123003888E2 /* AbstractRequest.swift */,
+				11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */,
+				11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		11F85F0720A300EF0060536B = {
 			isa = PBXGroup;
 			children = (
+				11221B9B20A310CE003888E2 /* Source */,
 				11F85F1420A301750060536B /* Kanboard iOS */,
 				11F85F2920A301770060536B /* Kanboard iOSTests */,
 				11F85F3820A3018B0060536B /* Kanboard macOS */,
@@ -159,6 +228,7 @@
 		11F85F3820A3018B0060536B /* Kanboard macOS */ = {
 			isa = PBXGroup;
 			children = (
+				11221BA820A31B32003888E2 /* Kanboard macOS.entitlements */,
 				11F85F3920A3018B0060536B /* AppDelegate.swift */,
 				11F85F3B20A3018C0060536B /* Assets.xcassets */,
 				11F85F3D20A3018C0060536B /* MainMenu.xib */,
@@ -298,6 +368,11 @@
 					};
 					11F85F3620A3018B0060536B = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					11F85F4520A3018C0060536B = {
 						CreatedOnToolsVersion = 9.3;
@@ -442,8 +517,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
+				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
+				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11221BA420A31436003888E2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +532,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
+				11221BA520A31436003888E2 /* Constants.swift in Sources */,
+				11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +546,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
+				11221BA620A31436003888E2 /* Constants.swift in Sources */,
+				11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +560,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11221BC220A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
+				11221BA720A31436003888E2 /* Constants.swift in Sources */,
+				11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +682,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
@@ -647,7 +749,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -718,7 +823,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
@@ -784,7 +893,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -832,7 +945,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -856,7 +969,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -903,7 +1019,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -921,7 +1037,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOS";
@@ -991,7 +1110,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1057,7 +1180,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOSTests";
