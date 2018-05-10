@@ -3,6 +3,7 @@ inhibit_all_warnings!
 
 def common_pods
     pod 'SnapKit', '~> 4.0.0'
+    pod 'RealmSwift', '~> 3.5.0'
 end
 
 target 'Kanboard iOS' do

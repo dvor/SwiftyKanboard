@@ -33,6 +33,10 @@
 		11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B620A45354002FCC2A /* LoginViewController.swift */; };
 		11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B920A45360002FCC2A /* RunningViewController.swift */; };
 		11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B920A45360002FCC2A /* RunningViewController.swift */; };
+		11BB14C520A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
+		11BB14C620A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
+		11BB14C720A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
+		11BB14C820A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
 		11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
 		11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
 		11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
@@ -85,6 +89,7 @@
 		11BB14B020A450D4002FCC2A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11BB14B920A45360002FCC2A /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
+		11BB14C420A4AB94002FCC2A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRequests.swift; sourceTree = "<group>"; };
 		11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRequests.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +162,7 @@
 		11221B9B20A310CE003888E2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				11BB14BD20A4A7C4002FCC2A /* Database */,
 				11221B9D20A313AB003888E2 /* Networking */,
 				11BB149520A44D89002FCC2A /* KeychainManager.swift */,
 				11BB149A20A44F39002FCC2A /* Logger.swift */,
@@ -212,6 +218,22 @@
 				11F85F4020A3018C0060536B /* Info.plist */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		11BB14BD20A4A7C4002FCC2A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				11BB14C320A4AB8E002FCC2A /* Objects */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		11BB14C320A4AB8E002FCC2A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				11BB14C420A4AB94002FCC2A /* Project.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		11F85F0720A300EF0060536B = {
@@ -515,10 +537,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm-macOS/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-macOS/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit-macOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,10 +577,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +624,7 @@
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11BB14C520A4AB94002FCC2A /* Project.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
 			);
@@ -606,6 +637,7 @@
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
 				11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
@@ -623,6 +655,7 @@
 				11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
 				11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
+				11BB14C720A4AB94002FCC2A /* Project.swift in Sources */,
 				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
@@ -641,6 +674,7 @@
 				11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
 				11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */,
 				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
+				11BB14C820A4AB94002FCC2A /* Project.swift in Sources */,
 				11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
