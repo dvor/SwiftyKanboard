@@ -9,17 +9,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-
-    let service = NetworkService()
+    var mainWindowController: MainWindowController!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-
-        let r1 = service.createRequest(GetAllProjectsRequest.self) { projects in print(projects)}
-        let r2 = service.createRequest(GetVersionRequest.self) { projects in print(projects)}
-        service.batch([r1, r2])
+        mainWindowController = MainWindowController()
+        mainWindowController.showWindow(self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -15,7 +15,10 @@ class NetworkService {
     }
 
     func batch(_ requests: [BaseRequest]) {
-        let loginData = "\(Constants.user):\(Constants.token)".data(using: .utf8)!
+        let keychain = KeychainManager()
+
+        let loginString = "\(keychain.userName!):\(keychain.apiToken!)"
+        let loginData = loginString.data(using: .utf8)!
         let base64 = loginData.base64EncodedString()
 
         let configuration = URLSessionConfiguration.default
@@ -23,7 +26,7 @@ class NetworkService {
             "Authorization" : "Basic \(base64)"
         ]
 
-        let url = Constants.baseURL.appendingPathComponent("jsonrpc.php")
+        let url = URL(string: keychain.baseURL!)!.appendingPathComponent("jsonrpc.php")
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.httpBody = try! JSONEncoder().encode(requests)

@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11221BA420A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
-		11221BA520A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
-		11221BA620A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
-		11221BA720A31436003888E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BA320A31436003888E2 /* Constants.swift */; };
 		11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
 		11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
 		11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
@@ -23,6 +19,20 @@
 		11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
+		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
+		11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
+		11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
+		11BB149B20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
+		11BB149C20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
+		11BB149D20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
+		11BB149E20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
+		11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B020A450D4002FCC2A /* MainWindowController.swift */; };
+		11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B020A450D4002FCC2A /* MainWindowController.swift */; };
+		11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B620A45354002FCC2A /* LoginViewController.swift */; };
+		11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B620A45354002FCC2A /* LoginViewController.swift */; };
+		11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B920A45360002FCC2A /* RunningViewController.swift */; };
+		11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B920A45360002FCC2A /* RunningViewController.swift */; };
 		11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
 		11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
 		11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
@@ -66,11 +76,15 @@
 
 /* Begin PBXFileReference section */
 		0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		11221BA320A31436003888E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11221BA820A31B32003888E2 /* Kanboard macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kanboard macOS.entitlements"; sourceTree = "<group>"; };
 		11221BB920A36D01003888E2 /* RemoteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProject.swift; sourceTree = "<group>"; };
 		11221BBE20A36D6E003888E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		11221BCE20A3A123003888E2 /* AbstractRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
+		11BB149520A44D89002FCC2A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		11BB149A20A44F39002FCC2A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		11BB14B020A450D4002FCC2A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11BB14B920A45360002FCC2A /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRequests.swift; sourceTree = "<group>"; };
 		11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRequests.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +102,6 @@
 		11F85F3B20A3018C0060536B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F85F3E20A3018C0060536B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		11F85F4020A3018C0060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11F85F4120A3018C0060536B /* Kanboard_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kanboard_macOS.entitlements; sourceTree = "<group>"; };
 		11F85F4620A3018C0060536B /* Kanboard macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanboard macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F4A20A3018C0060536B /* Kanboard_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanboard_macOSTests.swift; sourceTree = "<group>"; };
 		11F85F4C20A3018C0060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,7 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				11221B9D20A313AB003888E2 /* Networking */,
-				11221BA320A31436003888E2 /* Constants.swift */,
+				11BB149520A44D89002FCC2A /* KeychainManager.swift */,
+				11BB149A20A44F39002FCC2A /* Logger.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -176,6 +190,28 @@
 				11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		11BB149F20A44FAA002FCC2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11BB14B020A450D4002FCC2A /* MainWindowController.swift */,
+				11BB14B620A45354002FCC2A /* LoginViewController.swift */,
+				11BB14B920A45360002FCC2A /* RunningViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11BB14A020A44FB0002FCC2A /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				11221BA820A31B32003888E2 /* Kanboard macOS.entitlements */,
+				11F85F3920A3018B0060536B /* AppDelegate.swift */,
+				11F85F3B20A3018C0060536B /* Assets.xcassets */,
+				11F85F3D20A3018C0060536B /* MainMenu.xib */,
+				11F85F4020A3018C0060536B /* Info.plist */,
+			);
+			path = Default;
 			sourceTree = "<group>";
 		};
 		11F85F0720A300EF0060536B = {
@@ -228,12 +264,8 @@
 		11F85F3820A3018B0060536B /* Kanboard macOS */ = {
 			isa = PBXGroup;
 			children = (
-				11221BA820A31B32003888E2 /* Kanboard macOS.entitlements */,
-				11F85F3920A3018B0060536B /* AppDelegate.swift */,
-				11F85F3B20A3018C0060536B /* Assets.xcassets */,
-				11F85F3D20A3018C0060536B /* MainMenu.xib */,
-				11F85F4020A3018C0060536B /* Info.plist */,
-				11F85F4120A3018C0060536B /* Kanboard_macOS.entitlements */,
+				11BB14A020A44FB0002FCC2A /* Default */,
+				11BB149F20A44FAA002FCC2A /* Controllers */,
 			);
 			path = "Kanboard macOS";
 			sourceTree = "<group>";
@@ -284,6 +316,7 @@
 				11F85F0E20A301750060536B /* Sources */,
 				11F85F0F20A301750060536B /* Frameworks */,
 				11F85F1020A301750060536B /* Resources */,
+				CC7C853AA72ACA1DC5126FCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +354,7 @@
 				11F85F3320A3018B0060536B /* Sources */,
 				11F85F3420A3018B0060536B /* Frameworks */,
 				11F85F3520A3018B0060536B /* Resources */,
+				65A02A6C183A4AD3DA484674 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,6 +508,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		65A02A6C183A4AD3DA484674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-macOS/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AA235EB051E95ADD59012DF4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +542,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC7C853AA72ACA1DC5126FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */ = {
@@ -521,10 +591,11 @@
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
-				11221BA420A31436003888E2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +605,12 @@
 			files = (
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
-				11221BA520A31436003888E2 /* Constants.swift in Sources */,
 				11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,11 +620,15 @@
 			files = (
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
-				11221BA620A31436003888E2 /* Constants.swift in Sources */,
 				11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */,
+				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,11 +638,15 @@
 			files = (
 				11221BC220A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
-				11221BA720A31436003888E2 /* Constants.swift in Sources */,
 				11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */,
+				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,7 +1025,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Default/Kanboard macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -968,7 +1048,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
+				INFOPLIST_FILE = "Kanboard macOS/Default/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1019,7 +1099,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Kanboard macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Kanboard macOS/Default/Kanboard macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1036,7 +1116,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Kanboard macOS/Info.plist";
+				INFOPLIST_FILE = "Kanboard macOS/Default/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
