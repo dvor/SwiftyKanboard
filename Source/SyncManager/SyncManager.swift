@@ -26,7 +26,12 @@ class SyncManager {
         // Create realm to handle possible errors early (migration, misconfiguration, etc).
         _ = try Realm.default()
 
-        networkService = NetworkService(delegateQueue: self.queue)
+        let keychain = KeychainManager()
+
+        networkService = NetworkService(baseURL: URL(string: keychain.baseURL!)!,
+                                        userName: keychain.userName!,
+                                        apiToken: keychain.apiToken!,
+                                        delegateQueue: self.queue)
     }
 
     func start() {
@@ -44,14 +49,16 @@ extension SyncManager {
     func doFullSync() {
         dispatchPrecondition(condition: .onQueue(queue))
 
-        let request = networkService.createRequest(GetAllProjectsRequest.self) { [weak self] projects in
+        let request = GetAllProjectsRequest() { [weak self] projects in
             guard let `self` = self else { return }
 
             self.projectsUpdate(projects)
             self.doFullSync(after: .now() + Constants.updateInterval)
         }
 
-        networkService.batch([request])
+        networkService.batch([request], completion: nil, failure:{ error in
+            log("Cannot perform full sync, error \(error)")
+        })
     }
 
     func projectsUpdate(_ projects: [RemoteProject]) {

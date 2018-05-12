@@ -57,14 +57,18 @@
 		11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14DF20A6539B002FCC2A /* RealmExtension.swift */; };
 		11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14DF20A6539B002FCC2A /* RealmExtension.swift */; };
 		11BB14E320A6539B002FCC2A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14DF20A6539B002FCC2A /* RealmExtension.swift */; };
-		11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
-		11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
-		11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
-		11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */; };
-		11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
-		11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
-		11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
-		11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */; };
+		11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
+		11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
+		11BB14E720A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
+		11BB14E820A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
+		11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
+		11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
+		11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
+		11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
+		11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
+		11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
+		11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
+		11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -115,8 +119,9 @@
 		11BB14D420A64106002FCC2A /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		11BB14D920A6422C002FCC2A /* RemoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObject.swift; sourceTree = "<group>"; };
 		11BB14DF20A6539B002FCC2A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
-		11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRequests.swift; sourceTree = "<group>"; };
-		11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRequests.swift; sourceTree = "<group>"; };
+		11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestIdFactory.swift; sourceTree = "<group>"; };
+		11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsRequest.swift; sourceTree = "<group>"; };
+		11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionRequest.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +208,7 @@
 				11221BC320A3A0C8003888E2 /* Requests */,
 				11221BA920A35B22003888E2 /* Objects */,
 				11221BBE20A36D6E003888E2 /* NetworkService.swift */,
+				11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -220,8 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				11221BCE20A3A123003888E2 /* AbstractRequest.swift */,
-				11DC390C20A3ABFB00D66EE4 /* ApplicationRequests.swift */,
-				11DC390720A3ABF200D66EE4 /* ProjectRequests.swift */,
+				11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */,
+				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -664,7 +670,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
-				11DC390820A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
+				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
@@ -673,11 +680,11 @@
 				11BB14CB20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11DC390D20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11BB14C520A4AB94002FCC2A /* Project.swift in Sources */,
 				11BB14D020A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,18 +694,19 @@
 			files = (
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
-				11DC390920A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
+				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11BB14D120A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
+				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14CC20A4AD18002FCC2A /* SyncManager.swift in Sources */,
-				11DC390E20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14D620A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
+				11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,17 +720,18 @@
 				11BB14D220A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14CD20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
-				11DC390A20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
 				11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
+				11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C720A4AB94002FCC2A /* Project.swift in Sources */,
 				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
-				11DC390F20A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11BB14E720A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,17 +745,18 @@
 				11BB14D320A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14CE20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
-				11DC390B20A3ABF200D66EE4 /* ProjectRequests.swift in Sources */,
 				11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */,
 				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
+				11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C820A4AB94002FCC2A /* Project.swift in Sources */,
 				11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */,
-				11DC391020A3ABFB00D66EE4 /* ApplicationRequests.swift in Sources */,
+				11BB14E820A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB14D820A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

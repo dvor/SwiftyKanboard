@@ -7,22 +7,28 @@
 
 import Foundation
 
-protocol AbstractRequest: Encodable {
-    associatedtype Completion
-    init(id: Int, completion: Completion)
-}
-
-class BaseRequest: Encodable {
+class AbstractRequest: Encodable {
     let jsonrpc = "2.0"
-    let id: Int
+    let id: RequestId = RequestIdFactory.next()
     let method: String
 
-    init(id: Int, method: String) {
-        self.id = id
+    private enum CodingKeys: String, CodingKey {
+        case jsonrpc
+        case id
+        case method
+    }
+
+    init(method: String) {
         self.method = method
     }
 
-    func process(_ parsedObject: Any) {
+    /// Parse response from server.
+    func parse(_ result: Any) -> Bool {
+        fatalError("Implement in subclass")
+    }
+
+    /// Finish request by notifying user about result.
+    func finish() {
         fatalError("Implement in subclass")
     }
 }

@@ -7,17 +7,3 @@
 
 import Foundation
 
-class GetVersionRequest: BaseRequest, AbstractRequest {
-    typealias Completion = (String) -> Void
-    private let completion: Completion
-
-    required init(id: Int, completion: @escaping Completion) {
-        self.completion = completion
-        super.init(id: id, method: "getVersion")
-    }
-
-    override func process(_ parsedObject: Any) {
-        let response = parsedObject as! String
-        completion(response)
-    }
-}

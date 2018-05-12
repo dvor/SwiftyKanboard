@@ -7,72 +7,122 @@
 
 import Foundation
 
+enum NetworkServiceError: Error {
+    case noDataReturned
+    case wrongJsonFormat
+}
+
 class NetworkService {
-    private var idGenerator = IdGenerator()
     private let delegateQueue: DispatchQueue
     private let requestURL: URL
     private let session: URLSession
 
     /// Parameters:
     /// - delegateQueue: Callbacks will be asynchronously scheduled on this queue.
-    init(delegateQueue: DispatchQueue) {
+    init(baseURL: URL, userName: String, apiToken: String, delegateQueue: DispatchQueue) {
+        self.requestURL = baseURL.appendingPathComponent("jsonrpc.php")
         self.delegateQueue = delegateQueue
 
-        let keychain = KeychainManager()
-
-        self.requestURL = URL(string: keychain.baseURL!)!.appendingPathComponent("jsonrpc.php")
-
-        let loginString = "\(keychain.userName!):\(keychain.apiToken!)"
-        let loginData = loginString.data(using: .utf8)!
-        let base64 = loginData.base64EncodedString()
-
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = [ "Authorization" : "Basic \(base64)" ]
+
+        if let base64 = "\(userName):\(apiToken)".data(using: .utf8)?.base64EncodedString() {
+            configuration.httpAdditionalHeaders = [ "Authorization" : "Basic \(base64)" ]
+        }
 
         self.session = URLSession(configuration: configuration)
     }
 
-    func createRequest<T: AbstractRequest>(_ type: T.Type, completion: T.Completion) -> T {
-        return (T.self as T.Type).init(id: idGenerator.next(), completion: completion)
-    }
-
-    func batch(_ requests: [BaseRequest]) {
+    func batch(_ requests: [AbstractRequest], completion: (() -> Void)?, failure: ((Error) -> Void)?) {
         log("Batch requests: \(requests)")
 
         var urlRequest = URLRequest(url: requestURL)
         urlRequest.httpMethod = "POST"
-        urlRequest.httpBody = try! JSONEncoder().encode(requests)
+
+        do {
+            urlRequest.httpBody = try JSONEncoder().encode(requests)
+        }
+        catch let error {
+            safeFailure(failure, error)
+            return
+        }
 
         let task = session.dataTask(with: urlRequest) { [weak self] data, response, error in
-            let array = try! JSONSerialization.jsonObject(with: data!, options: []) as! [Dictionary<String, Any>]
+            let statusCode = (response as? HTTPURLResponse)?.statusCode
+            log("Batch response: statusCode \(String(describing: statusCode)), error \(String(describing: error))")
 
-            for dict in array {
-                let id = dict["id"]! as! Int
-                let result = dict["result"]!
-
-                let request = requests.filter{ $0.id == id }.first!
-
-                self?.delegateQueue.async {
-                    request.process(result)
-                }
-            }
+            self?.processData(data,
+                              response: response,
+                              error: error,
+                              for: requests,
+                              completion: completion,
+                              failure: failure)
         }
 
         task.resume()
     }
 }
 
-extension NetworkService {
-    struct IdGenerator {
-        private var current = 1
-
-        mutating func next() -> Int {
-            defer {
-                current += 1
-            }
-
-            return current
+private extension NetworkService {
+    func safeFailure(_ failure: ((Error) -> Void)?, _ error: Error) {
+        delegateQueue.async {
+            failure?(error)
         }
     }
-}
 
+    func processData(_ data: Data?,
+                     response: URLResponse?,
+                     error: Error?,
+                     for requests: [AbstractRequest],
+                     completion: (() -> Void)?,
+                     failure: ((Error) -> Void)?) {
+        if let error = error {
+            safeFailure(failure, error)
+            return
+        }
+
+        guard let data = data else {
+            safeFailure(failure, NetworkServiceError.noDataReturned)
+            return
+        }
+
+        let jsonObject: Any
+        do {
+            jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+        }
+        catch let error {
+            safeFailure(failure, error)
+            return
+        }
+
+        if !parse(jsonObject: jsonObject, for: requests) {
+            safeFailure(failure, NetworkServiceError.wrongJsonFormat)
+            return
+        }
+
+        delegateQueue.async {
+            requests.forEach { $0.finish() }
+            completion?()
+        }
+    }
+
+    func parse(jsonObject: Any, for requests: [AbstractRequest]) -> Bool {
+        guard let array = jsonObject as? [Dictionary<String, Any>] else {
+            return false
+        }
+
+        for dict in array {
+            guard let id = dict["id"] as? Int,
+            let result = dict["result"],
+            let request = requests.filter({ $0.id == id }).first
+            else {
+                return false
+            }
+
+            if !request.parse(result) {
+                return false
+            }
+        }
+
+        return true
+    }
+}
