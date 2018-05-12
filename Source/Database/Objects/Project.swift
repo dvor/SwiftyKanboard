@@ -10,5 +10,6 @@ import RealmSwift
 
 class Project: Object {
     @objc dynamic var id: String = ""
-    @objc dynamic var name: String?
+    @objc dynamic var name: String = ""
+    @objc dynamic var lastModified: Date = Date()
 }

@@ -8,10 +8,23 @@
 import Cocoa
 
 class RunningViewController: NSViewController {
-    let service = NetworkService()
+    private let syncManager: SyncManager?
 
     init() {
+        var syncManager: SyncManager? = nil
+
+        do {
+            syncManager = try SyncManager()
+        } catch let error as NSError {
+            let alert = NSAlert(error: error)
+            alert.runModal()
+        }
+
+        self.syncManager = syncManager
         super.init(nibName: nil, bundle: nil)
+
+        syncManager?.delegate = self
+        syncManager?.start()
     }
 
     required init?(coder: NSCoder) {
@@ -25,9 +38,11 @@ class RunningViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+}
 
-        let r1 = service.createRequest(GetAllProjectsRequest.self) { projects in print(projects) }
-        let r2 = service.createRequest(GetVersionRequest.self) { version in print(version) }
-        service.batch([r1, r2])
+extension RunningViewController: SyncManagerDelegate {
+    func userWasLoggedOut() {
+        log("Logout")
     }
 }
