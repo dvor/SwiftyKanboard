@@ -75,12 +75,30 @@ extension Project {
         return
             id == remote.id &&
             name == remote.name &&
+            projectDescription == remote.description &&
+            defaultSwimlane == remote.defaultSwimlane &&
+            showDefaultSwimlane == remote.showDefaultSwimlane &&
+            isActive == remote.isActive &&
+            isPublic == remote.isPublic &&
+            isPrivate == remote.isPrivate &&
+            boardURLString == remote.boardURLString &&
+            calendarURLString == remote.calendarURLString &&
+            listURLString == remote.listURLString &&
             lastModified == remote.lastModified
     }
 
     func update(with remote: RemoteProject) {
         id = remote.id
         name = remote.name
+        projectDescription = remote.description
+        defaultSwimlane = remote.defaultSwimlane
+        showDefaultSwimlane = remote.showDefaultSwimlane
+        isActive = remote.isActive
+        isPublic = remote.isPublic
+        isPrivate = remote.isPrivate
+        boardURLString = remote.boardURLString
+        calendarURLString = remote.calendarURLString
+        listURLString = remote.listURLString
         lastModified = remote.lastModified
     }
 }

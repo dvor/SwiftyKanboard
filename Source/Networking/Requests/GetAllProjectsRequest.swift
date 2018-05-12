@@ -47,6 +47,12 @@ extension RemoteProject {
         guard
             let id = dict["id"] as? String,
             let name = dict["name"] as? String,
+            let defaultSwimlane = dict["default_swimlane"] as? String,
+            let showDefaultSwimlane = dict["show_default_swimlane"] as? String,
+            let isActive = dict["is_active"] as? String,
+            let isPublic = dict["is_public"] as? String,
+            let isPrivate = dict["is_private"] as? String,
+            let urls = dict["url"] as? [String:String],
             let lastModified = dict["last_modified"] as? String,
             let lastModifiedInterval = TimeInterval(lastModified)
         else {
@@ -55,6 +61,15 @@ extension RemoteProject {
 
         self.id = id
         self.name = name
+        self.description = dict["description"] as? String
+        self.defaultSwimlane = defaultSwimlane
+        self.showDefaultSwimlane = showDefaultSwimlane == "1"
+        self.isActive = isActive == "1"
+        self.isPublic = isPublic == "1"
+        self.isPrivate = isPrivate == "1"
+        self.boardURLString = urls["board"]
+        self.calendarURLString = urls["calendar"]
+        self.listURLString = urls["list"]
         self.lastModified = Date(timeIntervalSince1970: lastModifiedInterval)
     }
 }
