@@ -57,8 +57,9 @@ private extension ProjectSyncManager {
         let columns = updateColumnsRequest()
         let activeTasks = updateTasksRequest(active: true)
         let nonActiveTasks = updateTasksRequest(active: false)
+        let colors = updateColorsRequest()
 
-        networkService.batch([projects, columns, activeTasks, nonActiveTasks], completion: { [weak self] in
+        networkService.batch([projects, columns, activeTasks, nonActiveTasks, colors], completion: { [weak self] in
             self?.doFullSyncAfterDelay()
         },
         failure:{ [weak self] error in
@@ -94,6 +95,17 @@ private extension ProjectSyncManager {
             let synchronizer: Synchronizer<RemoteTask, Task> = Synchronizer(realm: realm)
             for column in columns {
                 _ = synchronizer.updateDatabase(with: column)
+            }
+        }
+    }
+
+    func updateColorsRequest() -> GetDefaultTaskColorsRequest {
+        return GetDefaultTaskColorsRequest() { colors in
+            let realm = try! Realm.default()
+
+            let synchronizer: Synchronizer<RemoteTaskColor, TaskColor> = Synchronizer(realm: realm)
+            for color in colors {
+                _ = synchronizer.updateDatabase(with: color)
             }
         }
     }

@@ -51,6 +51,16 @@
 		11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */; };
 		11B7B69B20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */; };
 		11B7B69C20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */; };
+		11B7B69E20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69D20A8CE7A0039716E /* BoardCollectionViewDataSource.swift */; };
+		11B7B69F20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69D20A8CE7A0039716E /* BoardCollectionViewDataSource.swift */; };
+		11B7B6A120A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6A020A8D68B0039716E /* BoardCollectionViewItem.swift */; };
+		11B7B6A220A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6A020A8D68B0039716E /* BoardCollectionViewItem.swift */; };
+		11B7B6A720AB56490039716E /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6A620AB56490039716E /* BoardCollectionViewLayout.swift */; };
+		11B7B6A820AB56490039716E /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6A620AB56490039716E /* BoardCollectionViewLayout.swift */; };
+		11B7B6AE20ACEECB0039716E /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6AC20ACEECB0039716E /* MainWindowController.swift */; };
+		11B7B6AF20ACEECB0039716E /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6AC20ACEECB0039716E /* MainWindowController.swift */; };
+		11B7B6B020ACEECB0039716E /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B6AD20ACEECB0039716E /* MainWindowController.xib */; };
+		11B7B6B120ACEECB0039716E /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B6AD20ACEECB0039716E /* MainWindowController.xib */; };
 		11B7B6B320B2E2A20039716E /* RemoteTaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */; };
 		11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */; };
 		11B7B6B520B2E2A20039716E /* RemoteTaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */; };
@@ -69,6 +79,8 @@
 		11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
 		11B7B6C720B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
 		11B7B6C820B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
+		11B7B6CB20B3043E0039716E /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */; };
+		11B7B6CC20B3043E0039716E /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */; };
 		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
@@ -77,8 +89,6 @@
 		11BB149C20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
 		11BB149D20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
 		11BB149E20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
-		11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B020A450D4002FCC2A /* MainWindowController.swift */; };
-		11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B020A450D4002FCC2A /* MainWindowController.swift */; };
 		11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B620A45354002FCC2A /* LoginViewController.swift */; };
 		11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B620A45354002FCC2A /* LoginViewController.swift */; };
 		11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14B920A45360002FCC2A /* RunningViewController.swift */; };
@@ -197,14 +207,19 @@
 		11B7B69020A8A4FE0039716E /* GetProjectByIdRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProjectByIdRequestTest.swift; sourceTree = "<group>"; };
 		11B7B69320A8A7030039716E /* GetProjectActivityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProjectActivityRequest.swift; sourceTree = "<group>"; };
 		11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProjectActivity.swift; sourceTree = "<group>"; };
+		11B7B69D20A8CE7A0039716E /* BoardCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		11B7B6A020A8D68B0039716E /* BoardCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewItem.swift; sourceTree = "<group>"; };
+		11B7B6A620AB56490039716E /* BoardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewLayout.swift; sourceTree = "<group>"; };
+		11B7B6AC20ACEECB0039716E /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		11B7B6AD20ACEECB0039716E /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskColor.swift; sourceTree = "<group>"; };
 		11B7B6B720B2E3870039716E /* TaskColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColor.swift; sourceTree = "<group>"; };
 		11B7B6BC20B2ED680039716E /* GetDefaultTaskColorsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDefaultTaskColorsRequest.swift; sourceTree = "<group>"; };
 		11B7B6C120B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDefaultTaskColorsRequestTest.swift; sourceTree = "<group>"; };
 		11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColorExtension.swift; sourceTree = "<group>"; };
+		11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
 		11BB149520A44D89002FCC2A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		11BB149A20A44F39002FCC2A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		11BB14B020A450D4002FCC2A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11BB14B920A45360002FCC2A /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		11BB14C420A4AB94002FCC2A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -345,11 +360,23 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		11B7B6C920B304220039716E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		11BB149F20A44FAA002FCC2A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				11BB14B020A450D4002FCC2A /* MainWindowController.swift */,
+				11B7B69D20A8CE7A0039716E /* BoardCollectionViewDataSource.swift */,
+				11B7B6A020A8D68B0039716E /* BoardCollectionViewItem.swift */,
+				11B7B6A620AB56490039716E /* BoardCollectionViewLayout.swift */,
 				11BB14B620A45354002FCC2A /* LoginViewController.swift */,
+				11B7B6AC20ACEECB0039716E /* MainWindowController.swift */,
+				11B7B6AD20ACEECB0039716E /* MainWindowController.xib */,
 				11BB14B920A45360002FCC2A /* RunningViewController.swift */,
 			);
 			path = Controllers;
@@ -504,8 +531,9 @@
 		11F85F3820A3018B0060536B /* Kanboard macOS */ = {
 			isa = PBXGroup;
 			children = (
-				11BB14A020A44FB0002FCC2A /* Default */,
 				11BB149F20A44FAA002FCC2A /* Controllers */,
+				11BB14A020A44FB0002FCC2A /* Default */,
+				11B7B6C920B304220039716E /* Extensions */,
 			);
 			path = "Kanboard macOS";
 			sourceTree = "<group>";
@@ -699,6 +727,7 @@
 			files = (
 				11F85F3C20A3018C0060536B /* Assets.xcassets in Resources */,
 				11F85F3F20A3018C0060536B /* MainMenu.xib in Resources */,
+				11B7B6B020ACEECB0039716E /* MainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B7B6B120ACEECB0039716E /* MainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,13 +951,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BB14DC20A6422C002FCC2A /* RemoteObject.swift in Sources */,
+				11B7B6AE20ACEECB0039716E /* MainWindowController.swift in Sources */,
+				11B7B6A120A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11BB14CD20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
 				11B7B6BF20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
 				11B7B68E20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
-				11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */,
 				11BB154F20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
 				11B7B6B520B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
@@ -939,6 +970,7 @@
 				11BB152E20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11B7B6BA20B2E3870039716E /* TaskColor.swift in Sources */,
+				11B7B6CB20B3043E0039716E /* NSColorExtensions.swift in Sources */,
 				11BB14E720A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11B7B69B20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				11B7B68620A8956F0039716E /* TaskExtension.swift in Sources */,
@@ -946,8 +978,10 @@
 				11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11B7B6A720AB56490039716E /* BoardCollectionViewLayout.swift in Sources */,
 				11BB151420A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB152420A84708002FCC2A /* Column.swift in Sources */,
+				11B7B69E20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */,
 				11B7B67620A895070039716E /* GetAllTasksRequest.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB152920A84717002FCC2A /* RemoteColumn.swift in Sources */,
@@ -968,9 +1002,10 @@
 				11B7B67C20A895420039716E /* RemoteTask.swift in Sources */,
 				11BB14E320A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11BB14CE20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
+				11B7B6AF20ACEECB0039716E /* MainWindowController.swift in Sources */,
 				11B7B69720A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
-				11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */,
+				11B7B6A820AB56490039716E /* BoardCollectionViewLayout.swift in Sources */,
 				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C820A4AB94002FCC2A /* Project.swift in Sources */,
@@ -988,10 +1023,12 @@
 				11BB14D820A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11B7B6A220A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
 				11B7B69220A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */,
 				11BB151520A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11B7B69F20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */,
 				11B7B68120A8954B0039716E /* Task.swift in Sources */,
 				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB155020A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
@@ -1003,6 +1040,7 @@
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11B7B68F20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B68A20A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
+				11B7B6CC20B3043E0039716E /* NSColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
