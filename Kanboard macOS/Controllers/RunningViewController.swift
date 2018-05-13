@@ -8,13 +8,13 @@
 import Cocoa
 
 class RunningViewController: NSViewController {
-    private let syncManager: SyncManager?
+    private let syncManager: ProjectSyncManager?
 
     init() {
-        var syncManager: SyncManager? = nil
+        var syncManager: ProjectSyncManager? = nil
 
         do {
-            syncManager = try SyncManager()
+            syncManager = try ProjectSyncManager(projectId: "5")
         } catch let error as NSError {
             let alert = NSAlert(error: error)
             alert.runModal()
@@ -41,7 +41,7 @@ class RunningViewController: NSViewController {
     }
 }
 
-extension RunningViewController: SyncManagerDelegate {
+extension RunningViewController: ProjectSyncManagerDelegate {
     func userWasLoggedOut() {
         log("Logout")
     }
