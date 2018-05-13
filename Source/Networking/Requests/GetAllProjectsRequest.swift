@@ -8,24 +8,23 @@
 import Foundation
 
 class GetAllProjectsRequest: AbstractRequest {
+    let id = RequestIdFactory.next()
+    let method = "getAllProjects"
+    let parameters: [String:String]? = nil
+
     private let completion: ([RemoteProject]) -> Void
     private var response: [RemoteProject]?
 
     required init(completion: @escaping ([RemoteProject]) -> Void) {
         self.completion = completion
-        super.init(method: "getAllProjects")
     }
 
-    override func encode(to encoder: Encoder) throws {
-        try super.encode(to: encoder)
-    }
-
-    override func parse(_ result: Any) throws {
+    func parse(_ result: Any) throws {
         let array = try ArrayDecoder<Any>(result)
         response = try array.map { try RemoteProject(object: $0) }
     }
 
-    override func finish() {
+    func finish() {
         completion(response!)
     }
 }

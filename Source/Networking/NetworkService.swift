@@ -38,7 +38,7 @@ class NetworkService {
         urlRequest.httpMethod = "POST"
 
         do {
-            urlRequest.httpBody = try JSONEncoder().encode(requests)
+            urlRequest.httpBody = try JSONRPCEncoder.encodeRPCRequests(requests)
         }
         catch let error {
             safeFailure(failure, error)

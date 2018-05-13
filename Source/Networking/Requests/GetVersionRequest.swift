@@ -8,23 +8,22 @@
 import Foundation
 
 class GetVersionRequest: AbstractRequest {
+    let id = RequestIdFactory.next()
+    let method = "getVersion"
+    let parameters: [String:String]? = nil
+
     private let completion: (String) -> Void
     private var response: String?
 
     required init(completion: @escaping (String) -> Void) {
         self.completion = completion
-        super.init(method: "getVersion")
     }
 
-    override func encode(to encoder: Encoder) throws {
-        try super.encode(to: encoder)
-    }
-
-    override func parse(_ result: Any) throws {
+    func parse(_ result: Any) throws {
         response = try ValueDecoder(result).value
     }
 
-    override func finish() {
+    func finish() {
         completion(response!)
     }
 }
