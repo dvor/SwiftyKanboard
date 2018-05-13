@@ -16,7 +16,7 @@ extension Task: Synchronizable {
         return
             id               == task.id &&
             title            == task.title &&
-            description      == task.description &&
+            taskDescription  == task.description &&
             urlString        == task.urlString &&
             isActive         == task.isActive &&
             position         == task.position &&
