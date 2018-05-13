@@ -41,10 +41,6 @@
 		11BB14CC20A4AD18002FCC2A /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* SyncManager.swift */; };
 		11BB14CD20A4AD18002FCC2A /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* SyncManager.swift */; };
 		11BB14CE20A4AD18002FCC2A /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* SyncManager.swift */; };
-		11BB14D020A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */; };
-		11BB14D120A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */; };
-		11BB14D220A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */; };
-		11BB14D320A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */; };
 		11BB14D520A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
 		11BB14D620A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
 		11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
@@ -95,6 +91,14 @@
 		11BB153D20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */; };
 		11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */; };
 		11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */; };
+		11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
+		11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
+		11BB154F20A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
+		11BB155020A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
+		11BB155220A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
+		11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
+		11BB155420A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
+		11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -141,7 +145,6 @@
 		11BB14B920A45360002FCC2A /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		11BB14C420A4AB94002FCC2A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		11BB14CA20A4AD18002FCC2A /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
-		11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSynchronizer.swift; sourceTree = "<group>"; };
 		11BB14D420A64106002FCC2A /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		11BB14D920A6422C002FCC2A /* RemoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObject.swift; sourceTree = "<group>"; };
 		11BB14DF20A6539B002FCC2A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 		11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsRequestTest.swift; sourceTree = "<group>"; };
 		11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetColumnsRequestTest.swift; sourceTree = "<group>"; };
 		11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVersionRequestTest.swift; sourceTree = "<group>"; };
+		11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExtension.swift; sourceTree = "<group>"; };
+		11BB155120A85C47002FCC2A /* ColumnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnExtension.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -311,9 +316,9 @@
 		11BB14C920A4ACEC002FCC2A /* SyncManager */ = {
 			isa = PBXGroup;
 			children = (
+				11BB154B20A85A53002FCC2A /* ObjectExtensions */,
+				11BB154420A857D2002FCC2A /* Synchronizers */,
 				11BB14CA20A4AD18002FCC2A /* SyncManager.swift */,
-				11BB14CF20A640EE002FCC2A /* ProjectSynchronizer.swift */,
-				11BB14D420A64106002FCC2A /* Synchronizer.swift */,
 			);
 			path = SyncManager;
 			sourceTree = "<group>";
@@ -351,6 +356,23 @@
 				11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		11BB154420A857D2002FCC2A /* Synchronizers */ = {
+			isa = PBXGroup;
+			children = (
+				11BB14D420A64106002FCC2A /* Synchronizer.swift */,
+			);
+			path = Synchronizers;
+			sourceTree = "<group>";
+		};
+		11BB154B20A85A53002FCC2A /* ObjectExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				11BB155120A85C47002FCC2A /* ColumnExtension.swift */,
+				11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */,
+			);
+			path = ObjectExtensions;
 			sourceTree = "<group>";
 		};
 		11F85F0720A300EF0060536B = {
@@ -738,8 +760,10 @@
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
+				11BB155220A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB151C20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB152220A84708002FCC2A /* Column.swift in Sources */,
+				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
@@ -751,7 +775,6 @@
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11BB14C520A4AB94002FCC2A /* Project.swift in Sources */,
-				11BB14D020A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
@@ -770,9 +793,9 @@
 				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
+				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
 				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
-				11BB14D120A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
@@ -784,6 +807,7 @@
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14D620A64106002FCC2A /* Synchronizer.swift in Sources */,
+				11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 			);
@@ -796,10 +820,10 @@
 				11BB14DC20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11BB14D220A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14CD20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
 				11BB14B220A450D4002FCC2A /* MainWindowController.swift in Sources */,
+				11BB154F20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C720A4AB94002FCC2A /* Project.swift in Sources */,
@@ -814,6 +838,7 @@
 				11BB152420A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB152920A84717002FCC2A /* RemoteColumn.swift in Sources */,
+				11BB155420A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB151E20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
@@ -825,8 +850,8 @@
 			files = (
 				11BB14DD20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11221BC220A36D6E003888E2 /* NetworkService.swift in Sources */,
+				11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB14E320A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11BB14D320A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14CE20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
 				11BB14B320A450D4002FCC2A /* MainWindowController.swift in Sources */,
@@ -844,6 +869,7 @@
 				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,
+				11BB155020A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB153D20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11BB151F20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,

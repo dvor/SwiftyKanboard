@@ -14,4 +14,8 @@ class Column: Object {
     @objc dynamic var projectId: String = ""
     @objc dynamic var position: Int = 0
     @objc dynamic var taskLimit: Int = 0
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

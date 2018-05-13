@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RemoteObject: Codable {
-
+protocol RemoteObject {
+    var id: String { get }
 }

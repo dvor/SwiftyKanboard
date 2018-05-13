@@ -35,13 +35,13 @@ class SyncManager {
     }
 
     func start() {
-        doFullSync(after: .now())
+        doFullSyncAfterDelay(.now())
     }
 }
 
-extension SyncManager {
-    func doFullSync(after deadline: DispatchTime) {
-        queue.asyncAfter(deadline: deadline) { [weak self] in
+private extension SyncManager {
+    func doFullSyncAfterDelay(_ delay: DispatchTime = .now() + Constants.updateInterval) {
+        queue.asyncAfter(deadline: delay) { [weak self] in
             self?.doFullSync()
         }
     }
@@ -52,22 +52,59 @@ extension SyncManager {
         let request = GetAllProjectsRequest() { [weak self] projects in
             guard let `self` = self else { return }
 
-            self.projectsUpdate(projects)
-            self.doFullSync(after: .now() + Constants.updateInterval)
+            self.allProjectsRequestFinished(projects)
         }
 
-        networkService.batch([request], completion: nil, failure:{ error in
+        networkService.batch([request], completion: nil, failure:{ [weak self] error in
             log("Cannot perform full sync, error \(error)")
+            self?.doFullSyncAfterDelay()
         })
     }
 
-    func projectsUpdate(_ projects: [RemoteProject]) {
+    func allProjectsRequestFinished(_ projects: [RemoteProject]) {
         dispatchPrecondition(condition: .onQueue(queue))
         let realm = try! Realm.default()
-        let synchronizer = ProjectSynchronizer(realm: realm)
+        let synchronizer: Synchronizer<RemoteProject, Project> = Synchronizer(realm: realm)
+
+        var requests = [AbstractRequest]()
 
         for project in projects {
-            _ = synchronizer.updateDatabase(with: project)
+            let result = synchronizer.updateDatabase(with: project)
+
+            switch result {
+            case .internalError:
+                break
+            case .unchanged:
+                break
+            case .created:
+                fallthrough
+            case .updated:
+                requests.append(updateColumnsRequest(for: project))
+            }
+        }
+
+        if requests.isEmpty {
+            doFullSyncAfterDelay()
+            return
+        }
+
+        networkService.batch(requests, completion: { [weak self] in
+            self?.doFullSyncAfterDelay()
+        },
+        failure:{ [weak self] error in
+            log("Cannot perform full sync, error \(error)")
+            self?.doFullSyncAfterDelay()
+        })
+    }
+
+    func updateColumnsRequest(for project: RemoteProject) -> GetColumnsRequest {
+        return GetColumnsRequest(projectId: project.id) { columns in
+            let realm = try! Realm.default()
+
+            let synchronizer: Synchronizer<RemoteColumn, Column> = Synchronizer(realm: realm)
+            for column in columns {
+                _ = synchronizer.updateDatabase(with: column)
+            }
         }
     }
 }
