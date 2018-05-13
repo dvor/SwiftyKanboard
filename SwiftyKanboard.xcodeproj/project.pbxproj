@@ -77,6 +77,18 @@
 		11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */; };
 		11BB151E20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */; };
 		11BB151F20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */; };
+		11BB152220A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
+		11BB152320A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
+		11BB152420A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
+		11BB152520A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
+		11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
+		11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
+		11BB152920A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
+		11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
+		11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
+		11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
+		11BB152E20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
+		11BB152F20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -132,6 +144,9 @@
 		11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionRequest.swift; sourceTree = "<group>"; };
 		11BB151120A7985B002FCC2A /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCEncoder.swift; sourceTree = "<group>"; };
+		11BB152120A84708002FCC2A /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		11BB152620A84717002FCC2A /* RemoteColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteColumn.swift; sourceTree = "<group>"; };
+		11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetColumnsRequest.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,8 +242,9 @@
 		11221BA920A35B22003888E2 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				11221BB920A36D01003888E2 /* RemoteProject.swift */,
+				11BB152620A84717002FCC2A /* RemoteColumn.swift */,
 				11BB14D920A6422C002FCC2A /* RemoteObject.swift */,
+				11221BB920A36D01003888E2 /* RemoteProject.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -239,6 +255,7 @@
 				11221BCE20A3A123003888E2 /* AbstractRequest.swift */,
 				11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */,
 				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
+				11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -276,6 +293,7 @@
 		11BB14C320A4AB8E002FCC2A /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				11BB152120A84708002FCC2A /* Column.swift */,
 				11BB14C420A4AB94002FCC2A /* Project.swift */,
 			);
 			path = Objects;
@@ -691,10 +709,13 @@
 			files = (
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
+				11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11BB151C20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
+				11BB152220A84708002FCC2A /* Column.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
+				11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14D520A64106002FCC2A /* Synchronizer.swift in Sources */,
@@ -717,6 +738,7 @@
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
 				11BB151320A7985B002FCC2A /* Decoders.swift in Sources */,
+				11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
@@ -725,6 +747,8 @@
 				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
+				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
+				11BB152320A84708002FCC2A /* Column.swift in Sources */,
 				11BB14CC20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
@@ -748,6 +772,7 @@
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C720A4AB94002FCC2A /* Project.swift in Sources */,
+				11BB152E20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E720A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
@@ -755,7 +780,9 @@
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
 				11BB151420A7985B002FCC2A /* Decoders.swift in Sources */,
+				11BB152420A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11BB152920A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB151E20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
@@ -775,6 +802,7 @@
 				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB14C820A4AB94002FCC2A /* Project.swift in Sources */,
+				11BB152F20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E820A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
@@ -782,7 +810,9 @@
 				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
 				11BB151520A7985B002FCC2A /* Decoders.swift in Sources */,
+				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB151F20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);

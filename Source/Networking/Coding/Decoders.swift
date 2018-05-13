@@ -100,6 +100,16 @@ class DictionaryDecoder {
         }
     }
 
+    /// Returns integer value stored in string
+    func intFromString(forKey key: String) throws -> Int {
+        let string: String = try value(forKey: key)
+        guard let value = Int(string) else {
+            throw DecoderError.badType
+        }
+
+        return value
+    }
+
     func date(forKey key: String) throws -> Date {
         let string: String = try value(forKey: key)
 
