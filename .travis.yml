@@ -5,6 +5,8 @@ install:
     - bundle install
     - pod repo update > /dev/null
     - ./install.sh
+    # Disable signing for mac, Travis doesn't have no valid signing identity.
+    - git apply fastlane/disable_mac_signing.diff
 
 env:
     - PLATFORM=ios
