@@ -89,6 +89,12 @@
 		11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
 		11BB152E20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
 		11BB152F20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
+		11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */; };
+		11BB153A20A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */; };
+		11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */; };
+		11BB153D20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */; };
+		11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */; };
+		11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -147,6 +153,9 @@
 		11BB152120A84708002FCC2A /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		11BB152620A84717002FCC2A /* RemoteColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteColumn.swift; sourceTree = "<group>"; };
 		11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetColumnsRequest.swift; sourceTree = "<group>"; };
+		11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsRequestTest.swift; sourceTree = "<group>"; };
+		11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetColumnsRequestTest.swift; sourceTree = "<group>"; };
+		11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVersionRequestTest.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -254,8 +263,8 @@
 			children = (
 				11221BCE20A3A123003888E2 /* AbstractRequest.swift */,
 				11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */,
-				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
 				11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */,
+				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -326,10 +335,29 @@
 			path = Coding;
 			sourceTree = "<group>";
 		};
+		11BB153020A84E32002FCC2A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				11BB153120A84E44002FCC2A /* Networking */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		11BB153120A84E44002FCC2A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */,
+				11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */,
+				11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		11F85F0720A300EF0060536B = {
 			isa = PBXGroup;
 			children = (
 				11221B9B20A310CE003888E2 /* Source */,
+				11BB153020A84E32002FCC2A /* Tests */,
 				11F85F1420A301750060536B /* Kanboard iOS */,
 				11F85F2920A301770060536B /* Kanboard iOSTests */,
 				11F85F3820A3018B0060536B /* Kanboard macOS */,
@@ -742,12 +770,15 @@
 				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
+				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
+				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
 				11BB14D120A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
+				11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11BB152320A84708002FCC2A /* Column.swift in Sources */,
 				11BB14CC20A4AD18002FCC2A /* SyncManager.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
@@ -813,7 +844,10 @@
 				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,
+				11BB153D20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11BB151F20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
+				11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
+				11BB153A20A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
