@@ -80,6 +80,8 @@ private extension SyncManager {
                 fallthrough
             case .updated:
                 requests.append(updateColumnsRequest(for: project))
+                requests.append(updateTasksRequest(for: project, active: true))
+                requests.append(updateTasksRequest(for: project, active: false))
             }
         }
 
@@ -102,6 +104,17 @@ private extension SyncManager {
             let realm = try! Realm.default()
 
             let synchronizer: Synchronizer<RemoteColumn, Column> = Synchronizer(realm: realm)
+            for column in columns {
+                _ = synchronizer.updateDatabase(with: column)
+            }
+        }
+    }
+
+    func updateTasksRequest(for project: RemoteProject, active: Bool) -> GetAllTasksRequest {
+        return GetAllTasksRequest(projectId: project.id, active: active) { columns in
+            let realm = try! Realm.default()
+
+            let synchronizer: Synchronizer<RemoteTask, Task> = Synchronizer(realm: realm)
             for column in columns {
                 _ = synchronizer.updateDatabase(with: column)
             }

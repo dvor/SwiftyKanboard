@@ -120,4 +120,22 @@ class DictionaryDecoder {
 
         return Date(timeIntervalSince1970: interval)
     }
+
+    func optionalDate(forKey key: String) throws -> Date? {
+        let theString: String? = try optionalValue(forKey: key)
+        guard let string = theString else {
+            return nil
+        }
+
+        guard let interval = TimeInterval(string) else {
+            log("String \(string) for key \(key) cannot be converted to TimeInterval")
+            throw DecoderError.badType
+        }
+
+        if interval == 0 {
+            return nil
+        }
+
+        return Date(timeIntervalSince1970: interval)
+    }
 }
