@@ -43,6 +43,7 @@ class ProjectSynchronizer: Synchronizer {
 private extension ProjectSynchronizer {
     func createProject(from remote: RemoteProject) throws {
         let project = Project()
+        project.id = remote.id
         project.update(with: remote)
 
         log("Creating new project: \(project)")
@@ -88,7 +89,6 @@ extension Project {
     }
 
     func update(with remote: RemoteProject) {
-        id = remote.id
         name = remote.name
         projectDescription = remote.description
         defaultSwimlane = remote.defaultSwimlane

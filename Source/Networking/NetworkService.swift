@@ -9,7 +9,6 @@ import Foundation
 
 enum NetworkServiceError: Error {
     case noDataReturned
-    case wrongJsonFormat
 }
 
 class NetworkService {
@@ -88,14 +87,10 @@ private extension NetworkService {
         let jsonObject: Any
         do {
             jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+            try parse(jsonObject: jsonObject, for: requests)
         }
         catch let error {
             safeFailure(failure, error)
-            return
-        }
-
-        if !parse(jsonObject: jsonObject, for: requests) {
-            safeFailure(failure, NetworkServiceError.wrongJsonFormat)
             return
         }
 
@@ -105,24 +100,19 @@ private extension NetworkService {
         }
     }
 
-    func parse(jsonObject: Any, for requests: [AbstractRequest]) -> Bool {
-        guard let array = jsonObject as? [Dictionary<String, Any>] else {
-            return false
-        }
+    func parse(jsonObject: Any, for requests: [AbstractRequest]) throws {
+        let array = try ArrayDecoder<Any>(jsonObject)
 
-        for dict in array {
-            guard let id = dict["id"] as? Int,
-            let result = dict["result"],
-            let request = requests.filter({ $0.id == id }).first
-            else {
-                return false
+        for object in array {
+            let dict = try DictionaryDecoder(object)
+
+            let id: Int = try dict.value(forKey: "id")
+            let result: Any = try dict.value(forKey: "result")
+            guard let request = requests.filter({ $0.id == id }).first else {
+                throw DecoderError.badType
             }
 
-            if !request.parse(result) {
-                return false
-            }
+            try request.parse(result)
         }
-
-        return true
     }
 }

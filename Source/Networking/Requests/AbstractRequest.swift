@@ -23,7 +23,7 @@ class AbstractRequest: Encodable {
     }
 
     /// Parse response from server.
-    func parse(_ result: Any) -> Bool {
+    func parse(_ result: Any) throws {
         fatalError("Implement in subclass")
     }
 

@@ -20,19 +20,9 @@ class GetAllProjectsRequest: AbstractRequest {
         try super.encode(to: encoder)
     }
 
-    override func parse(_ result: Any) -> Bool {
-        guard let array = result as? [[String:Any]] else {
-            return false
-        }
-
-        do {
-            response = try array.map { try RemoteProject(dict: $0) }
-        }
-        catch {
-            return false
-        }
-
-        return true
+    override func parse(_ result: Any) throws {
+        let array = try ArrayDecoder<Any>(result)
+        response = try array.map { try RemoteProject(object: $0) }
     }
 
     override func finish() {
@@ -41,35 +31,20 @@ class GetAllProjectsRequest: AbstractRequest {
 }
 
 extension RemoteProject {
-    struct InitError: Error {}
+    init(object: Any) throws {
+        let dict = try DictionaryDecoder(object)
 
-    init(dict: [String:Any]) throws {
-        guard
-            let id = dict["id"] as? String,
-            let name = dict["name"] as? String,
-            let defaultSwimlane = dict["default_swimlane"] as? String,
-            let showDefaultSwimlane = dict["show_default_swimlane"] as? String,
-            let isActive = dict["is_active"] as? String,
-            let isPublic = dict["is_public"] as? String,
-            let isPrivate = dict["is_private"] as? String,
-            let urls = dict["url"] as? [String:String],
-            let lastModified = dict["last_modified"] as? String,
-            let lastModifiedInterval = TimeInterval(lastModified)
-        else {
-            throw InitError()
-        }
-
-        self.id = id
-        self.name = name
-        self.description = dict["description"] as? String
-        self.defaultSwimlane = defaultSwimlane
-        self.showDefaultSwimlane = showDefaultSwimlane == "1"
-        self.isActive = isActive == "1"
-        self.isPublic = isPublic == "1"
-        self.isPrivate = isPrivate == "1"
-        self.boardURLString = urls["board"]
-        self.calendarURLString = urls["calendar"]
-        self.listURLString = urls["list"]
-        self.lastModified = Date(timeIntervalSince1970: lastModifiedInterval)
+        id                  = try dict.value(forKey: "id")
+        name                = try dict.value(forKey: "name")
+        description         = try dict.optionalValue(forKey: "description")
+        defaultSwimlane     = try dict.value(forKey: "default_swimlane")
+        showDefaultSwimlane = try dict.boolFromString(forKey: "show_default_swimlane")
+        isActive            = try dict.boolFromString(forKey: "is_active")
+        isPublic            = try dict.boolFromString(forKey: "is_public")
+        isPrivate           = try dict.boolFromString(forKey: "is_private")
+        boardURLString      = try dict.nestedDict(forKey: "url").optionalValue(forKey: "board")
+        calendarURLString   = try dict.nestedDict(forKey: "url").optionalValue(forKey: "calendar")
+        listURLString       = try dict.nestedDict(forKey: "url").optionalValue(forKey: "list")
+        lastModified        = try dict.date(forKey: "last_modified")
     }
 }

@@ -20,13 +20,8 @@ class GetVersionRequest: AbstractRequest {
         try super.encode(to: encoder)
     }
 
-    override func parse(_ result: Any) -> Bool {
-        guard let version = result as? String else {
-            return false
-        }
-
-        response = version
-        return true
+    override func parse(_ result: Any) throws {
+        response = try ValueDecoder(result).value
     }
 
     override func finish() {

@@ -69,6 +69,10 @@
 		11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
 		11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
 		11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
+		11BB151220A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
+		11BB151320A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
+		11BB151420A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
+		11BB151520A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
 		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
@@ -122,6 +126,7 @@
 		11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestIdFactory.swift; sourceTree = "<group>"; };
 		11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProjectsRequest.swift; sourceTree = "<group>"; };
 		11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionRequest.swift; sourceTree = "<group>"; };
+		11BB151120A7985B002FCC2A /* Decoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 				11221BA920A35B22003888E2 /* Objects */,
 				11221BBE20A36D6E003888E2 /* NetworkService.swift */,
 				11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */,
+				11BB151120A7985B002FCC2A /* Decoders.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -685,6 +691,7 @@
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
+				11BB151220A7985B002FCC2A /* Decoders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +701,7 @@
 			files = (
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
+				11BB151320A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11BB14D120A640EE002FCC2A /* ProjectSynchronizer.swift in Sources */,
@@ -730,6 +738,7 @@
 				11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11BB151420A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
@@ -755,6 +764,7 @@
 				11BB14D820A64106002FCC2A /* Synchronizer.swift in Sources */,
 				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11BB151520A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
