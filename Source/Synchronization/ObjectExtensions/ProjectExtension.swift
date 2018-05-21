@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-extension Project: Synchronizable {
+extension Project: Updatable {
     func isEqual(to remote: RemoteObject) -> Bool {
         guard let project = remote as? RemoteProject else {
             fatalError("Passed object of wrong type")

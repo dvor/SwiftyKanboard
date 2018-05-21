@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetAllTasksRequest: AbstractRequest {
+class GetAllTasksRequest: DownloadRequest {
     let id = RequestIdFactory.next()
     let method = "getAllTasks"
     let parameters: [String:String]?

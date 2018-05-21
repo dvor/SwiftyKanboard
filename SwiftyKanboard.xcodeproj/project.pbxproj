@@ -19,6 +19,26 @@
 		11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		1189D0AF20B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
+		1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
+		1189D0B120B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
+		1189D0B220B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
+		1189D0B420B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
+		1189D0B520B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
+		1189D0B620B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
+		1189D0B720B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
+		1189D0B920B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
+		1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
+		1189D0BB20B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
+		1189D0BC20B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
+		1189D0BE20B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
+		1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
+		1189D0C020B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
+		1189D0C120B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
+		1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
+		1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
+		1189D0C620B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
+		1189D0C720B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
 		11B7B67420A895030039716E /* GetAllTasksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67320A895030039716E /* GetAllTasksRequest.swift */; };
 		11B7B67520A895070039716E /* GetAllTasksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67320A895030039716E /* GetAllTasksRequest.swift */; };
 		11B7B67620A895070039716E /* GetAllTasksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67320A895030039716E /* GetAllTasksRequest.swift */; };
@@ -81,6 +101,20 @@
 		11B7B6C820B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
 		11B7B6CB20B3043E0039716E /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */; };
 		11B7B6CC20B3043E0039716E /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */; };
+		11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
+		11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
+		11B7B6D020B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
+		11B7B6D120B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
+		11B7B6D320B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
+		11B7B6D420B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
+		11B7B6D520B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
+		11B7B6D620B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
+		11B7B6D920B360000039716E /* MacSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D820B360000039716E /* MacSynchronizationStrategy.swift */; };
+		11B7B6DA20B360000039716E /* MacSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D820B360000039716E /* MacSynchronizationStrategy.swift */; };
+		11B7B6E120B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
+		11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
+		11B7B6E320B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
+		11B7B6E420B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
 		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
@@ -97,14 +131,10 @@
 		11BB14C620A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
 		11BB14C720A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
 		11BB14C820A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
-		11BB14CB20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */; };
-		11BB14CC20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */; };
-		11BB14CD20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */; };
-		11BB14CE20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */; };
-		11BB14D520A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
-		11BB14D620A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
-		11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
-		11BB14D820A64106002FCC2A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* Synchronizer.swift */; };
+		11BB14D520A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
+		11BB14D620A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
+		11BB14D720A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
+		11BB14D820A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
 		11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D920A6422C002FCC2A /* RemoteObject.swift */; };
 		11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D920A6422C002FCC2A /* RemoteObject.swift */; };
 		11BB14DC20A6422C002FCC2A /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D920A6422C002FCC2A /* RemoteObject.swift */; };
@@ -198,6 +228,11 @@
 		11221BB920A36D01003888E2 /* RemoteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProject.swift; sourceTree = "<group>"; };
 		11221BBE20A36D6E003888E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		11221BCE20A3A123003888E2 /* AbstractRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
+		1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDownloadManager.swift; sourceTree = "<group>"; };
+		1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUploadManager.swift; sourceTree = "<group>"; };
+		1189D0B820B4372A005BA02D /* DownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadRequest.swift; sourceTree = "<group>"; };
+		1189D0BD20B4372F005BA02D /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
+		1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSettingsDownloadManager.swift; sourceTree = "<group>"; };
 		11B7B67320A895030039716E /* GetAllTasksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTasksRequest.swift; sourceTree = "<group>"; };
 		11B7B67820A895420039716E /* RemoteTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTask.swift; sourceTree = "<group>"; };
 		11B7B67D20A8954B0039716E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -218,13 +253,16 @@
 		11B7B6C120B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDefaultTaskColorsRequestTest.swift; sourceTree = "<group>"; };
 		11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColorExtension.swift; sourceTree = "<group>"; };
 		11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
+		11B7B6CD20B35FC50039716E /* SynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
+		11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationStrategy.swift; sourceTree = "<group>"; };
+		11B7B6D820B360000039716E /* MacSynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSynchronizationStrategy.swift; sourceTree = "<group>"; };
+		11B7B6E020B378CA0039716E /* RequestsQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsQueue.swift; sourceTree = "<group>"; };
 		11BB149520A44D89002FCC2A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		11BB149A20A44F39002FCC2A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11BB14B920A45360002FCC2A /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		11BB14C420A4AB94002FCC2A /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSyncManager.swift; sourceTree = "<group>"; };
-		11BB14D420A64106002FCC2A /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
+		11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUpdater.swift; sourceTree = "<group>"; };
 		11BB14D920A6422C002FCC2A /* RemoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteObject.swift; sourceTree = "<group>"; };
 		11BB14DF20A6539B002FCC2A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestIdFactory.swift; sourceTree = "<group>"; };
@@ -349,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				11221BCE20A3A123003888E2 /* AbstractRequest.swift */,
+				1189D0B820B4372A005BA02D /* DownloadRequest.swift */,
 				11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */,
 				11B7B67320A895030039716E /* GetAllTasksRequest.swift */,
 				11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */,
@@ -356,8 +395,19 @@
 				11B7B69320A8A7030039716E /* GetProjectActivityRequest.swift */,
 				11B7B68B20A8A4660039716E /* GetProjectByIdRequest.swift */,
 				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
+				1189D0BD20B4372F005BA02D /* UploadRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		1189D0C220B44503005BA02D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */,
+				1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */,
+				1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		11B7B6C920B304220039716E /* Extensions */ = {
@@ -366,6 +416,14 @@
 				11B7B6CA20B3043E0039716E /* NSColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11B7B6D720B35FF10039716E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B6D820B360000039716E /* MacSynchronizationStrategy.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		11BB149F20A44FAA002FCC2A /* Controllers */ = {
@@ -416,9 +474,12 @@
 		11BB14C920A4ACEC002FCC2A /* Synchronization */ = {
 			isa = PBXGroup;
 			children = (
+				1189D0C220B44503005BA02D /* Managers */,
 				11BB154B20A85A53002FCC2A /* ObjectExtensions */,
-				11BB154420A857D2002FCC2A /* Synchronizers */,
-				11BB14CA20A4AD18002FCC2A /* ProjectSyncManager.swift */,
+				11B7B6CD20B35FC50039716E /* SynchronizationService.swift */,
+				11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */,
+				11B7B6E020B378CA0039716E /* RequestsQueue.swift */,
+				11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */,
 			);
 			path = Synchronization;
 			sourceTree = "<group>";
@@ -459,14 +520,6 @@
 				11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		11BB154420A857D2002FCC2A /* Synchronizers */ = {
-			isa = PBXGroup;
-			children = (
-				11BB14D420A64106002FCC2A /* Synchronizer.swift */,
-			);
-			path = Synchronizers;
 			sourceTree = "<group>";
 		};
 		11BB154B20A85A53002FCC2A /* ObjectExtensions */ = {
@@ -531,6 +584,7 @@
 		11F85F3820A3018B0060536B /* Kanboard macOS */ = {
 			isa = PBXGroup;
 			children = (
+				11B7B6D720B35FF10039716E /* Classes */,
 				11BB149F20A44FAA002FCC2A /* Controllers */,
 				11BB14A020A44FB0002FCC2A /* Default */,
 				11B7B6C920B304220039716E /* Extensions */,
@@ -865,6 +919,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1189D0B420B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
+				11B7B6D320B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
 				11B7B68420A8956F0039716E /* TaskExtension.swift in Sources */,
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
@@ -875,28 +931,33 @@
 				11B7B69920A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				11B7B67420A895030039716E /* GetAllTasksRequest.swift in Sources */,
 				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
+				11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11F85F1820A301750060536B /* ViewController.swift in Sources */,
+				1189D0BE20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
+				11B7B6E120B378CA0039716E /* RequestsQueue.swift in Sources */,
 				11B7B6BD20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11B7B6C520B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
 				11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11B7B67E20A8954B0039716E /* Task.swift in Sources */,
 				11B7B6B320B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11B7B68C20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B6B820B2E3870039716E /* TaskColor.swift in Sources */,
-				11BB14D520A64106002FCC2A /* Synchronizer.swift in Sources */,
-				11BB14CB20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
+				11BB14D520A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B67920A895420039716E /* RemoteTask.swift in Sources */,
 				11BB14C520A4AB94002FCC2A /* Project.swift in Sources */,
+				1189D0B920B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11BB151220A7985B002FCC2A /* Decoders.swift in Sources */,
+				1189D0AF20B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
 				11B7B69420A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -910,6 +971,7 @@
 				11BB151320A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
+				11B7B6D420B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
 				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
@@ -917,6 +979,7 @@
 				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B67A20A895420039716E /* RemoteTask.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
+				1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
@@ -925,17 +988,21 @@
 				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
+				1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
+				11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */,
 				11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
+				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11BB152320A84708002FCC2A /* Column.swift in Sources */,
-				11BB14CC20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
+				11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */,
 				11B7B68920A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11B7B67520A895070039716E /* GetAllTasksRequest.swift in Sources */,
+				1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
 				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
-				11BB14D620A64106002FCC2A /* Synchronizer.swift in Sources */,
+				11BB14D620A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
 				11B7B68D20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
@@ -943,6 +1010,7 @@
 				11B7B67F20A8954B0039716E /* Task.swift in Sources */,
 				11B7B69120A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */,
 				11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
+				1189D0B520B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,15 +1021,19 @@
 				11BB14DC20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11B7B6AE20ACEECB0039716E /* MainWindowController.swift in Sources */,
 				11B7B6A120A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
+				1189D0B620B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11BB14CD20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
 				11B7B6BF20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11F85F3A20A3018B0060536B /* AppDelegate.swift in Sources */,
 				11B7B68E20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11BB154F20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
+				1189D0C020B4372F005BA02D /* UploadRequest.swift in Sources */,
+				1189D0BB20B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11B7B6B520B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
+				11B7B6E320B378CA0039716E /* RequestsQueue.swift in Sources */,
+				11B7B6D520B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
 				11B7B67B20A895420039716E /* RemoteTask.swift in Sources */,
 				11BB14F620A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11B7B6C720B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
@@ -975,8 +1047,9 @@
 				11B7B69B20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				11B7B68620A8956F0039716E /* TaskExtension.swift in Sources */,
 				11221BBC20A36D01003888E2 /* RemoteProject.swift in Sources */,
-				11BB14D720A64106002FCC2A /* Synchronizer.swift in Sources */,
+				11BB14D720A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				1189D0C620B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
 				11B7B6A720AB56490039716E /* BoardCollectionViewLayout.swift in Sources */,
 				11BB151420A7985B002FCC2A /* Decoders.swift in Sources */,
@@ -984,10 +1057,13 @@
 				11B7B69E20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */,
 				11B7B67620A895070039716E /* GetAllTasksRequest.swift in Sources */,
 				11BB14B720A45354002FCC2A /* LoginViewController.swift in Sources */,
+				11B7B6D020B35FC50039716E /* SynchronizationService.swift in Sources */,
+				1189D0B120B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
 				11BB152920A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB155420A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB151E20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11B7B68020A8954B0039716E /* Task.swift in Sources */,
+				11B7B6D920B360000039716E /* MacSynchronizationStrategy.swift in Sources */,
 				11BB14F120A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,13 +1077,15 @@
 				11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11B7B67C20A895420039716E /* RemoteTask.swift in Sources */,
 				11BB14E320A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11BB14CE20A4AD18002FCC2A /* ProjectSyncManager.swift in Sources */,
+				11B7B6D120B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11B7B6AF20ACEECB0039716E /* MainWindowController.swift in Sources */,
+				1189D0B220B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
 				11B7B69720A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
 				11F85F4B20A3018C0060536B /* Kanboard_macOSTests.swift in Sources */,
 				11B7B6A820AB56490039716E /* BoardCollectionViewLayout.swift in Sources */,
 				11BB149E20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14F720A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
+				1189D0C720B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB14C820A4AB94002FCC2A /* Project.swift in Sources */,
 				11BB152F20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11B7B6C820B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
@@ -1020,23 +1098,29 @@
 				11BB14E820A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11B7B6BB20B2E3870039716E /* TaskColor.swift in Sources */,
 				11221BBD20A36D01003888E2 /* RemoteProject.swift in Sources */,
-				11BB14D820A64106002FCC2A /* Synchronizer.swift in Sources */,
+				11BB14D820A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
 				11BB149920A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11BB14BB20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				1189D0BC20B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11B7B6A220A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
 				11B7B69220A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */,
 				11BB151520A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11B7B69F20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */,
+				11B7B6DA20B360000039716E /* MacSynchronizationStrategy.swift in Sources */,
 				11B7B68120A8954B0039716E /* Task.swift in Sources */,
 				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,
+				1189D0B720B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
+				11B7B6E420B378CA0039716E /* RequestsQueue.swift in Sources */,
+				1189D0C120B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11BB155020A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB153D20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11BB151F20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
 				11B7B6C320B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */,
 				11BB153A20A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
+				11B7B6D620B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11B7B68F20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B68A20A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,

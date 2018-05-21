@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Column: Synchronizable {
+extension Column: Updatable {
     func isEqual(to remote: RemoteObject) -> Bool {
         guard let column = remote as? RemoteColumn else {
             fatalError("Passed object of wrong type")

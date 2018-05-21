@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetColumnsRequest: AbstractRequest {
+class GetColumnsRequest: DownloadRequest {
     let id = RequestIdFactory.next()
     let method = "getColumns"
     let parameters: [String:String]?

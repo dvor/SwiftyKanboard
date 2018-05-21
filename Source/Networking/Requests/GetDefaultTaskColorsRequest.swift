@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetDefaultTaskColorsRequest: AbstractRequest {
+class GetDefaultTaskColorsRequest: DownloadRequest {
     let id = RequestIdFactory.next()
     let method = "getDefaultTaskColors"
     let parameters: [String:String]? = nil

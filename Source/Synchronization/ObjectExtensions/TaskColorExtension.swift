@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension TaskColor: Synchronizable {
+extension TaskColor: Updatable {
     func isEqual(to remote: RemoteObject) -> Bool {
         guard let color = remote as? RemoteTaskColor else {
             fatalError("Passed object of wrong type")

@@ -11,28 +11,33 @@ import SnapKit
 class RunningViewController: NSViewController {
     let projectId = "3"
 
-    private let syncManager: ProjectSyncManager?
+    private let synchronizationService: SynchronizationService?
     private var collectionViewDataSource: BoardCollectionViewDataSource!
 
     private var scrollView: NSScrollView!
     private var collectionView: NSCollectionView!
 
     init() {
-        var syncManager: ProjectSyncManager? = nil
+        var synchronizationService: SynchronizationService? = nil
 
         do {
-            syncManager = try ProjectSyncManager(projectId: projectId)
+            let keychain = KeychainManager()
+
+            synchronizationService = try SynchronizationService(projectIds: [projectId],
+                                                                strategy: MacSynchronizationStrategy(),
+                                                                baseURL: URL(string: keychain.baseURL!)!,
+                                                                userName: keychain.userName!,
+                                                                apiToken: keychain.apiToken!)
         } catch let error as NSError {
             let alert = NSAlert(error: error)
             alert.runModal()
         }
 
-        self.syncManager = syncManager
+        self.synchronizationService = synchronizationService
 
         super.init(nibName: nil, bundle: nil)
 
-        syncManager?.delegate = self
-        syncManager?.start()
+        synchronizationService?.startSynchronization()
     }
 
     required init?(coder: NSCoder) {
@@ -50,12 +55,6 @@ class RunningViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         addEvents()
-    }
-}
-
-extension RunningViewController: ProjectSyncManagerDelegate {
-    func userWasLoggedOut() {
-        log("Logout")
     }
 }
 

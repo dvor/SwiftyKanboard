@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetVersionRequest: AbstractRequest {
+class GetVersionRequest: DownloadRequest {
     let id = RequestIdFactory.next()
     let method = "getVersion"
     let parameters: [String:String]? = nil

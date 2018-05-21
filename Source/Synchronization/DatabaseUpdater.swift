@@ -1,5 +1,5 @@
 //
-//  Synchronizer.swift
+//  DatabaseUpdater.swift
 //  SwiftyKanboard
 //
 //  Created by Dmytro Vorobiov on 11/05/2018.
@@ -8,27 +8,27 @@
 import Foundation
 import RealmSwift
 
-protocol Synchronizable {
+protocol Updatable {
     var id: String { get set }
     func isEqual(to remote: RemoteObject) -> Bool
     func update(with remote: RemoteObject)
 }
 
-enum SynchronizerResult {
+enum DatabaseUpdaterResult {
     case internalError
     case unchanged
     case created
     case updated
 }
 
-class Synchronizer<RemoteType: RemoteObject, LocalType: Object & Synchronizable> {
+class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
     private let realm: Realm
 
     init(realm: Realm) {
         self.realm = realm
     }
 
-    func updateDatabase(with remote: RemoteType) -> SynchronizerResult {
+    func updateDatabase(with remote: RemoteType) -> DatabaseUpdaterResult {
         let predicate = NSPredicate(format: "id = %@", remote.id)
         let locals = realm.objects(LocalType.self).filter(predicate)
 
@@ -53,7 +53,7 @@ class Synchronizer<RemoteType: RemoteObject, LocalType: Object & Synchronizable>
     }
 }
 
-private extension Synchronizer {
+private extension DatabaseUpdater {
     func createLocal(from remote: RemoteType) throws {
         var local = LocalType()
         local.id = remote.id

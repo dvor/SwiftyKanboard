@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetAllProjectsRequest: AbstractRequest {
+class GetAllProjectsRequest: DownloadRequest {
     let id = RequestIdFactory.next()
     let method = "getAllProjects"
     let parameters: [String:String]? = nil

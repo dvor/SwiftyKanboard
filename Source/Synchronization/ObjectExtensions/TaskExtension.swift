@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Task: Synchronizable {
+extension Task: Updatable {
     func isEqual(to remote: RemoteObject) -> Bool {
         guard let task = remote as? RemoteTask else {
             fatalError("Passed object of wrong type")
