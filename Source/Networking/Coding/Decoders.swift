@@ -43,7 +43,7 @@ class ArrayDecoder<Element>: Sequence {
     }
 }
 
-class DictionaryDecoder {
+class DictionaryDecoder: Sequence {
     private let dict: [String:Any]
 
     init(_ object: Any) throws {
@@ -137,5 +137,9 @@ class DictionaryDecoder {
         }
 
         return Date(timeIntervalSince1970: interval)
+    }
+
+    func makeIterator() -> Dictionary<String,Any>.Iterator {
+        return dict.makeIterator()
     }
 }
