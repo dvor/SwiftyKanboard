@@ -17,6 +17,17 @@ class GenericSettingsDownloadManager {
         self.downloadQueue = downloadQueue
     }
 
+    func areRequiredSettingsSynchronized() -> Bool {
+        let realm = try! Realm.default()
+
+        // For now we require only colors to be synced.
+        return realm.objects(TaskColor.self).count > 0
+    }
+
+    func synchronizeRequiredSettings(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
+        updateTaskColors(completion: completion, failure: failure)
+    }
+
     func start() {
         updateSettings()
     }
@@ -24,6 +35,10 @@ class GenericSettingsDownloadManager {
 
 private extension GenericSettingsDownloadManager {
     func updateSettings() {
+        updateTaskColors(completion: nil, failure: nil)
+    }
+
+    func updateTaskColors(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
         let request = GetDefaultTaskColorsRequest(completion: { colors in
             let realm = try! Realm.default()
 
@@ -31,7 +46,12 @@ private extension GenericSettingsDownloadManager {
             for color in colors {
                 _ = updater.updateDatabase(with: color)
             }
-        }, failure: { _ in})
+
+            completion?()
+        },
+        failure: { error in
+            failure?(error)
+        })
 
         downloadQueue.add(downloadRequest: request, isConcurent: true)
     }

@@ -17,6 +17,8 @@ class SynchronizationService {
     private let projectDownloadManagers: [ProjectDownloadManager]
     private let projectUploadManagers: [ProjectUploadManager]
 
+    private var isRunning = false
+
     init(projectIds: [String],
          strategy: SynchronizationStrategy,
          baseURL: URL,
@@ -40,11 +42,23 @@ class SynchronizationService {
         self.projectUploadManagers = projectIds.map{ ProjectUploadManager(strategy: strategy, projectId: $0, uploadQueue: requestsQueue) }
     }
 
+    /// Check whether settings required to run the app were already synced.
+    func areRequiredSettingsSynchronized() -> Bool {
+        return genericSettingsDownloadManager.areRequiredSettingsSynchronized()
+    }
+
+    func synchronizeRequiredSettings(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
+        genericSettingsDownloadManager.synchronizeRequiredSettings(completion: completion, failure: failure)
+        requestsQueue.start()
+    }
+
+    /// Start synchronization of projects and their components.
     func startSynchronization() {
         serviceQueue.async { [weak self] in
             guard let `self` = self else { return }
 
-            if self.requestsQueue.isRunning { return }
+            if self.isRunning { return }
+            self.isRunning = true
 
             self.genericSettingsDownloadManager.start()
             self.projectDownloadManagers.forEach{ $0.start() }

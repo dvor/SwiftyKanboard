@@ -25,7 +25,7 @@ class RequestsQueue: DownloadRequestsQueue, UploadRequestsQueue {
     private let strategy: SynchronizationStrategy
     private let queue: DispatchQueue
 
-    private(set) var isRunning = false
+    private var isRunning = false
     private var downloadQueue = [DownloadRequestContainer]()
     private var uploadQueue = [UploadRequest]()
 
@@ -35,6 +35,7 @@ class RequestsQueue: DownloadRequestsQueue, UploadRequestsQueue {
         self.queue = queue
     }
 
+    /// Start queue if it was not started yet.
     func start() {
         if isRunning { return }
         isRunning = true
