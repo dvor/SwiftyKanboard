@@ -7,16 +7,16 @@
 
 import Foundation
 
-class GetVersionRequest: DownloadRequest {
-    let id = RequestIdFactory.next()
+class GetVersionRequest: BaseRequest, DownloadRequest {
     let method = "getVersion"
     let parameters: [String:String]? = nil
 
     private let completion: (String) -> Void
     private var response: String?
 
-    required init(completion: @escaping (String) -> Void) {
+    required init(completion: @escaping (String) -> Void, failure: @escaping (NetworkServiceError) -> Void) {
         self.completion = completion
+        super.init(failure: failure)
     }
 
     func parse(_ result: Any) throws {

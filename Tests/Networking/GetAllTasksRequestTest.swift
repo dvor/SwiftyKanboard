@@ -96,7 +96,7 @@ class GetAllTasksRequestTest: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Completion called")
 
-        let request = GetAllTasksRequest(projectId: "1", active: true) { tasks in
+        let request = GetAllTasksRequest(projectId: "1", active: true, completion: { tasks in
             XCTAssertEqual(tasks.count, 2)
 
             let t0 = tasks[0]
@@ -152,7 +152,7 @@ class GetAllTasksRequestTest: XCTestCase {
             XCTAssertEqual(t1.completedDate, Date(timeIntervalSince1970: 1409962117))
 
             expectation.fulfill()
-        }
+        }, failure: { _ in })
 
         let jsonObject = try! JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: [])
 

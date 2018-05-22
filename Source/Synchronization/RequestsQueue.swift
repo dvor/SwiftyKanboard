@@ -43,7 +43,9 @@ class RequestsQueue: DownloadRequestsQueue, UploadRequestsQueue {
     }
 
     func add(downloadRequest: DownloadRequest, isConcurent: Bool) {
-        downloadQueue.append(DownloadRequestContainer(request: downloadRequest, isConcurent: isConcurent))
+        // FIXME Concurent requests are disabled due to bug in Kanboard
+        // See https://github.com/kanboard/kanboard/issues/3879
+        downloadQueue.append(DownloadRequestContainer(request: downloadRequest, isConcurent: false))
     }
 
     func add(uploadRequest: UploadRequest) {

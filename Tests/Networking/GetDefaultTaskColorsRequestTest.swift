@@ -26,7 +26,7 @@ class GetDefaultTaskColorsRequestTest: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Completion called")
 
-        let request = GetDefaultTaskColorsRequest() { colors in
+        let request = GetDefaultTaskColorsRequest(completion: { colors in
             XCTAssertEqual(colors.count, 2)
 
             let c0 = colors[0]
@@ -50,7 +50,7 @@ class GetDefaultTaskColorsRequestTest: XCTestCase {
             XCTAssertEqual(c1.borderBlue, 0.1764, accuracy: 0.001)
 
             expectation.fulfill()
-        }
+        }, failure: { _ in })
 
         let jsonObject = try! JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: [])
 

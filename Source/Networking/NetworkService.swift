@@ -8,7 +8,10 @@
 import Foundation
 
 enum NetworkServiceError: Error {
+    case cannotEncodeJson(Error)
+    case networkError(Error)
     case noDataReturned
+    case cannotParseJson(Error)
 }
 
 class NetworkService {
@@ -31,7 +34,7 @@ class NetworkService {
         self.session = URLSession(configuration: configuration)
     }
 
-    func batch(_ requests: [AbstractRequest], completion: (() -> Void)?, failure: ((Error) -> Void)?) {
+    func batch(_ requests: [AbstractRequest], completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
         log("Batch requests: \(requests)")
 
         var urlRequest = URLRequest(url: requestURL)
@@ -41,7 +44,7 @@ class NetworkService {
             urlRequest.httpBody = try JSONRPCEncoder.encodeRPCRequests(requests)
         }
         catch let error {
-            safeFailure(failure, error)
+            globalFail(requests: requests, failureBlock: failure, with: .cannotEncodeJson(error))
             return
         }
 
@@ -62,9 +65,13 @@ class NetworkService {
 }
 
 private extension NetworkService {
-    func safeFailure(_ failure: ((Error) -> Void)?, _ error: Error) {
+    func globalFail(requests: [AbstractRequest], failureBlock: ((NetworkServiceError) -> Void)?, with error: NetworkServiceError) {
         delegateQueue.async {
-            failure?(error)
+            for request in requests {
+                request.failure(error)
+            }
+
+            failureBlock?(error)
         }
     }
 
@@ -73,46 +80,60 @@ private extension NetworkService {
                      error: Error?,
                      for requests: [AbstractRequest],
                      completion: (() -> Void)?,
-                     failure: ((Error) -> Void)?) {
+                     failure: ((NetworkServiceError) -> Void)?) {
         if let error = error {
-            safeFailure(failure, error)
+            globalFail(requests: requests, failureBlock: failure, with: .networkError(error))
             return
         }
 
         guard let data = data else {
-            safeFailure(failure, NetworkServiceError.noDataReturned)
+            globalFail(requests: requests, failureBlock: failure, with: .noDataReturned)
             return
         }
 
-        let jsonObject: Any
+        var responses = [Int:DictionaryDecoder]()
         do {
-            jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-            try parse(jsonObject: jsonObject, for: requests)
+            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+            let array = try ArrayDecoder<Any>(jsonObject)
+
+            for object in array {
+                let dict = try DictionaryDecoder(object)
+                let id: Int = try dict.value(forKey: "id")
+
+                responses[id] = dict
+            }
         }
         catch let error {
-            safeFailure(failure, error)
+            globalFail(requests: requests, failureBlock: failure, with: .cannotParseJson(error))
             return
         }
 
+        parse(responses: responses, for: requests)
+
         delegateQueue.async {
-            requests.forEach { $0.finish() }
             completion?()
         }
     }
 
-    func parse(jsonObject: Any, for requests: [AbstractRequest]) throws {
-        let array = try ArrayDecoder<Any>(jsonObject)
-
-        for object in array {
-            let dict = try DictionaryDecoder(object)
-
-            let id: Int = try dict.value(forKey: "id")
-            let result: Any = try dict.value(forKey: "result")
+    func parse(responses: [Int:DictionaryDecoder], for requests: [AbstractRequest]) {
+        for (id, dict) in responses {
             guard let request = requests.filter({ $0.id == id }).first else {
-                throw DecoderError.badType
+                continue
             }
 
-            try request.parse(result)
+            do {
+                let result: Any = try dict.value(forKey: "result")
+                try request.parse(result)
+
+                delegateQueue.async {
+                    request.finish()
+                }
+            }
+            catch let error {
+                delegateQueue.async {
+                    request.failure(.cannotParseJson(error))
+                }
+            }
         }
     }
 }

@@ -13,5 +13,16 @@ protocol AbstractRequest: JSONRPCEncodable {
 
     /// Finish request by notifying user about result.
     func finish()
+
+    /// Block notifying user about request failure
+    var failure: (NetworkServiceError) -> Void { get }
 }
 
+class BaseRequest {
+    let id = RequestIdFactory.next()
+    let failure: (NetworkServiceError) -> Void
+
+    init(failure: @escaping (NetworkServiceError) -> Void) {
+        self.failure = failure
+    }
+}

@@ -7,19 +7,19 @@
 
 import Foundation
 
-class GetProjectActivityRequest: DownloadRequest {
-    let id = RequestIdFactory.next()
+class GetProjectActivityRequest: BaseRequest, DownloadRequest {
     let method = "getProjectActivity"
     let parameters: [String:String]?
 
     private let completion: ([RemoteProjectActivity]) -> Void
     private var response: [RemoteProjectActivity]?
 
-    required init(projectId: String, completion: @escaping ([RemoteProjectActivity]) -> Void) {
+    required init(projectId: String, completion: @escaping ([RemoteProjectActivity]) -> Void, failure: @escaping (NetworkServiceError) -> Void) {
         self.parameters = [
             "project_id" : projectId
         ]
         self.completion = completion
+        super.init(failure: failure)
     }
 
     func parse(_ result: Any) throws {

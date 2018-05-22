@@ -37,7 +37,7 @@ class GetColumnsRequestTest: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Completion called")
 
-        let request = GetColumnsRequest(projectId: "1") { columns in
+        let request = GetColumnsRequest(projectId: "1", completion: { columns in
             XCTAssertEqual(columns.count, 3)
 
             let c0 = columns[0]
@@ -62,7 +62,7 @@ class GetColumnsRequestTest: XCTestCase {
             XCTAssertEqual(c2.taskLimit, 0)
 
             expectation.fulfill()
-        }
+        }, failure: { _ in })
 
         let jsonObject = try! JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: [])
 

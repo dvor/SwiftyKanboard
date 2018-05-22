@@ -13,11 +13,11 @@ class GetVersionRequestTest: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Completion called")
 
-        let request = GetVersionRequest() { version in
+        let request = GetVersionRequest(completion: { version in
             XCTAssertEqual(version, "1.0.13")
 
             expectation.fulfill()
-        }
+        }, failure: { _ in })
 
         try! request.parse(json)
         request.finish()

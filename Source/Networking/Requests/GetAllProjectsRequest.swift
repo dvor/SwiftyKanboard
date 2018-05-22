@@ -7,16 +7,16 @@
 
 import Foundation
 
-class GetAllProjectsRequest: DownloadRequest {
-    let id = RequestIdFactory.next()
+class GetAllProjectsRequest: BaseRequest, DownloadRequest {
     let method = "getAllProjects"
     let parameters: [String:String]? = nil
 
     private let completion: ([RemoteProject]) -> Void
     private var response: [RemoteProject]?
 
-    required init(completion: @escaping ([RemoteProject]) -> Void) {
+    required init(completion: @escaping ([RemoteProject]) -> Void, failure: @escaping (NetworkServiceError) -> Void) {
         self.completion = completion
+        super.init(failure: failure)
     }
 
     func parse(_ result: Any) throws {

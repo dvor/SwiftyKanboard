@@ -24,14 +24,14 @@ class GenericSettingsDownloadManager {
 
 private extension GenericSettingsDownloadManager {
     func updateSettings() {
-        let request = GetDefaultTaskColorsRequest() { colors in
+        let request = GetDefaultTaskColorsRequest(completion: { colors in
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteTaskColor, TaskColor> = DatabaseUpdater(realm: realm)
             for color in colors {
                 _ = updater.updateDatabase(with: color)
             }
-        }
+        }, failure: { _ in})
 
         downloadQueue.add(downloadRequest: request, isConcurent: true)
     }

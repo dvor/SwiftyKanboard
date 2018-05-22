@@ -7,19 +7,19 @@
 
 import Foundation
 
-class GetColumnsRequest: DownloadRequest {
-    let id = RequestIdFactory.next()
+class GetColumnsRequest: BaseRequest, DownloadRequest {
     let method = "getColumns"
     let parameters: [String:String]?
 
     private let completion: ([RemoteColumn]) -> Void
     private var response: [RemoteColumn]?
 
-    required init(projectId: String, completion: @escaping ([RemoteColumn]) -> Void) {
+    required init(projectId: String, completion: @escaping ([RemoteColumn]) -> Void, failure: @escaping (NetworkServiceError) -> Void) {
         self.parameters = [
             "project_id" : projectId
         ]
         self.completion = completion
+        super.init(failure: failure)
     }
 
     func parse(_ result: Any) throws {

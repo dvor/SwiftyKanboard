@@ -7,16 +7,16 @@
 
 import Foundation
 
-class GetDefaultTaskColorsRequest: DownloadRequest {
-    let id = RequestIdFactory.next()
+class GetDefaultTaskColorsRequest: BaseRequest, DownloadRequest {
     let method = "getDefaultTaskColors"
     let parameters: [String:String]? = nil
 
     private let completion: ([RemoteTaskColor]) -> Void
     private var response: [RemoteTaskColor]?
 
-    required init(completion: @escaping ([RemoteTaskColor]) -> Void) {
+    required init(completion: @escaping ([RemoteTaskColor]) -> Void, failure: @escaping (NetworkServiceError) -> Void) {
         self.completion = completion
+        super.init(failure: failure)
     }
 
     func parse(_ result: Any) throws {
