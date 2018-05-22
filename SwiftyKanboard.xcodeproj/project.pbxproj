@@ -115,6 +115,28 @@
 		11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
 		11B7B6E320B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
 		11B7B6E420B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
+		11B7B6EB20B4CADA0039716E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6EA20B4CADA0039716E /* LoginViewController.swift */; };
+		11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6EA20B4CADA0039716E /* LoginViewController.swift */; };
+		11B7B6EE20B4CAE80039716E /* SelectProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */; };
+		11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */; };
+		11B7B6F120B4CAF00039716E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F020B4CAF00039716E /* BoardViewController.swift */; };
+		11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F020B4CAF00039716E /* BoardViewController.swift */; };
+		11B7B6F520B4CB310039716E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F420B4CB310039716E /* AppCoordinator.swift */; };
+		11B7B6F620B4CB310039716E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F420B4CB310039716E /* AppCoordinator.swift */; };
+		11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */; };
+		11B7B6F920B4CC0A0039716E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */; };
+		11B7B6FB20B4CC110039716E /* RunningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */; };
+		11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */; };
+		11B7B6FE20B4CC400039716E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FD20B4CC400039716E /* Coordinator.swift */; };
+		11B7B6FF20B4CC400039716E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FD20B4CC400039716E /* Coordinator.swift */; };
+		11B7B70420B4CE900039716E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B70320B4CE900039716E /* Localizable.strings */; };
+		11B7B70520B4CE900039716E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B70320B4CE900039716E /* Localizable.strings */; };
+		11B7B70820B4CEC60039716E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70720B4CEC60039716E /* StringExtension.swift */; };
+		11B7B70920B4CEC60039716E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70720B4CEC60039716E /* StringExtension.swift */; };
+		11B7B70C20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */; };
+		11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */; };
+		11B7B71220C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
+		11B7B71320C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
 		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
@@ -190,8 +212,6 @@
 		11BB155420A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
-		11F85F1820A301750060536B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1720A301750060536B /* ViewController.swift */; };
-		11F85F1B20A301750060536B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1920A301750060536B /* Main.storyboard */; };
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
 		11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F2A20A301770060536B /* Kanboard_iOSTests.swift */; };
@@ -257,6 +277,17 @@
 		11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizationStrategy.swift; sourceTree = "<group>"; };
 		11B7B6D820B360000039716E /* MacSynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSynchronizationStrategy.swift; sourceTree = "<group>"; };
 		11B7B6E020B378CA0039716E /* RequestsQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsQueue.swift; sourceTree = "<group>"; };
+		11B7B6EA20B4CADA0039716E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProjectViewController.swift; sourceTree = "<group>"; };
+		11B7B6F020B4CAF00039716E /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		11B7B6F420B4CB310039716E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningCoordinator.swift; sourceTree = "<group>"; };
+		11B7B6FD20B4CC400039716E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		11B7B70320B4CE900039716E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		11B7B70720B4CEC60039716E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSynchronizationStrategy.swift; sourceTree = "<group>"; };
+		11B7B71120C426520039716E /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		11BB149520A44D89002FCC2A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		11BB149A20A44F39002FCC2A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -280,8 +311,6 @@
 		11BB155120A85C47002FCC2A /* ColumnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnExtension.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11F85F1720A301750060536B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11F85F1A20A301750060536B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11F85F1C20A301760060536B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F85F1F20A301760060536B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F85F2120A301760060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -426,6 +455,56 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		11B7B6E820B4C4180039716E /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				11F85F1520A301750060536B /* AppDelegate.swift */,
+				11F85F1C20A301760060536B /* Assets.xcassets */,
+				11F85F1E20A301760060536B /* LaunchScreen.storyboard */,
+				11F85F2120A301760060536B /* Info.plist */,
+				11B7B70320B4CE900039716E /* Localizable.strings */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		11B7B6E920B4CACE0039716E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B6EA20B4CADA0039716E /* LoginViewController.swift */,
+				11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */,
+				11B7B6F020B4CAF00039716E /* BoardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11B7B6F320B4CB260039716E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B6F420B4CB310039716E /* AppCoordinator.swift */,
+				11B7B6FD20B4CC400039716E /* Coordinator.swift */,
+				11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */,
+				11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		11B7B70620B4CEB90039716E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B70720B4CEC60039716E /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11B7B70A20C420F60039716E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */,
+				11B7B71120C426520039716E /* ProgressHUD.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		11BB149F20A44FAA002FCC2A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,12 +641,11 @@
 		11F85F1420A301750060536B /* Kanboard iOS */ = {
 			isa = PBXGroup;
 			children = (
-				11F85F1520A301750060536B /* AppDelegate.swift */,
-				11F85F1720A301750060536B /* ViewController.swift */,
-				11F85F1920A301750060536B /* Main.storyboard */,
-				11F85F1C20A301760060536B /* Assets.xcassets */,
-				11F85F1E20A301760060536B /* LaunchScreen.storyboard */,
-				11F85F2120A301760060536B /* Info.plist */,
+				11B7B70A20C420F60039716E /* Classes */,
+				11B7B6E920B4CACE0039716E /* Controllers */,
+				11B7B6F320B4CB260039716E /* Coordinator */,
+				11B7B6E820B4C4180039716E /* Default */,
+				11B7B70620B4CEB90039716E /* Extensions */,
 			);
 			path = "Kanboard iOS";
 			sourceTree = "<group>";
@@ -763,8 +841,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */,
+				11B7B70420B4CE900039716E /* Localizable.strings in Resources */,
 				11F85F1D20A301760060536B /* Assets.xcassets in Resources */,
-				11F85F1B20A301750060536B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +850,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B7B70520B4CE900039716E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +960,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm-iOS/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
@@ -888,6 +968,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -928,6 +1009,8 @@
 				11B7B68420A8956F0039716E /* TaskExtension.swift in Sources */,
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
+				11B7B70820B4CEC60039716E /* StringExtension.swift in Sources */,
+				11B7B6F520B4CB310039716E /* AppCoordinator.swift in Sources */,
 				11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11BB155220A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11BB151C20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
@@ -937,27 +1020,34 @@
 				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
-				11F85F1820A301750060536B /* ViewController.swift in Sources */,
 				1189D0BE20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
 				11B7B6E120B378CA0039716E /* RequestsQueue.swift in Sources */,
+				11B7B6FB20B4CC110039716E /* RunningCoordinator.swift in Sources */,
 				11B7B6BD20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11B7B6C520B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
+				11B7B70C20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */,
 				11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11B7B67E20A8954B0039716E /* Task.swift in Sources */,
 				11B7B6B320B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
+				11B7B71220C426520039716E /* ProgressHUD.swift in Sources */,
 				1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
 				11B7B68C20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B6B820B2E3870039716E /* TaskColor.swift in Sources */,
+				11B7B6EE20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
 				11BB14D520A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
+				11B7B6EB20B4CADA0039716E /* LoginViewController.swift in Sources */,
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B67920A895420039716E /* RemoteTask.swift in Sources */,
 				11BB14C520A4AB94002FCC2A /* Project.swift in Sources */,
 				1189D0B920B4372A005BA02D /* DownloadRequest.swift in Sources */,
+				11B7B6F120B4CAF00039716E /* BoardViewController.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
+				11B7B6FE20B4CC400039716E /* Coordinator.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				11BB151220A7985B002FCC2A /* Decoders.swift in Sources */,
@@ -980,7 +1070,9 @@
 				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
 				11B7B69520A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
+				11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */,
 				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
+				11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */,
 				11B7B67A20A895420039716E /* RemoteTask.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
 				1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */,
@@ -989,6 +1081,7 @@
 				11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
 				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
+				11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
 				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
@@ -996,12 +1089,16 @@
 				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */,
 				11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
+				11B7B6FF20B4CC400039716E /* Coordinator.swift in Sources */,
+				11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */,
 				11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
+				11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */,
 				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11BB152320A84708002FCC2A /* Column.swift in Sources */,
 				11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */,
 				11B7B68920A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
+				11B7B71320C426520039716E /* ProgressHUD.swift in Sources */,
 				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11B7B67520A895070039716E /* GetAllTasksRequest.swift in Sources */,
 				1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
@@ -1009,12 +1106,15 @@
 				11BB14D620A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
 				11B7B68D20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */,
+				11B7B6F920B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
 				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11B7B6C220B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */,
 				11B7B67F20A8954B0039716E /* Task.swift in Sources */,
+				11B7B70920B4CEC60039716E /* StringExtension.swift in Sources */,
 				11B7B69120A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */,
 				11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
 				1189D0B520B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
+				11B7B6F620B4CB310039716E /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,14 +1248,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		11F85F1920A301750060536B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11F85F1A20A301750060536B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		11F85F1E20A301760060536B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1242,9 +1334,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
+				INFOPLIST_FILE = "Kanboard iOS/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
@@ -1306,9 +1401,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Kanboard iOS/Info.plist";
+				INFOPLIST_FILE = "Kanboard iOS/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1379,7 +1477,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
@@ -1445,7 +1547,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1517,7 +1623,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Default/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1582,7 +1691,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOS/Default/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOS";
@@ -1652,7 +1764,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1718,7 +1834,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Kanboard macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.dvor.Kanboard-macOSTests";

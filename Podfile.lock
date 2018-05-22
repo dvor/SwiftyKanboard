@@ -1,4 +1,5 @@
 PODS:
+  - JGProgressHUD (2.0.3)
   - Realm (3.5.0):
     - Realm/Headers (= 3.5.0)
   - Realm/Headers (3.5.0)
@@ -8,23 +9,26 @@ PODS:
   - Willow (5.0.2)
 
 DEPENDENCIES:
+  - JGProgressHUD (~> 2.0.3)
   - RealmSwift (~> 3.5.0)
   - SnapKit (~> 4.0.0)
   - Willow (~> 5.0.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - JGProgressHUD
     - Realm
     - RealmSwift
     - SnapKit
     - Willow
 
 SPEC CHECKSUMS:
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Willow: 959c8fd6906f95c4e78c344cbaded176816d1b16
 
-PODFILE CHECKSUM: 0bac7081bc492d0fc570e02d9e241c41eb8aaae4
+PODFILE CHECKSUM: 13509c5676d67012490baa57a7f259a5b510f2f9
 
 COCOAPODS: 1.5.0

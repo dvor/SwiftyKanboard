@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  SwiftyKanboard
+
+  Created by Dmytro Vorobiov on 23/05/2018.
+  
+*/
+
+"base_url_placeholder" = "Kanboard URL";
+"user_name_placeholder" = "Username";
+"api_token_placeholder" = "API token";
+"login_button_title" = "Login";
+
+"loading_indicator_text" = "Loading...";

@@ -43,12 +43,21 @@ class SynchronizationService {
     }
 
     /// Check whether settings required to run the app were already synced.
-    func areRequiredSettingsSynchronized() -> Bool {
-        return genericSettingsDownloadManager.areRequiredSettingsSynchronized()
+    var areRequiredSettingsSynchronized: Bool {
+        get {
+            return genericSettingsDownloadManager.areRequiredSettingsSynchronized
+        }
     }
 
-    func synchronizeRequiredSettings(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
-        genericSettingsDownloadManager.synchronizeRequiredSettings(completion: completion, failure: failure)
+    func synchronizeRequiredSettings(resultQueue: DispatchQueue,
+                                     completion: (() -> Void)?,
+                                     failure: ((NetworkServiceError) -> Void)?) {
+        genericSettingsDownloadManager.synchronizeRequiredSettings(completion: {
+            resultQueue.async { completion?() }
+        }, failure: { error in
+            resultQueue.async { failure?(error) }
+        })
+
         requestsQueue.start()
     }
 

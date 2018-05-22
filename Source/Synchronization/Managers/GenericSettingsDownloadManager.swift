@@ -17,11 +17,13 @@ class GenericSettingsDownloadManager {
         self.downloadQueue = downloadQueue
     }
 
-    func areRequiredSettingsSynchronized() -> Bool {
-        let realm = try! Realm.default()
+    var areRequiredSettingsSynchronized: Bool {
+        get {
+            let realm = try! Realm.default()
 
-        // For now we require only colors to be synced.
-        return realm.objects(TaskColor.self).count > 0
+            // For now we require only colors to be synced.
+            return realm.objects(TaskColor.self).count > 0
+        }
     }
 
     func synchronizeRequiredSettings(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {

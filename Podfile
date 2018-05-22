@@ -12,6 +12,7 @@ target 'Kanboard iOS' do
   use_frameworks!
 
   common_pods
+  pod 'JGProgressHUD', '~> 2.0.3'
 
   target 'Kanboard iOSTests' do
     inherit! :search_paths
