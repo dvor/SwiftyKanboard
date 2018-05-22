@@ -16,7 +16,7 @@ class ValueDecoder<T> {
 
     init(_ object: Any) throws {
         guard let value = object as? T else {
-            log("Object \(object) doesn't match \(T.self) type")
+            log.warnMessage("Object \(object) doesn't match \(T.self) type")
             throw DecoderError.badType
         }
         self.value = value
@@ -28,7 +28,7 @@ class ArrayDecoder<Element>: Sequence {
 
     init(_ object: Any) throws {
         guard let array = object as? [Element] else {
-            log("Object is not an array: \(object)")
+            log.warnMessage("Object is not an array: \(object)")
             throw DecoderError.badType
         }
         self.array = array
@@ -48,7 +48,7 @@ class DictionaryDecoder: Sequence {
 
     init(_ object: Any) throws {
         guard let dict = object as? [String:Any] else {
-            log("Object is not a dictionary: \(object)")
+            log.warnMessage("Object is not a dictionary: \(object)")
             throw DecoderError.badType
         }
         self.dict = dict
@@ -60,7 +60,8 @@ class DictionaryDecoder: Sequence {
         }
 
         guard let value = dict[key] as? T else {
-            log("Object \(String(describing: dict[key])) for key \(key) not matching type \(T.self)")
+            let object = String(describing: dict[key])
+            log.warnMessage("Object \(object) for key \(key) not matching type \(T.self)")
             throw DecoderError.badType
         }
         return value
@@ -74,7 +75,8 @@ class DictionaryDecoder: Sequence {
         }
 
         guard let value = unknown as? T? else {
-            log("Object \(String(describing: dict[key])) for key \(key) not matching type \(T.self)")
+            let object = String(describing: dict[key])
+            log.warnMessage("Object \(object) for key \(key) not matching type \(T.self)")
             throw DecoderError.badType
         }
         return value
@@ -95,7 +97,7 @@ class DictionaryDecoder: Sequence {
         case "1":
             return true
         default:
-            log("String \(string) for key \(key) cannot be converted to bool")
+            log.warnMessage("String \(string) for key \(key) cannot be converted to bool")
             throw DecoderError.badType
         }
     }
@@ -114,7 +116,7 @@ class DictionaryDecoder: Sequence {
         let string: String = try value(forKey: key)
 
         guard let interval = TimeInterval(string) else {
-            log("String \(string) for key \(key) cannot be converted to TimeInterval")
+            log.warnMessage("String \(string) for key \(key) cannot be converted to TimeInterval")
             throw DecoderError.badType
         }
 
@@ -128,7 +130,7 @@ class DictionaryDecoder: Sequence {
         }
 
         guard let interval = TimeInterval(string) else {
-            log("String \(string) for key \(key) cannot be converted to TimeInterval")
+            log.warnMessage("String \(string) for key \(key) cannot be converted to TimeInterval")
             throw DecoderError.badType
         }
 

@@ -35,7 +35,7 @@ class BoardCollectionViewDataSource: NSObject {
             case .update:
                 self?.updateTasksByColumns()
             case .error(let error):
-                log("Cannot update columns, \(error)")
+                log.warnMessage("Cannot update columns, \(error)")
             }
         }
     }

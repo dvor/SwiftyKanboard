@@ -35,7 +35,7 @@ class NetworkService {
     }
 
     func batch(_ requests: [AbstractRequest], completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
-        log("Batch requests: \(requests)")
+        log.infoMessage("Batch requests: \(requests)")
 
         var urlRequest = URLRequest(url: requestURL)
         urlRequest.httpMethod = "POST"
@@ -50,7 +50,7 @@ class NetworkService {
 
         let task = session.dataTask(with: urlRequest) { [weak self] data, response, error in
             let statusCode = (response as? HTTPURLResponse)?.statusCode
-            log("Batch response: statusCode \(String(describing: statusCode)), error \(String(describing: error))")
+            log.infoMessage("Batch response: statusCode \(String(describing: statusCode)), error \(String(describing: error))")
 
             self?.processData(data,
                               response: response,

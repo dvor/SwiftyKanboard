@@ -134,12 +134,12 @@ private extension KeychainManager {
         }
 
         guard status == noErr else {
-            log("Error when getting keychain data for key \(key), status \(status)")
+            log.errorMessage("Error when getting keychain data for key \(key), status \(status)")
             return nil
         }
 
         guard let data = queryResult as? Data else {
-            log("Unexpected data for key \(key)")
+            log.errorMessage("Unexpected data for key \(key)")
             return nil
         }
 
@@ -159,7 +159,7 @@ private extension KeychainManager {
 
                 let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
                 guard status == noErr else {
-                    log("Error when updating keychain data for key \(key), status \(status)")
+                    log.errorMessage("Error when updating keychain data for key \(key), status \(status)")
                     return
                 }
 
@@ -168,7 +168,7 @@ private extension KeychainManager {
                 let query = genericQueryWithKey(key)
                 let status = SecItemDelete(query as CFDictionary)
                 guard status == noErr else {
-                    log("Error when updating keychain data for key \(key), status \(status)")
+                    log.errorMessage("Error when updating keychain data for key \(key), status \(status)")
                     return
                 }
 
@@ -179,7 +179,7 @@ private extension KeychainManager {
 
                 let status = SecItemAdd(query as CFDictionary, nil)
                 guard status == noErr else {
-                    log("Error when setting keychain data for key \(key), status \(status)")
+                    log.errorMessage("Error when setting keychain data for key \(key), status \(status)")
                     return
                 }
 

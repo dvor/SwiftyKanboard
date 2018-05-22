@@ -2,8 +2,9 @@ ENV['COCOAPODS_DISABLE_STATS'] = "true"
 inhibit_all_warnings!
 
 def common_pods
-    pod 'SnapKit', '~> 4.0.0'
     pod 'RealmSwift', '~> 3.5.0'
+    pod 'SnapKit', '~> 4.0.0'
+    pod 'Willow', '~> 5.0.2'
 end
 
 target 'Kanboard iOS' do

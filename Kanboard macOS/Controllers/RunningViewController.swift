@@ -115,7 +115,6 @@ private extension RunningViewController {
 
             guard let selected = self.collectionView.selectionIndexPaths.first else {
                 let path = IndexPath(item: 0, section: 0)
-                print(path)
                 self.collectionView.selectItems(at: [path], scrollPosition: [.nearestHorizontalEdge, .nearestVerticalEdge])
                 return nil
             }

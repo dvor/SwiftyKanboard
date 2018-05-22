@@ -33,7 +33,7 @@ class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
         let locals = realm.objects(LocalType.self).filter(predicate)
 
         if locals.count > 1 {
-            log("Inconsistent database: found several objects with same id \(locals)")
+            log.errorMessage("Inconsistent database: found several objects with same id \(locals)")
             return .internalError
         }
 
@@ -47,7 +47,7 @@ class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
             }
         }
         catch let error as NSError {
-            log("Cannot write to realm: \(error)")
+            log.errorMessage("Cannot write to realm: \(error)")
             return .internalError
         }
     }
@@ -59,7 +59,7 @@ private extension DatabaseUpdater {
         local.id = remote.id
         local.update(with: remote)
 
-        log("Creating new object: \(local)")
+        log.infoMessage("Creating new object: \(local)")
 
         try realm.write {
             realm.add(local)
@@ -67,10 +67,10 @@ private extension DatabaseUpdater {
     }
 
     func updateIfNeeded(_ local: LocalType, with remote: RemoteType) throws -> Bool {
-        log("Syncing object \(LocalType.self) with id \(remote.id)")
+        log.infoMessage("Syncing object \(LocalType.self) with id \(remote.id)")
 
         if local.isEqual(to: remote) {
-            log("Nothing to update")
+            log.infoMessage("Nothing to update")
             return false
         }
 
@@ -78,7 +78,7 @@ private extension DatabaseUpdater {
             local.update(with: remote)
         }
 
-        log("Updated object: \(local)")
+        log.infoMessage("Updated object: \(local)")
 
         return true
     }
