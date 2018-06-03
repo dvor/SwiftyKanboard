@@ -9,11 +9,9 @@ import Foundation
 import RealmSwift
 
 class GenericSettingsDownloadManager {
-    private let strategy: SynchronizationStrategy
     private let downloadQueue: DownloadRequestsQueue
 
-    init(strategy: SynchronizationStrategy, downloadQueue: DownloadRequestsQueue) {
-        self.strategy = strategy
+    init(downloadQueue: DownloadRequestsQueue) {
         self.downloadQueue = downloadQueue
     }
 
@@ -21,7 +19,6 @@ class GenericSettingsDownloadManager {
         get {
             let realm = try! Realm.default()
 
-            // For now we require only colors to be synced.
             return realm.objects(TaskColor.self).count > 0
         }
     }

@@ -137,6 +137,10 @@
 		11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */; };
 		11B7B71220C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
 		11B7B71320C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
+		11B7B71520C47CCE0039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
+		11B7B71620C47CCE0039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
+		11B7B71720C486370039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
+		11B7B71820C486370039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
 		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
@@ -288,6 +292,7 @@
 		11B7B70720B4CEC60039716E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSynchronizationStrategy.swift; sourceTree = "<group>"; };
 		11B7B71120C426520039716E /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		11B7B71420C47CCE0039716E /* CallbackBarrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackBarrier.swift; sourceTree = "<group>"; };
 		11BB149520A44D89002FCC2A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		11BB149A20A44F39002FCC2A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		11BB14B620A45354002FCC2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -559,6 +564,7 @@
 				11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */,
 				11B7B6E020B378CA0039716E /* RequestsQueue.swift */,
 				11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */,
+				11B7B71420C47CCE0039716E /* CallbackBarrier.swift */,
 			);
 			path = Synchronization;
 			sourceTree = "<group>";
@@ -1010,6 +1016,7 @@
 				11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11B7B70820B4CEC60039716E /* StringExtension.swift in Sources */,
+				11B7B71520C47CCE0039716E /* CallbackBarrier.swift in Sources */,
 				11B7B6F520B4CB310039716E /* AppCoordinator.swift in Sources */,
 				11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11BB155220A85C47002FCC2A /* ColumnExtension.swift in Sources */,
@@ -1108,6 +1115,7 @@
 				11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11B7B6F920B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
 				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
+				11B7B71620C47CCE0039716E /* CallbackBarrier.swift in Sources */,
 				11B7B6C220B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */,
 				11B7B67F20A8954B0039716E /* Task.swift in Sources */,
 				11B7B70920B4CEC60039716E /* StringExtension.swift in Sources */,
@@ -1126,6 +1134,7 @@
 				11B7B6AE20ACEECB0039716E /* MainWindowController.swift in Sources */,
 				11B7B6A120A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
 				1189D0B620B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
+				11B7B71720C486370039716E /* CallbackBarrier.swift in Sources */,
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B6BF20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
@@ -1228,6 +1237,7 @@
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
 				11B7B68F20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B68A20A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
+				11B7B71820C486370039716E /* CallbackBarrier.swift in Sources */,
 				11B7B6CC20B3043E0039716E /* NSColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

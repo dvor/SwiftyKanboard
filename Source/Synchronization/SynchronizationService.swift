@@ -37,28 +37,48 @@ class SynchronizationService {
         let requestsQueue = RequestsQueue(networkService: networkService, strategy: strategy, queue: serviceQueue)
 
         self.requestsQueue = requestsQueue
-        self.genericSettingsDownloadManager = GenericSettingsDownloadManager(strategy: strategy, downloadQueue: requestsQueue)
-        self.projectDownloadManagers = projectIds.map{ ProjectDownloadManager(strategy: strategy, projectId: $0, downloadQueue: requestsQueue) }
-        self.projectUploadManagers = projectIds.map{ ProjectUploadManager(strategy: strategy, projectId: $0, uploadQueue: requestsQueue) }
+        self.genericSettingsDownloadManager = GenericSettingsDownloadManager(downloadQueue: requestsQueue)
+        self.projectDownloadManagers = projectIds.map{ ProjectDownloadManager(projectId: $0, downloadQueue: requestsQueue) }
+        self.projectUploadManagers = projectIds.map{ ProjectUploadManager(projectId: $0, uploadQueue: requestsQueue) }
     }
 
     /// Check whether settings required to run the app were already synced.
     var areRequiredSettingsSynchronized: Bool {
         get {
-            return genericSettingsDownloadManager.areRequiredSettingsSynchronized
+            return genericSettingsDownloadManager.areRequiredSettingsSynchronized &&
+                   projectDownloadManagers.reduce(true, { $0 && $1.isProjectDownloaded })
         }
     }
 
     func synchronizeRequiredSettings(resultQueue: DispatchQueue,
                                      completion: (() -> Void)?,
                                      failure: ((NetworkServiceError) -> Void)?) {
-        genericSettingsDownloadManager.synchronizeRequiredSettings(completion: {
-            resultQueue.async { completion?() }
-        }, failure: { error in
-            resultQueue.async { failure?(error) }
-        })
+        serviceQueue.async { [weak self] in
+            guard let `self` = self else { return }
 
-        requestsQueue.start()
+            let generic = self.genericSettingsDownloadManager
+            let managers = self.projectDownloadManagers.filter{ !$0.isProjectDownloaded }
+
+            var blocksNumber = managers.count
+            if !generic.areRequiredSettingsSynchronized {
+                blocksNumber += 1
+            }
+
+            let barrier = CallbackBarrier<NetworkServiceError>(blocksNumber: blocksNumber,
+                                                               resultQueue: resultQueue,
+                                                               completion: completion,
+                                                               failure: failure)
+
+            if !generic.areRequiredSettingsSynchronized {
+                generic.synchronizeRequiredSettings(completion: barrier.completion, failure: barrier.failure)
+            }
+
+            managers.forEach {
+                $0.downloadProjects(completion: barrier.completion, failure: barrier.failure)
+            }
+
+            self.requestsQueue.start()
+        }
     }
 
     /// Start synchronization of projects and their components.

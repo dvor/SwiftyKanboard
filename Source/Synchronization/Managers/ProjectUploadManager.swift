@@ -8,12 +8,10 @@
 import Foundation
 
 class ProjectUploadManager {
-    private let strategy: SynchronizationStrategy
     private let projectId: String
     private let uploadQueue: UploadRequestsQueue
 
-    init(strategy: SynchronizationStrategy, projectId: String, uploadQueue: UploadRequestsQueue) {
-        self.strategy = strategy
+    init(projectId: String, uploadQueue: UploadRequestsQueue) {
         self.projectId = projectId
         self.uploadQueue = uploadQueue
     }
