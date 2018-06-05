@@ -45,8 +45,9 @@ class SynchronizationService {
     /// Check whether settings required to run the app were already synced.
     var areRequiredSettingsSynchronized: Bool {
         get {
-            return genericSettingsDownloadManager.areRequiredSettingsSynchronized &&
-                   projectDownloadManagers.reduce(true, { $0 && $1.isProjectDownloaded })
+            let managers: [DownloadManager] = [genericSettingsDownloadManager] + projectDownloadManagers
+
+            return managers.reduce(true, { $0 && $1.areRequiredSettingsSynchronized })
         }
     }
 
@@ -56,25 +57,25 @@ class SynchronizationService {
         serviceQueue.async { [weak self] in
             guard let `self` = self else { return }
 
-            let generic = self.genericSettingsDownloadManager
-            let managers = self.projectDownloadManagers.filter{ !$0.isProjectDownloaded }
-
-            var blocksNumber = managers.count
-            if !generic.areRequiredSettingsSynchronized {
-                blocksNumber += 1
+            var managers: [DownloadManager] = [self.genericSettingsDownloadManager] + self.projectDownloadManagers
+            managers = managers.filter {
+                !$0.areRequiredSettingsSynchronized
             }
 
-            let barrier = CallbackBarrier<NetworkServiceError>(blocksNumber: blocksNumber,
+            guard managers.count > 0 else {
+                resultQueue.async{
+                    completion?()
+                }
+                return
+            }
+
+            let barrier = CallbackBarrier<NetworkServiceError>(blocksNumber: managers.count,
                                                                resultQueue: resultQueue,
                                                                completion: completion,
                                                                failure: failure)
 
-            if !generic.areRequiredSettingsSynchronized {
-                generic.synchronizeRequiredSettings(completion: barrier.completion, failure: barrier.failure)
-            }
-
             managers.forEach {
-                $0.downloadProjects(completion: barrier.completion, failure: barrier.failure)
+                $0.synchronizeRequiredSettings(completion: barrier.completion, failure: barrier.failure)
             }
 
             self.requestsQueue.start()

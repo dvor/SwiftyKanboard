@@ -17,7 +17,13 @@ class ProjectDownloadManager {
         self.downloadQueue = downloadQueue
     }
 
-    var isProjectDownloaded: Bool {
+    func start() {
+        doFullSync()
+    }
+}
+
+extension ProjectDownloadManager: DownloadManager {
+    var areRequiredSettingsSynchronized: Bool {
         get {
             let realm = try! Realm.default()
 
@@ -26,24 +32,18 @@ class ProjectDownloadManager {
         }
     }
 
-    func downloadProjects(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
+    func synchronizeRequiredSettings(completion: @escaping (() -> Void), failure: @escaping ((NetworkServiceError) -> Void)) {
         let request = GetProjectByIdRequest(projectId: projectId, completion: { project in
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteProject, Project> = DatabaseUpdater(realm: realm)
             _ = updater.updateDatabase(with: project)
 
-            completion?()
+            completion()
         },
-        failure: { error in
-            failure?(error)
-        })
+        failure: failure)
 
         downloadQueue.add(downloadRequest: request, isConcurent: true)
-    }
-
-    func start() {
-        doFullSync()
     }
 }
 

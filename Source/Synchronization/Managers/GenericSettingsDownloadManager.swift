@@ -15,6 +15,12 @@ class GenericSettingsDownloadManager {
         self.downloadQueue = downloadQueue
     }
 
+    func start() {
+        updateSettings()
+    }
+}
+
+extension GenericSettingsDownloadManager: DownloadManager {
     var areRequiredSettingsSynchronized: Bool {
         get {
             let realm = try! Realm.default()
@@ -23,12 +29,8 @@ class GenericSettingsDownloadManager {
         }
     }
 
-    func synchronizeRequiredSettings(completion: (() -> Void)?, failure: ((NetworkServiceError) -> Void)?) {
+    func synchronizeRequiredSettings(completion: @escaping (() -> Void), failure: @escaping ((NetworkServiceError) -> Void)) {
         updateTaskColors(completion: completion, failure: failure)
-    }
-
-    func start() {
-        updateSettings()
     }
 }
 
