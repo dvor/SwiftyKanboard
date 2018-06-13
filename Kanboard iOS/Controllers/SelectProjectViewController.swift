@@ -42,8 +42,8 @@ class SelectProjectViewController: UIViewController {
         makeConstraints()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         if projects.isEmpty {
             downloadProjects()

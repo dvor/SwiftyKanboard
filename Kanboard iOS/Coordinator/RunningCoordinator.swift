@@ -9,20 +9,38 @@ import UIKit
 
 // TODO handle errors in this class
 // TODO handle logout
-class RunningCoordinator: Coordinator {
+class RunningCoordinator: NSObject, Coordinator {
     private let navigationController: UINavigationController
 
     init(window: UIWindow) {
-        navigationController = UINavigationController()
-        window.rootViewController = navigationController
+        self.navigationController = UINavigationController()
 
+        super.init()
+
+        navigationController.delegate = self
         pushSelectProjectController()
+
+        if let projectId = UserDefaultsManager().activeProjectId {
+            pushBoardController(projectId: projectId, animated: false)
+        }
+
+        window.rootViewController = navigationController
+    }
+}
+
+extension RunningCoordinator: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController,
+                              animated: Bool) {
+        if viewController is SelectProjectViewController {
+            UserDefaultsManager().activeProjectId = nil
+        }
     }
 }
 
 extension RunningCoordinator: SelectProjectViewControllerDelegate {
     func selectProjectControllerDidSelect(projectId: String) {
-        showBoardController(projectId: projectId)
+        pushBoardController(projectId: projectId, animated: true)
     }
 }
 
@@ -49,7 +67,7 @@ private extension RunningCoordinator {
         navigationController.pushViewController(controller, animated: false)
     }
 
-    func showBoardController(projectId: String) {
+    func pushBoardController(projectId: String, animated: Bool) {
         let credentials = self.credentials()
 
         let service = try! SynchronizationService(projectIds: [projectId],
@@ -59,8 +77,10 @@ private extension RunningCoordinator {
                                                   apiToken: credentials.apiToken)
 
         let createController = { [weak self] in
+            UserDefaultsManager().activeProjectId = projectId
+
             let controller = BoardViewController(synchronizationService: service, projectId: projectId)
-            self?.navigationController.pushViewController(controller, animated: true)
+            self?.navigationController.pushViewController(controller, animated: animated)
         }
 
         if service.areRequiredSettingsSynchronized {
