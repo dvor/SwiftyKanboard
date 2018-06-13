@@ -39,7 +39,7 @@ class SelectProjectViewController: UIViewController {
         view.backgroundColor = .white
 
         createSubviews()
-        installConstraints()
+        makeConstraints()
     }
 
     override func viewDidLoad() {
@@ -84,7 +84,7 @@ private extension SelectProjectViewController {
         view.addSubview(tableView)
     }
 
-    func installConstraints() {
+    func makeConstraints() {
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view)
         }

@@ -23,6 +23,12 @@
 		1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97F20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B98020D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
+		1179B98320D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */; };
+		1179B98420D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */; };
+		1179B98620D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */; };
+		1179B98720D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */; };
+		1179B98920D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */; };
+		1179B98A20D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */; };
 		1189D0AF20B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
 		1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
 		1189D0B120B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
@@ -257,6 +263,9 @@
 		11221BBE20A36D6E003888E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		11221BCE20A3A123003888E2 /* AbstractRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
 		1179B97C20D1B820006ED736 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDownloadManager.swift; sourceTree = "<group>"; };
 		1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUploadManager.swift; sourceTree = "<group>"; };
 		1189D0B820B4372A005BA02D /* DownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadRequest.swift; sourceTree = "<group>"; };
@@ -437,6 +446,16 @@
 				1189D0BD20B4372F005BA02D /* UploadRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		1179B98120D1BE72006ED736 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */,
+				1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */,
+				1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1189D0C220B44503005BA02D /* Managers */ = {
@@ -658,6 +677,7 @@
 				11B7B6F320B4CB260039716E /* Coordinator */,
 				11B7B6E820B4C4180039716E /* Default */,
 				11B7B70620B4CEB90039716E /* Extensions */,
+				1179B98120D1BE72006ED736 /* Views */,
 			);
 			path = "Kanboard iOS";
 			sourceTree = "<group>";
@@ -1030,6 +1050,7 @@
 				11BB152220A84708002FCC2A /* Column.swift in Sources */,
 				11B7B69920A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				11B7B67420A895030039716E /* GetAllTasksRequest.swift in Sources */,
+				1179B98920D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */,
 				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
@@ -1043,9 +1064,11 @@
 				11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				1179B97D20D1B820006ED736 /* DownloadManager.swift in Sources */,
 				11B7B67E20A8954B0039716E /* Task.swift in Sources */,
+				1179B98320D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */,
 				11B7B6B320B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
 				11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */,
 				11B7B71220C426520039716E /* ProgressHUD.swift in Sources */,
+				1179B98620D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */,
 				1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
@@ -1076,6 +1099,7 @@
 			files = (
 				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
+				1179B98A20D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */,
 				11BB151320A7985B002FCC2A /* Decoders.swift in Sources */,
 				11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */,
 				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
@@ -1085,6 +1109,7 @@
 				11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
 				11B7B69520A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
 				11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */,
+				1179B98420D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */,
 				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */,
 				11B7B67A20A895420039716E /* RemoteTask.swift in Sources */,
@@ -1094,6 +1119,7 @@
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
 				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
+				1179B98720D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */,
 				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
 				11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
 				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,

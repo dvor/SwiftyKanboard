@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class BoardViewController: UIViewController {
     private let synchronizationService: SynchronizationService
+    private let projectId: String
 
-    init(synchronizationService: SynchronizationService) {
+    private var dataSource: BoardCollectionViewDataSource!
+    private var collectionView: UICollectionView!
+
+    init(synchronizationService: SynchronizationService, projectId: String) {
         self.synchronizationService = synchronizationService
+        self.projectId = projectId
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -22,23 +28,32 @@ class BoardViewController: UIViewController {
 
     override func loadView() {
         view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = .red
+        view.backgroundColor = .white
 
         createSubviews()
-        installConstraints()
+        makeConstraints()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        synchronizationService.startSynchronization()
     }
 }
 
 private extension BoardViewController {
     func createSubviews() {
+        collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.register(BoardCollectionViewCell.self,
+                                forCellWithReuseIdentifier: BoardCollectionViewCell.identifier)
+        view.addSubview(collectionView)
 
+        dataSource = BoardCollectionViewDataSource(collectionView: collectionView, projectId: projectId)
+        collectionView.dataSource = dataSource
     }
 
-    func installConstraints() {
-
+    func makeConstraints() {
+        collectionView.snp.makeConstraints {
+            $0.edges.equalTo(view)
+        }
     }
 }

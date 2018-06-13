@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
 
         createSubviews()
-        installConstraints()
+        makeConstraints()
     }
 }
 
@@ -99,7 +99,7 @@ private extension LoginViewController {
         container.addSubview(loginButton)
     }
 
-    func installConstraints() {
+    func makeConstraints() {
         container.snp.makeConstraints {
             $0.centerX.equalTo(view)
             $0.centerY.equalTo(view).offset(Constants.topOffset)

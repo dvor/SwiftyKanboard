@@ -48,7 +48,7 @@ class RunningViewController: NSViewController {
         view = NSView(frame: CGRect(x: 0, y: 0, width: 600, height: 300))
 
         createCollectionView()
-        installConstraints()
+        makeConstraints()
     }
 
     override func viewDidLoad() {
@@ -80,7 +80,7 @@ private extension RunningViewController {
         scrollView.documentView = collectionView
     }
 
-    func installConstraints() {
+    func makeConstraints() {
         scrollView.snp.makeConstraints {
             $0.edges.equalTo(view)
         }

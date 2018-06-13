@@ -32,7 +32,7 @@ class LoginViewController: NSViewController {
     override func loadView() {
         view = NSView(frame: CGRect(x: 0, y: 0, width: 600, height: 300))
         createViews()
-        installConstraints()
+        makeConstraints()
     }
 
     override func viewDidLoad() {
@@ -76,7 +76,7 @@ private extension LoginViewController {
         view.addSubview(loginButton)
     }
 
-    func installConstraints() {
+    func makeConstraints() {
         containerView.snp.makeConstraints {
             $0.center.equalTo(view)
         }

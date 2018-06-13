@@ -2,21 +2,21 @@
 //  BoardCollectionViewDataSource.swift
 //  SwiftyKanboard
 //
-//  Created by Dmytro Vorobiov on 13/05/2018.
+//  Created by Dmytro Vorobiov on 13/06/2018.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 
 class BoardCollectionViewDataSource: NSObject {
-    private weak var collectionView: NSCollectionView?
+    private weak var collectionView: UICollectionView?
     private let projectId: String
     private let columns: Results<Column>
     private var columnsToken: NotificationToken!
     private var tasksByColumns: [Results<Task>]
     private var colors: Results<TaskColor>
 
-    init(collectionView: NSCollectionView, projectId: String) {
+    init(collectionView: UICollectionView, projectId: String) {
         self.collectionView = collectionView
         self.projectId = projectId
 
@@ -41,36 +41,33 @@ class BoardCollectionViewDataSource: NSObject {
     }
 }
 
-extension BoardCollectionViewDataSource: NSCollectionViewDataSource {
-    func numberOfSections(in collectionView: NSCollectionView) -> Int {
+extension BoardCollectionViewDataSource: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return tasksByColumns.count
     }
 
-    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tasksByColumns[section].count
     }
 
-    func collectionView(_ collectionView: NSCollectionView,
-                        itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: BoardCollectionViewItem.identifier, for: indexPath)
-        guard let boardItem = item as? BoardCollectionViewItem else {
-            fatalError("Wrong item passed")
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BoardCollectionViewCell.identifier,
+                                                            for: indexPath) as? BoardCollectionViewCell else {
+            fatalError("Wrong cell class")
         }
 
         let task = tasksByColumns[indexPath.section][indexPath.item]
-        boardItem.name = task.title
+        cell.label.text = task.title
 
         let predicate = NSPredicate(format: "id == %@", task.colorId)
         if let color = colors.filter(predicate).first {
-            boardItem.backgroundColor = NSColor(red: CGFloat(color.backgroundRed),
-                                                green: CGFloat(color.backgroundGreen),
-                                                blue: CGFloat(color.backgroundBlue),
-                                                alpha: 1.0)
+            cell.contentView.backgroundColor = UIColor(red: CGFloat(color.backgroundRed),
+                                                       green: CGFloat(color.backgroundGreen),
+                                                       blue: CGFloat(color.backgroundBlue),
+                                                       alpha: 1.0)
         }
 
-        boardItem.redraw()
-
-        return boardItem
+        return cell
     }
 }
 

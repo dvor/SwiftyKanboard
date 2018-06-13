@@ -59,7 +59,7 @@ private extension RunningCoordinator {
                                                   apiToken: credentials.apiToken)
 
         let createController = { [weak self] in
-            let controller = BoardViewController(synchronizationService: service)
+            let controller = BoardViewController(synchronizationService: service, projectId: projectId)
             self?.navigationController.pushViewController(controller, animated: true)
         }
 
