@@ -33,7 +33,7 @@ extension ProjectDownloadManager: DownloadManager {
     }
 
     func synchronizeRequiredSettings(completion: @escaping (() -> Void), failure: @escaping ((NetworkServiceError) -> Void)) {
-        let request = syncProject()
+        let request = syncProject(completion: completion, failure: failure)
         downloadQueue.add(downloadRequest: request, isConcurent: true)
     }
 }
@@ -45,14 +45,18 @@ private extension ProjectDownloadManager {
         downloadQueue.add(downloadRequest: syncTasks(active: true), isConcurent: true)
     }
 
-    func syncProject() -> GetProjectByIdRequest {
+    func syncProject(completion: (() -> Void)? = nil, failure: ((NetworkServiceError) -> Void)? = nil) -> GetProjectByIdRequest {
         return GetProjectByIdRequest(projectId: projectId, completion: { project in
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteProject, Project> = DatabaseUpdater(realm: realm)
             _ = updater.updateDatabase(with: project)
+
+            completion?()
         },
-        failure: { _ in })
+        failure: { error in
+            failure?(error)
+        })
     }
 
     func syncColumns() -> GetColumnsRequest {
