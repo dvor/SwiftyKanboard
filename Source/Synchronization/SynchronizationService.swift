@@ -90,8 +90,8 @@ class SynchronizationService {
             if self.isRunning { return }
             self.isRunning = true
 
-            self.genericSettingsDownloadManager.start()
             self.projectDownloadManagers.forEach{ $0.start() }
+            self.genericSettingsDownloadManager.start()
             self.projectUploadManagers.forEach{ $0.start() }
             self.requestsQueue.start()
         }

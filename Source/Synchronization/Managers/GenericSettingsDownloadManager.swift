@@ -44,9 +44,7 @@ private extension GenericSettingsDownloadManager {
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteTaskColor, TaskColor> = DatabaseUpdater(realm: realm)
-            for color in colors {
-                _ = updater.updateDatabase(with: color)
-            }
+            updater.updateDatabase(with: colors)
 
             completion?()
         },

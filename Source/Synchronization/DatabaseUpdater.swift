@@ -14,13 +14,6 @@ protocol Updatable {
     func update(with remote: RemoteObject)
 }
 
-enum DatabaseUpdaterResult {
-    case internalError
-    case unchanged
-    case created
-    case updated
-}
-
 class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
     private let realm: Realm
 
@@ -28,45 +21,51 @@ class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
         self.realm = realm
     }
 
-    func updateDatabase(with remote: RemoteType) -> DatabaseUpdaterResult {
+    func updateDatabase(with remotes: [RemoteType]) {
+        realm.beginWrite()
+
+        remotes.forEach {
+            updateDatabase(with: $0)
+        }
+
+        do {
+            try realm.commitWrite()
+        }
+        catch let error as NSError {
+            log.errorMessage("Cannot write to realm: \(error)")
+        }
+    }
+
+}
+
+private extension DatabaseUpdater {
+    func updateDatabase(with remote: RemoteType) {
         let predicate = NSPredicate(format: "id = %@", remote.id)
         let locals = realm.objects(LocalType.self).filter(predicate)
 
         if locals.count > 1 {
             log.errorMessage("Inconsistent database: found several objects with same id \(locals)")
-            return .internalError
         }
 
-        do {
-            if let local = locals.first {
-                return try updateIfNeeded(local, with: remote) ? .updated : .unchanged
-            }
-            else {
-                try createLocal(from: remote)
-                return .created
-            }
+        if let local = locals.first {
+            _ = updateIfNeeded(local, with: remote)
         }
-        catch let error as NSError {
-            log.errorMessage("Cannot write to realm: \(error)")
-            return .internalError
+        else {
+            createLocal(from: remote)
         }
     }
-}
 
-private extension DatabaseUpdater {
-    func createLocal(from remote: RemoteType) throws {
+    func createLocal(from remote: RemoteType) {
         var local = LocalType()
         local.id = remote.id
         local.update(with: remote)
 
         log.infoMessage("Creating new object: \(local)")
 
-        try realm.write {
-            realm.add(local)
-        }
+        realm.add(local)
     }
 
-    func updateIfNeeded(_ local: LocalType, with remote: RemoteType) throws -> Bool {
+    func updateIfNeeded(_ local: LocalType, with remote: RemoteType) -> Bool {
         log.infoMessage("Syncing object \(LocalType.self) with id \(remote.id)")
 
         if local.isEqual(to: remote) {
@@ -74,10 +73,7 @@ private extension DatabaseUpdater {
             return false
         }
 
-        try realm.write {
-            local.update(with: remote)
-        }
-
+        local.update(with: remote)
         log.infoMessage("Updated object: \(local)")
 
         return true

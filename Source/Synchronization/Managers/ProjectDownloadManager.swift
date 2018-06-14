@@ -50,7 +50,7 @@ private extension ProjectDownloadManager {
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteProject, Project> = DatabaseUpdater(realm: realm)
-            _ = updater.updateDatabase(with: project)
+            updater.updateDatabase(with: [project])
 
             completion?()
         },
@@ -64,9 +64,7 @@ private extension ProjectDownloadManager {
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteColumn, Column> = DatabaseUpdater(realm: realm)
-            columns.forEach {
-                _ = updater.updateDatabase(with: $0)
-            }
+            updater.updateDatabase(with: columns)
         },
         failure: { _ in })
     }
@@ -76,9 +74,7 @@ private extension ProjectDownloadManager {
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteTask, Task> = DatabaseUpdater(realm: realm)
-            tasks.forEach {
-                _ = updater.updateDatabase(with: $0)
-            }
+            updater.updateDatabase(with: tasks)
         },
         failure: { _ in })
     }
