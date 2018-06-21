@@ -10,44 +10,46 @@ import RealmSwift
 
 class BoardCollectionViewDataSource: NSObject {
     private weak var collectionView: UICollectionView?
-    private let projectId: String
-    private let columns: Results<Column>
-    private var columnsToken: NotificationToken!
-    private var tasksByColumns: [Results<Task>]
+
+    private var taskDataSource: BoardTaskDataSource
     private var colors: Results<TaskColor>
 
     init(collectionView: UICollectionView, projectId: String) {
         self.collectionView = collectionView
-        self.projectId = projectId
 
         let realm = try! Realm()
-        let predicate = NSPredicate(format: "projectId == %@", projectId)
-        self.columns = realm.objects(Column.self).filter(predicate).sorted(byKeyPath: "position")
-        self.tasksByColumns = [Results<Task>]()
-        self.colors = realm.objects(TaskColor.self)
+        taskDataSource = BoardTaskDataSource(projectId: projectId)
+        colors = realm.objects(TaskColor.self)
 
         super.init()
 
-        self.columnsToken = columns.observe() { [weak self] change in
-            switch change {
-            case .initial:
-                fallthrough
-            case .update:
-                self?.updateTasksByColumns()
-            case .error(let error):
-                log.warnMessage("Cannot update columns, \(error)")
-            }
-        }
+        taskDataSource.delegate = self
+    }
+}
+
+extension BoardCollectionViewDataSource: BoardTaskDataSourceDelegate {
+    func boardTaskUpdate(deleteSections: IndexSet, insertSections: IndexSet, reloadSections: IndexSet,
+                         deleteItems: [IndexPath], insertItems: [IndexPath], reloadItems: [IndexPath]) {
+        guard let collectionView = collectionView else { return }
+
+        collectionView.performBatchUpdates({
+            collectionView.deleteSections(deleteSections)
+            collectionView.insertSections(insertSections)
+            collectionView.reloadSections(reloadSections)
+            collectionView.deleteItems(at: deleteItems)
+            collectionView.insertItems(at: insertItems)
+            collectionView.reloadItems(at: reloadItems)
+        })
     }
 }
 
 extension BoardCollectionViewDataSource: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return tasksByColumns.count
+        return taskDataSource.numberOfSections
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tasksByColumns[section].count
+        return taskDataSource.numberOfItemsInSection(section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -56,7 +58,7 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
             fatalError("Wrong cell class")
         }
 
-        let task = tasksByColumns[indexPath.section][indexPath.item]
+        let task = taskDataSource.item(at: indexPath)
         cell.label.text = task.title
 
         let predicate = NSPredicate(format: "id == %@", task.colorId)
@@ -72,15 +74,5 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
 }
 
 private extension BoardCollectionViewDataSource {
-    func updateTasksByColumns() {
-        let realm = try! Realm()
-
-        tasksByColumns = columns.map { column in
-            let predicate = NSPredicate(format: "projectId == %@ AND columnId == %@ AND isActive == YES", projectId, column.id)
-
-            return realm.objects(Task.self).filter(predicate).sorted(byKeyPath: "position")
-        }
-
-        collectionView?.reloadData()
-    }
 }
+
