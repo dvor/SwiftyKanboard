@@ -25,6 +25,10 @@ class BoardCollectionViewDataSource: NSObject {
 
         taskDataSource.delegate = self
     }
+
+    func getTask(at indexPath: IndexPath) -> Task {
+        return taskDataSource.item(at: indexPath)
+    }
 }
 
 extension BoardCollectionViewDataSource: BoardTaskDataSourceDelegate {
@@ -58,7 +62,7 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
             fatalError("Wrong cell class")
         }
 
-        let task = taskDataSource.item(at: indexPath)
+        let task = getTask(at: indexPath)
         cell.label.text = task.title
 
         let predicate = NSPredicate(format: "id == %@", task.colorId)
