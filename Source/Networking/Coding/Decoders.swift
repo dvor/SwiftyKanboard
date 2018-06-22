@@ -123,6 +123,19 @@ class DictionaryDecoder: Sequence {
         return Date(timeIntervalSince1970: interval)
     }
 
+    func optionalIntFromString(forKey key: String) throws -> Int? {
+        let theString: String? = try optionalValue(forKey: key)
+        guard let string = theString else {
+            return nil
+        }
+
+        guard let value = Int(string) else {
+            throw DecoderError.badType
+        }
+
+        return value
+    }
+
     func optionalDate(forKey key: String) throws -> Date? {
         let theString: String? = try optionalValue(forKey: key)
         guard let string = theString else {

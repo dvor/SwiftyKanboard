@@ -20,7 +20,7 @@ extension Task: Updatable {
             urlString        == task.urlString &&
             isActive         == task.isActive &&
             position         == task.position &&
-            score            == task.score &&
+            score.value      == task.score &&
             priority         == task.priority &&
             colorId          == task.colorId &&
             projectId        == task.projectId &&
@@ -47,7 +47,7 @@ extension Task: Updatable {
         urlString        = task.urlString
         isActive         = task.isActive
         position         = task.position
-        score            = task.score
+        score.value      = task.score
         priority         = task.priority
         colorId          = task.colorId
         projectId        = task.projectId

@@ -16,7 +16,7 @@ class Task: Object {
 
     @objc dynamic var isActive: Bool = false
     @objc dynamic var position: Int = 0
-    @objc dynamic var score: Int = 0
+    let score = RealmOptional<Int>()
     @objc dynamic var priority: Int = 0
 
     @objc dynamic var colorId: String = ""

@@ -15,7 +15,7 @@ struct RemoteTask: RemoteObject {
 
     let isActive: Bool
     let position: Int
-    let score: Int
+    let score: Int?
     let priority: Int
 
     let colorId: String
@@ -43,7 +43,7 @@ struct RemoteTask: RemoteObject {
 
         isActive = try dict.boolFromString(forKey: "is_active")
         position = try dict.intFromString(forKey: "position")
-        score = try dict.intFromString(forKey: "score")
+        score = try dict.optionalIntFromString(forKey: "score")
         priority = try dict.intFromString(forKey: "priority")
 
         colorId = try dict.value(forKey: "color_id")
