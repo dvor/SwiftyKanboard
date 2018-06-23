@@ -50,6 +50,22 @@ class BoardTaskDataSource {
         #endif
         return tasksByColumns[indexPath.section].snapshot[row]
     }
+
+    func column(at index: Int) -> Column {
+        return columns[index]
+    }
+
+    var tasksNotificationTokens: [NotificationToken] {
+        get {
+            return tasksByColumns.map{
+                $0.token
+            }
+        }
+    }
+
+    func reloadTasks(in column: Int) {
+        tasksByColumns[column].updateSnapshot()
+    }
 }
 
 extension BoardTaskDataSource: ResultsSnapshotDelegate {
@@ -109,7 +125,7 @@ private extension BoardTaskDataSource {
         let realm = try! Realm()
 
         let predicate = NSPredicate(format: "projectId == %@ AND columnId == %@ AND isActive == YES", projectId, column.id)
-        let results = realm.objects(Task.self).filter(predicate)
+        let results = realm.objects(Task.self).filter(predicate).sorted(byKeyPath: "position")
 
         let snapshot = ResultsSnapshot(results: results)
         snapshot.delegate = self

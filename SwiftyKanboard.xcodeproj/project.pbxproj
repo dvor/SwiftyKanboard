@@ -239,6 +239,12 @@
 		11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11BB155420A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
+		11BC329720DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
+		11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
+		11BC329920DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
+		11BC329A20DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
+		11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */; };
+		11BC329F20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
@@ -346,6 +352,8 @@
 		11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVersionRequestTest.swift; sourceTree = "<group>"; };
 		11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExtension.swift; sourceTree = "<group>"; };
 		11BB155120A85C47002FCC2A /* ColumnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnExtension.swift; sourceTree = "<group>"; };
+		11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequest.swift; sourceTree = "<group>"; };
+		11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequestTest.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1C20A301760060536B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -463,6 +471,7 @@
 				11B7B69320A8A7030039716E /* GetProjectActivityRequest.swift */,
 				11B7B68B20A8A4660039716E /* GetProjectByIdRequest.swift */,
 				11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */,
+				11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */,
 				1189D0BD20B4372F005BA02D /* UploadRequest.swift */,
 			);
 			path = Requests;
@@ -658,6 +667,7 @@
 				11B7B6C120B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift */,
 				11B7B69020A8A4FE0039716E /* GetProjectByIdRequestTest.swift */,
 				11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */,
+				11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1104,6 +1114,7 @@
 				1179B98620D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */,
 				1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11BC329720DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
 				11B7B68C20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11B7B6B820B2E3870039716E /* TaskColor.swift in Sources */,
@@ -1147,6 +1158,7 @@
 				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */,
 				11B7B67A20A895420039716E /* RemoteTask.swift in Sources */,
+				11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
 				1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
@@ -1170,6 +1182,7 @@
 				11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */,
 				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
+				11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11BB152320A84708002FCC2A /* Column.swift in Sources */,
 				11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */,
@@ -1208,6 +1221,7 @@
 				11B7B6A120A8D68B0039716E /* BoardCollectionViewItem.swift in Sources */,
 				1189D0B620B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
 				11B7B71720C486370039716E /* CallbackBarrier.swift in Sources */,
+				11BC329920DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11221BC120A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB14E220A6539B002FCC2A /* RealmExtension.swift in Sources */,
 				11B7B6BF20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
@@ -1299,7 +1313,9 @@
 				11BB152520A84708002FCC2A /* Column.swift in Sources */,
 				11BB14B820A45354002FCC2A /* LoginViewController.swift in Sources */,
 				11B7B69F20A8CE7A0039716E /* BoardCollectionViewDataSource.swift in Sources */,
+				11BC329A20DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11B7B6DA20B360000039716E /* MacSynchronizationStrategy.swift in Sources */,
+				11BC329F20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */,
 				1179B98F20D1C9D0006ED736 /* UserDefaultsManager.swift in Sources */,
 				11B7B68120A8954B0039716E /* Task.swift in Sources */,
 				11BB152A20A84717002FCC2A /* RemoteColumn.swift in Sources */,

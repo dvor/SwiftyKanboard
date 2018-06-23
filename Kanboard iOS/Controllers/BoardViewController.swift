@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 private struct Constants {
     static let horizontalOffsetFromEdge: CGFloat = 25.0
@@ -46,6 +47,25 @@ class BoardViewController: UIViewController {
     }
 }
 
+// MARK: Actions
+extension BoardViewController {
+    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        switch gesture.state {
+        case .began:
+            guard let indexPath = self.collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
+                break
+            }
+            collectionView.beginInteractiveMovementForItem(at: indexPath)
+        case .changed:
+            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
+        case .ended:
+            collectionView.endInteractiveMovement()
+        default:
+            collectionView.cancelInteractiveMovement()
+        }
+    }
+}
+
 extension BoardViewController: UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         oldContentOffset = scrollView.contentOffset
@@ -69,6 +89,25 @@ extension BoardViewController: UICollectionViewDelegate {
     }
 }
 
+extension BoardViewController: BoardCollectionViewDataSourceDelegate {
+    func move(task: Task,
+              to column: Column,
+              position: Int,
+              withoutNotifying notificationTokens: [NotificationToken],
+              completion: @escaping (() -> Void),
+              failure: @escaping (() -> Void)) {
+        synchronizationService.move(taskId: task.id,
+                                    to: column.id,
+                                    at: position,
+                                    withoutNotifying: notificationTokens,
+                                    completion: completion,
+                                    failure: { _ in
+            // TODO handle error
+            failure()
+        })
+    }
+}
+
 private extension BoardViewController {
     func createSubviews() {
         let layout = BoardCollectionViewLayout(horizontalOffsetFromEdge: Constants.horizontalOffsetFromEdge)
@@ -84,7 +123,13 @@ private extension BoardViewController {
         view.addSubview(collectionView)
 
         dataSource = BoardCollectionViewDataSource(collectionView: collectionView, projectId: projectId)
+        dataSource.delegate = self
         collectionView.dataSource = dataSource
+
+        let recognizer = UILongPressGestureRecognizer(target: self,
+                                                      action: #selector(BoardViewController.handleLongGesture))
+        recognizer.minimumPressDuration = 0.3
+        collectionView.addGestureRecognizer(recognizer)
     }
 
     func makeConstraints() {

@@ -8,6 +8,13 @@
 import Foundation
 import RealmSwift
 
+enum SynchronizationServiceError: Error {
+    case wrongParameters
+    // Server returned "false" for result.
+    case requestFailed
+    case networkError
+}
+
 class SynchronizationService {
     private let projectIds: [String]
     private let serviceQueue: DispatchQueue
@@ -95,6 +102,36 @@ class SynchronizationService {
             self.projectUploadManagers.forEach{ $0.start() }
             self.requestsQueue.start()
         }
+    }
+}
+
+extension SynchronizationService {
+    func move(taskId: String,
+              to columnId: String,
+              at position: Int,
+              withoutNotifying notificationTokens: [NotificationToken],
+              completion: (() -> Void)?,
+              failure: ((SynchronizationServiceError) -> Void)?) {
+        let realm = try! Realm.default()
+
+        guard let task = realm.objects(Task.self).filter(NSPredicate(format: "id == %@", taskId)).first,
+              let manager = projectUploadManagers.first(where: { $0.projectId == task.projectId }) else {
+
+            DispatchQueue.main.async {
+                failure?(.wrongParameters)
+            }
+            return
+        }
+
+        manager.move(taskId: taskId, to: columnId, at: position, withoutNotifying: notificationTokens, completion: {
+            DispatchQueue.main.async {
+                completion?()
+            }
+        }, failure: { error in
+            DispatchQueue.main.async {
+                failure?(error)
+            }
+        })
     }
 }
 

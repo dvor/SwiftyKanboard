@@ -33,17 +33,16 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
         attributes = [[UICollectionViewLayoutAttributes]]()
         contentSize = CGSize()
 
-        guard let collectionView = collectionView,
-              let dataSource = collectionView.dataSource as? BoardCollectionViewDataSource else { return }
+        guard let collectionView = collectionView else { return }
 
         let screenWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         var currentOrigin = CGPoint()
 
-        for section in 0..<dataSource.numberOfSections(in: collectionView) {
+        for section in 0..<collectionView.numberOfSections {
             attributes.append([UICollectionViewLayoutAttributes]())
             currentOrigin.y = 0
 
-            for row in 0..<dataSource.collectionView(collectionView, numberOfItemsInSection: section) {
+            for row in 0..<collectionView.numberOfItems(inSection: section) {
                 let indexPath = IndexPath(row: row, section: section)
                 let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 

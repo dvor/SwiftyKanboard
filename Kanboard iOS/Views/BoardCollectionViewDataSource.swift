@@ -8,11 +8,22 @@
 import UIKit
 import RealmSwift
 
+protocol BoardCollectionViewDataSourceDelegate: class {
+    func move(task: Task,
+              to: Column,
+              position: Int,
+              withoutNotifying notificationTokens: [NotificationToken],
+              completion: @escaping (() -> Void),
+              failure: @escaping (() -> Void))
+}
+
 class BoardCollectionViewDataSource: NSObject {
     private weak var collectionView: UICollectionView?
 
     private var taskDataSource: BoardTaskDataSource
     private var colors: Results<TaskColor>
+
+    weak var delegate: BoardCollectionViewDataSourceDelegate?
 
     init(collectionView: UICollectionView, projectId: String) {
         self.collectionView = collectionView
@@ -75,8 +86,49 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
 
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        disableUserInteraction()
+
+        let cancelBlock = { [weak self] in
+            collectionView.performBatchUpdates({
+                collectionView.deleteItems(at: [destinationIndexPath])
+                collectionView.insertItems(at: [sourceIndexPath])
+            })
+            self?.enableUserInteraction()
+        }
+
+        guard let delegate = delegate else {
+            cancelBlock()
+            return
+        }
+
+        let task = getTask(at: sourceIndexPath)
+        let column = taskDataSource.column(at: destinationIndexPath.section)
+        let position = destinationIndexPath.row + 1
+        let tasksTokens = taskDataSource.tasksNotificationTokens
+
+        delegate.move(task: task,
+                      to: column,
+                      position: position,
+                      withoutNotifying: tasksTokens,
+                      completion: enableUserInteraction,
+                      failure: cancelBlock)
+
+        taskDataSource.reloadTasks(in: sourceIndexPath.section)
+        taskDataSource.reloadTasks(in: destinationIndexPath.section)
+    }
 }
 
 private extension BoardCollectionViewDataSource {
+    func disableUserInteraction() {
+        collectionView?.isUserInteractionEnabled = false
+        collectionView?.alpha = 0.8
+    }
+
+    func enableUserInteraction() {
+        collectionView?.isUserInteractionEnabled = true
+        collectionView?.alpha = 1.0
+    }
 }
 

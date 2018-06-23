@@ -64,11 +64,11 @@ private extension RequestsQueue {
     func performNextOperation() {
         let requests: [AbstractRequest]
 
-        if let downloadRequests = nextDownloadRequests() {
-            requests = downloadRequests
-        }
-        else if let uploadRequests = nextUploadRequests() {
+        if let uploadRequests = nextUploadRequests() {
             requests = uploadRequests
+        }
+        else if let downloadRequests = nextDownloadRequests() {
+            requests = downloadRequests
         }
         else {
             scheduleNextOperation()

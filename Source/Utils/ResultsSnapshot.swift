@@ -16,7 +16,7 @@ protocol ResultsSnapshotDelegate: class {
 
 class ResultsSnapshot<T: Object> {
     private let results: Results<T>
-    private var token: NotificationToken!
+    var token: NotificationToken!
 
     private(set) var snapshot = [T]()
     weak var delegate: ResultsSnapshotDelegate?
@@ -30,7 +30,7 @@ class ResultsSnapshot<T: Object> {
             case .initial:
                 break
             case .update(_, let deletions, let insertions, let modifications):
-                self.updateTasks()
+                self.updateSnapshot()
                 self.delegate?.resultsSnapshotUpdated(snapshot: self,
                                                       deletions: deletions,
                                                       insertions: insertions,
@@ -40,10 +40,10 @@ class ResultsSnapshot<T: Object> {
             }
         }
 
-        updateTasks()
+        updateSnapshot()
     }
 
-    private func updateTasks() {
+    func updateSnapshot() {
         self.snapshot = results.map{ $0 }
     }
 }
