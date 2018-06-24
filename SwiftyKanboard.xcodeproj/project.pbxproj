@@ -33,6 +33,8 @@
 		11378F5C20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
 		11378F5D20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
 		11378F5E20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
+		11378F6020E0443000561758 /* SyncAnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5F20E0443000561758 /* SyncAnimatedButton.swift */; };
+		11378F6120E0443100561758 /* SyncAnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5F20E0443000561758 /* SyncAnimatedButton.swift */; };
 		1179B97D20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97F20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
@@ -302,6 +304,7 @@
 		11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableIndexPathCalculatorTest.swift; sourceTree = "<group>"; };
 		11378F5420DFBCED00561758 /* IndexPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtensions.swift; sourceTree = "<group>"; };
 		11378F5A20E0323200561758 /* ProjectLocalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLocalInfo.swift; sourceTree = "<group>"; };
+		11378F5F20E0443000561758 /* SyncAnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAnimatedButton.swift; sourceTree = "<group>"; };
 		1179B97C20D1B820006ED736 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -520,6 +523,7 @@
 				1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */,
 				1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */,
 				1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */,
+				11378F5F20E0443000561758 /* SyncAnimatedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1165,6 +1169,7 @@
 				11B7B6B820B2E3870039716E /* TaskColor.swift in Sources */,
 				11B7B6EE20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
 				11BB14D520A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
+				11378F6020E0443000561758 /* SyncAnimatedButton.swift in Sources */,
 				11B7B6EB20B4CADA0039716E /* LoginViewController.swift in Sources */,
 				11BB149B20A44F39002FCC2A /* Logger.swift in Sources */,
 				11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */,
@@ -1219,6 +1224,7 @@
 				1192FB9F20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */,
 				11378F4B20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
 				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,
+				11378F6120E0443100561758 /* SyncAnimatedButton.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,

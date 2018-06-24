@@ -21,6 +21,8 @@ class BoardViewController: UIViewController {
     private var dataSource: BoardCollectionViewDataSource!
     private var collectionView: UICollectionView!
 
+    private var syncAnimatedButton: SyncAnimatedButton!
+
     private var oldContentOffset: CGPoint?
 
     init?(synchronizationService: SynchronizationService, projectId: String) {
@@ -45,6 +47,7 @@ class BoardViewController: UIViewController {
 
         createSubviews()
         makeConstraints()
+        addNavigationItems()
     }
 
     override func viewDidLoad() {
@@ -77,6 +80,10 @@ extension BoardViewController {
             collectionView.cancelInteractiveMovement()
             layout.isMovingItem = false
         }
+    }
+
+    @objc func syncButtonPressed() {
+        syncAnimatedButton.isAnimating = !syncAnimatedButton.isAnimating
     }
 }
 
@@ -169,6 +176,13 @@ private extension BoardViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalTo(view)
         }
+    }
+
+    func addNavigationItems() {
+        syncAnimatedButton = SyncAnimatedButton()
+        syncAnimatedButton.addTarget(self, action: #selector(BoardViewController.syncButtonPressed), for: .touchUpInside)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: syncAnimatedButton)
     }
 
     func saveVisibleColumn() {
