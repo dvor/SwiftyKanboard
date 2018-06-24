@@ -15,7 +15,7 @@ private struct Constants {
 
 class BoardViewController: UIViewController {
     private let synchronizationService: SynchronizationService
-    private let projectId: String
+    private let project: Project
 
     private var layout: BoardCollectionViewLayout!
     private var dataSource: BoardCollectionViewDataSource!
@@ -23,9 +23,14 @@ class BoardViewController: UIViewController {
 
     private var oldContentOffset: CGPoint?
 
-    init(synchronizationService: SynchronizationService, projectId: String) {
+    init?(synchronizationService: SynchronizationService, projectId: String) {
+        let realm = try! Realm.default()
+        guard let project = realm.objects(Project.self).filter(NSPredicate(format: "id == %@", projectId)).first else {
+            return nil
+        }
+
         self.synchronizationService = synchronizationService
-        self.projectId = projectId
+        self.project = project
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,6 +50,11 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         synchronizationService.startSynchronization()
+
+        if let lastActiveColumn = project.localInfo?.lastActiveColumn {
+            view.layoutIfNeeded()
+            layout.setVisibleColumn(lastActiveColumn, animated: true)
+        }
     }
 }
 
@@ -91,6 +101,16 @@ extension BoardViewController: UICollectionViewDelegate {
             scrollView.showsVerticalScrollIndicator = true
         }
     }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            saveVisibleColumn()
+        }
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        saveVisibleColumn()
+    }
 }
 
 extension BoardViewController: BoardCollectionViewDataSourceDelegate {
@@ -135,7 +155,7 @@ private extension BoardViewController {
                                 forCellWithReuseIdentifier: BoardCollectionViewCell.identifier)
         view.addSubview(collectionView)
 
-        dataSource = BoardCollectionViewDataSource(collectionView: collectionView, projectId: projectId)
+        dataSource = BoardCollectionViewDataSource(collectionView: collectionView, projectId: project.id)
         dataSource.delegate = self
         collectionView.dataSource = dataSource
 
@@ -148,6 +168,14 @@ private extension BoardViewController {
     func makeConstraints() {
         collectionView.snp.makeConstraints {
             $0.edges.equalTo(view)
+        }
+    }
+
+    func saveVisibleColumn() {
+        let realm = try! Realm.default()
+
+        try? realm.write {
+            project.createLocalInfoIfNeeded().lastActiveColumn = layout.visibleColumn
         }
     }
 }

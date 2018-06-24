@@ -1,0 +1,12 @@
+//
+//  ProjectLocalInfo.swift
+//  SwiftyKanboard
+//
+//  Created by Dmytro Vorobiov on 24/06/2018.
+//
+
+import RealmSwift
+
+class ProjectLocalInfo: Object {
+    @objc dynamic var lastActiveColumn: Int = 0
+}

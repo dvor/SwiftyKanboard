@@ -79,7 +79,10 @@ private extension RunningCoordinator {
         let createController = { [weak self] in
             UserDefaultsManager().activeProjectId = projectId
 
-            let controller = BoardViewController(synchronizationService: service, projectId: projectId)
+            guard let controller = BoardViewController(synchronizationService: service, projectId: projectId) else {
+                // TODO handle error
+                return
+            }
             self?.navigationController.pushViewController(controller, animated: animated)
         }
 

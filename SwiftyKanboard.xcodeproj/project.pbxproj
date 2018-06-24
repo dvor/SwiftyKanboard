@@ -29,6 +29,10 @@
 		11378F5620DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
 		11378F5720DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
 		11378F5820DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
+		11378F5B20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
+		11378F5C20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
+		11378F5D20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
+		11378F5E20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
 		1179B97D20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97F20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
@@ -297,6 +301,7 @@
 		11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableIndexPathCalculator.swift; sourceTree = "<group>"; };
 		11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableIndexPathCalculatorTest.swift; sourceTree = "<group>"; };
 		11378F5420DFBCED00561758 /* IndexPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtensions.swift; sourceTree = "<group>"; };
+		11378F5A20E0323200561758 /* ProjectLocalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLocalInfo.swift; sourceTree = "<group>"; };
 		1179B97C20D1B820006ED736 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -501,6 +506,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		11378F5920E0321A00561758 /* LocalObjects */ = {
+			isa = PBXGroup;
+			children = (
+				11378F5A20E0323200561758 /* ProjectLocalInfo.swift */,
+			);
+			path = LocalObjects;
+			sourceTree = "<group>";
+		};
 		1179B98120D1BE72006ED736 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +642,7 @@
 		11BB14BD20A4A7C4002FCC2A /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				11378F5920E0321A00561758 /* LocalObjects */,
 				11BB14C320A4AB8E002FCC2A /* Objects */,
 			);
 			path = Database;
@@ -1122,6 +1136,7 @@
 				1179B98920D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */,
 				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */,
+				11378F5B20E0323200561758 /* ProjectLocalInfo.swift in Sources */,
 				11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
 				1189D0BE20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11F85F1620A301750060536B /* AppDelegate.swift in Sources */,
@@ -1215,6 +1230,7 @@
 				11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */,
 				11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
 				11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */,
+				11378F5C20E0323200561758 /* ProjectLocalInfo.swift in Sources */,
 				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11378F5120DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */,
@@ -1289,6 +1305,7 @@
 				11BB149820A44D89002FCC2A /* KeychainManager.swift in Sources */,
 				1189D0C620B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB14BA20A45360002FCC2A /* RunningViewController.swift in Sources */,
+				11378F5D20E0323200561758 /* ProjectLocalInfo.swift in Sources */,
 				1179B97F20D1B820006ED736 /* DownloadManager.swift in Sources */,
 				11B7B6A720AB56490039716E /* BoardCollectionViewLayout.swift in Sources */,
 				1179B98E20D1C9D0006ED736 /* UserDefaultsManager.swift in Sources */,
@@ -1375,6 +1392,7 @@
 				11B7B68A20A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
 				11B7B71820C486370039716E /* CallbackBarrier.swift in Sources */,
 				11B7B6CC20B3043E0039716E /* NSColorExtensions.swift in Sources */,
+				11378F5E20E0323200561758 /* ProjectLocalInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
