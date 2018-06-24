@@ -68,8 +68,13 @@ class RequestsQueue: DownloadRequestsQueue, UploadRequestsQueue {
 }
 
 private extension RequestsQueue {
-    func scheduleNextOperation() {
-        queue.asyncAfter(deadline: .now() + strategy.idleDelay) { [weak self] in
+    func scheduleNextOperation(afterDelay: Bool) {
+        var deadline = DispatchTime.now()
+        if afterDelay {
+            deadline = deadline + strategy.idleDelay
+        }
+
+        queue.asyncAfter(deadline: deadline) { [weak self] in
             self?.performNextOperation()
         }
     }
@@ -84,7 +89,7 @@ private extension RequestsQueue {
             requests = downloadRequests
         }
         else {
-            scheduleNextOperation()
+            scheduleNextOperation(afterDelay: true)
             requestsInProgress = false
             return
         }
@@ -92,11 +97,11 @@ private extension RequestsQueue {
         requestsInProgress = true
 
         networkService.batch(requests, completion: { [weak self] in
-            self?.scheduleNextOperation()
+            self?.scheduleNextOperation(afterDelay: false)
         },
         failure:{ [weak self] error in
             // TODO handle generic errors like user logout
-            self?.scheduleNextOperation()
+            self?.scheduleNextOperation(afterDelay: false)
         })
     }
 
