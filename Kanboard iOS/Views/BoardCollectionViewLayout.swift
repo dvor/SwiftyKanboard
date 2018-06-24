@@ -39,6 +39,29 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
         }
     }
 
+    var visibleColumn: Int {
+        get {
+            guard let collectionView = collectionView else { return 0 }
+            return columnIndexForOffsetX(collectionView.contentOffset.x)
+        }
+    }
+
+    func setVisibleColumn(_ column: Int, animated: Bool) {
+        guard let collectionView = collectionView else { return }
+
+        var realColumn = column
+        if realColumn < 0 {
+            realColumn = 0
+        }
+        if realColumn > attributes.count - 1 {
+            realColumn = attributes.count - 1
+        }
+
+        var offset = collectionView.contentOffset
+        offset.x = offsetXForColumn(realColumn)
+        collectionView.setContentOffset(offset, animated: animated)
+    }
+
     init(horizontalOffsetFromEdge: CGFloat) {
         self.horizontalOffsetFromEdge = horizontalOffsetFromEdge
         super.init()
@@ -54,7 +77,8 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
 
         guard let collectionView = collectionView else { return }
 
-        let screenWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        let screenMinimalSide = self.screenMinimalSide
+        let pageWidth = self.pageWidth
         var currentOrigin = CGPoint()
 
         for section in 0..<collectionView.numberOfSections {
@@ -69,7 +93,7 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
 
                 let x = currentOrigin.x + Constants.horizontalOffset
                 let y = currentOrigin.y + Constants.verticalOffset
-                let width = screenWidth - 2 * Constants.horizontalOffset - 2 * horizontalOffsetFromEdge
+                let width = pageWidth
                 let height = delegate.collectionView(collectionView, heightForItemAt: dataSourceIndexPath, forWidth: width)
 
                 attr.frame = CGRect(x: x, y: y, width: width, height: height)
@@ -79,7 +103,7 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
                 contentSize.height = max(contentSize.height, currentOrigin.y)
             }
 
-            currentOrigin.x += screenWidth - 2 * horizontalOffsetFromEdge
+            currentOrigin.x += screenMinimalSide - 2 * horizontalOffsetFromEdge
             contentSize.width = max(contentSize.width, currentOrigin.x)
         }
     }
@@ -110,19 +134,18 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
 
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint,
                                       withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        guard let collectionView = collectionView else { return proposedContentOffset }
+        var column = columnIndexForOffsetX(proposedContentOffset.x)
 
-        let proposedCenterX = proposedContentOffset.x + collectionView.bounds.size.width/2
-        let proposedRect = CGRect(origin: CGPoint(x: proposedContentOffset.x, y: collectionView.contentOffset.y),
-                                  size: collectionView.bounds.size)
-
-        guard let attributes = layoutAttributesForElements(in: proposedRect),
-              let closest = findClosestCell(to: proposedCenterX, in: attributes) else {
-            return proposedContentOffset
+        if column == visibleColumn {
+            if velocity.x > 0 && column < (attributes.count - 1) {
+                column += 1
+            }
+            else if velocity.x < 0 && column > 0 {
+                column -= 1
+            }
         }
 
-        return CGPoint(x: closest.center.x - collectionView.bounds.size.width / 2,
-                       y: proposedContentOffset.y)
+        return CGPoint(x: offsetXForColumn(column), y: proposedContentOffset.y)
     }
 
     override func targetIndexPath(forInteractivelyMovingItem previousIndexPath: IndexPath, withPosition position: CGPoint) -> IndexPath {
@@ -139,22 +162,36 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
 }
 
 private extension BoardCollectionViewLayout {
-    func findClosestCell(to xCoordinate: CGFloat, in attributes: [UICollectionViewLayoutAttributes]) -> UICollectionViewLayoutAttributes? {
-        var selected: UICollectionViewLayoutAttributes? = nil
+    var screenMinimalSide: CGFloat {
+        get {
+            return min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        }
+    }
 
-        for current in attributes {
-            guard current.representedElementCategory == .cell else { continue }
-            guard let previous = selected else {
-                selected = current
-                continue
-            }
+    var pageWidth: CGFloat {
+        get {
+            return screenMinimalSide - 2 * Constants.horizontalOffset - 2 * horizontalOffsetFromEdge
+        }
+    }
 
-            if abs(current.center.x - xCoordinate) < abs(previous.center.x - xCoordinate) {
-                selected = current
+    func columnIndexForOffsetX(_ offsetX: CGFloat) -> Int {
+        let centerX = offsetX + screenMinimalSide / 2
+        let pageWidth = self.pageWidth
+        var x = -horizontalOffsetFromEdge
+
+        for column in 0..<attributes.count {
+            x += pageWidth + Constants.horizontalOffset
+
+            if centerX < x {
+                return column
             }
         }
 
-        return selected
+        return attributes.count - 1
+    }
+
+    func offsetXForColumn(_ column: Int) -> CGFloat {
+        return -horizontalOffsetFromEdge + CGFloat(column) * (pageWidth + 2 * Constants.horizontalOffset)
     }
 
     // When moving item UICollectionView temporarely updates it's row/sections without notifying dataSource.
