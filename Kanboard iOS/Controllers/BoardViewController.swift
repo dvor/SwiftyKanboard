@@ -52,7 +52,10 @@ class BoardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        synchronizationService.addListener(self)
         synchronizationService.startSynchronization()
+
+        syncAnimatedButton.isAnimating = synchronizationService.isSyncing
 
         if let lastActiveColumn = project.localInfo?.lastActiveColumn {
             view.layoutIfNeeded()
@@ -83,7 +86,12 @@ extension BoardViewController {
     }
 
     @objc func syncButtonPressed() {
-        syncAnimatedButton.isAnimating = !syncAnimatedButton.isAnimating
+    }
+}
+
+extension BoardViewController: SynchronizationServiceListener {
+    @objc func synchronizationService(isSynchingChange isSyncing: Bool) {
+        syncAnimatedButton.isAnimating = isSyncing
     }
 }
 

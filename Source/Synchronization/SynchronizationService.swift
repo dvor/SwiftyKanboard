@@ -15,7 +15,13 @@ enum SynchronizationServiceError: Error {
     case networkError
 }
 
+@objc protocol SynchronizationServiceListener: class {
+    @objc func synchronizationService(isSynchingChange isSyncing: Bool)
+}
+
 class SynchronizationService {
+   private var listeners = NSHashTable<SynchronizationServiceListener>.weakObjects()
+
     private let projectIds: [String]
     private let serviceQueue: DispatchQueue
     private let requestsQueue: RequestsQueue
@@ -47,6 +53,8 @@ class SynchronizationService {
         self.genericSettingsDownloadManager = GenericSettingsDownloadManager(downloadQueue: requestsQueue)
         self.projectDownloadManagers = projectIds.map{ ProjectDownloadManager(projectId: $0, downloadQueue: requestsQueue) }
         self.projectUploadManagers = projectIds.map{ ProjectUploadManager(projectId: $0, uploadQueue: requestsQueue) }
+
+        requestsQueue.delegate = self
     }
 
     /// Check whether settings required to run the app were already synced.
@@ -106,6 +114,20 @@ class SynchronizationService {
 }
 
 extension SynchronizationService {
+    var isSyncing: Bool {
+        get {
+            return requestsQueue.requestsInProgress
+        }
+    }
+
+    func addListener(_ listener: SynchronizationServiceListener) {
+        listeners.add(listener)
+    }
+
+    func removeListener(_ listener: SynchronizationServiceListener) {
+        listeners.remove(listener)
+    }
+
     func move(taskId: String,
               to columnId: String,
               at position: Int,
@@ -132,6 +154,16 @@ extension SynchronizationService {
                 failure?(error)
             }
         })
+    }
+}
+
+extension SynchronizationService: RequestsQueueDelegate {
+    func requestsQueue(_ queue: RequestsQueue, requestsInProgressUpdate requestsInProgress: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.listeners.allObjects.forEach {
+                $0.synchronizationService(isSynchingChange: requestsInProgress)
+            }
+        }
     }
 }
 

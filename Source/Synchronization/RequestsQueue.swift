@@ -15,11 +15,24 @@ protocol UploadRequestsQueue {
     func add(uploadRequest: UploadRequest)
 }
 
+protocol RequestsQueueDelegate: class {
+    func requestsQueue(_ queue: RequestsQueue, requestsInProgressUpdate requestsInProgress: Bool)
+}
+
 class RequestsQueue: DownloadRequestsQueue, UploadRequestsQueue {
     private struct DownloadRequestContainer {
         let request: DownloadRequest
         let isConcurent: Bool
     }
+
+    private(set) var requestsInProgress = false {
+        didSet {
+            if oldValue != requestsInProgress {
+                delegate?.requestsQueue(self, requestsInProgressUpdate: requestsInProgress)
+            }
+        }
+    }
+    weak var delegate: RequestsQueueDelegate?
 
     private let networkService: NetworkService
     private let strategy: SynchronizationStrategy
@@ -72,8 +85,11 @@ private extension RequestsQueue {
         }
         else {
             scheduleNextOperation()
+            requestsInProgress = false
             return
         }
+
+        requestsInProgress = true
 
         networkService.batch(requests, completion: { [weak self] in
             self?.scheduleNextOperation()

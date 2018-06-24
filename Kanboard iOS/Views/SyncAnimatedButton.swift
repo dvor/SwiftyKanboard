@@ -18,9 +18,11 @@ class SyncAnimatedButton: UIButton {
 
     var isAnimating = false {
         didSet {
-            if isAnimating {
+            if animator == nil {
                 startNextAnimation()
             }
+
+            isAnimating ? animator?.startAnimation() : animator?.pauseAnimation()
         }
     }
 
