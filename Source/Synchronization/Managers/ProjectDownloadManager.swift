@@ -20,6 +20,10 @@ class ProjectDownloadManager {
     func start() {
         doFullSync()
     }
+
+    func synchronizeNow() {
+        doFullSync()
+    }
 }
 
 extension ProjectDownloadManager: DownloadManager {

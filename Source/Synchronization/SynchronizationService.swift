@@ -128,6 +128,10 @@ extension SynchronizationService {
         listeners.remove(listener)
     }
 
+    func synchronizeNow() {
+        projectDownloadManagers.forEach{ $0.synchronizeNow() }
+    }
+
     func move(taskId: String,
               to columnId: String,
               at position: Int,

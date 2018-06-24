@@ -86,6 +86,7 @@ extension BoardViewController {
     }
 
     @objc func syncButtonPressed() {
+        synchronizationService.synchronizeNow()
     }
 }
 
