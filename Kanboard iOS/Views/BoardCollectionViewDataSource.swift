@@ -19,11 +19,12 @@ protocol BoardCollectionViewDataSourceDelegate: class {
 
 class BoardCollectionViewDataSource: NSObject {
     private weak var collectionView: UICollectionView?
+    private let dummySizingCell = BoardCollectionViewCell()
 
     private var taskDataSource: BoardTaskDataSource
     private var colors: Results<TaskColor>
 
-    weak var delegate: BoardCollectionViewDataSourceDelegate?
+    weak var delegate: BoardCollectionViewDataSourceDelegate!
 
     init(collectionView: UICollectionView, projectId: String) {
         self.collectionView = collectionView
@@ -39,6 +40,15 @@ class BoardCollectionViewDataSource: NSObject {
 
     func getTask(at indexPath: IndexPath) -> Task {
         return taskDataSource.item(at: indexPath)
+    }
+
+    func heightForItem(at indexPath: IndexPath, forWidth width: CGFloat) -> CGFloat {
+        let task = getTask(at: indexPath)
+        fillCell(dummySizingCell, with: task)
+        dummySizingCell.titleLabel.preferredMaxLayoutWidth = width
+
+        let size = dummySizingCell.systemLayoutSizeFitting(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
+        return size.height
     }
 }
 
@@ -74,34 +84,13 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
         }
 
         let task = getTask(at: indexPath)
-        cell.label.text = task.title
-
-        let predicate = NSPredicate(format: "id == %@", task.colorId)
-        if let color = colors.filter(predicate).first {
-            cell.contentView.backgroundColor = UIColor(red: CGFloat(color.backgroundRed),
-                                                       green: CGFloat(color.backgroundGreen),
-                                                       blue: CGFloat(color.backgroundBlue),
-                                                       alpha: 1.0)
-        }
+        fillCell(cell, with: task)
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         disableUserInteraction()
-
-        let cancelBlock = { [weak self] in
-            collectionView.performBatchUpdates({
-                collectionView.deleteItems(at: [destinationIndexPath])
-                collectionView.insertItems(at: [sourceIndexPath])
-            })
-            self?.enableUserInteraction()
-        }
-
-        guard let delegate = delegate else {
-            cancelBlock()
-            return
-        }
 
         let task = getTask(at: sourceIndexPath)
         let column = taskDataSource.column(at: destinationIndexPath.section)
@@ -113,7 +102,13 @@ extension BoardCollectionViewDataSource: UICollectionViewDataSource {
                       position: position,
                       withoutNotifying: tasksTokens,
                       completion: enableUserInteraction,
-                      failure: cancelBlock)
+                      failure: { [weak self] in
+            collectionView.performBatchUpdates({
+                collectionView.deleteItems(at: [destinationIndexPath])
+                collectionView.insertItems(at: [sourceIndexPath])
+            })
+            self?.enableUserInteraction()
+        })
 
         taskDataSource.reloadTasks(in: sourceIndexPath.section)
         taskDataSource.reloadTasks(in: destinationIndexPath.section)
@@ -129,6 +124,18 @@ private extension BoardCollectionViewDataSource {
     func enableUserInteraction() {
         collectionView?.isUserInteractionEnabled = true
         collectionView?.alpha = 1.0
+    }
+
+    func fillCell(_ cell: BoardCollectionViewCell, with task: Task) {
+        cell.idLabel.text = "#" + task.id
+        cell.titleLabel.text = task.title
+        cell.priorityLabel.text = "P\(task.priority)"
+
+        let predicate = NSPredicate(format: "id == %@", task.colorId)
+        if let color = colors.filter(predicate).first {
+            cell.backgroundColor = color.backgroundColor
+            cell.borderColor = color.borderColor
+        }
     }
 }
 

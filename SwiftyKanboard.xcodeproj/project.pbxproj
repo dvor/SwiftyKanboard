@@ -19,6 +19,16 @@
 		11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD120A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11221BD220A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
+		11378F4A20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
+		11378F4B20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
+		11378F4C20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
+		11378F4D20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
+		11378F5120DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */; };
+		11378F5320DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */; };
+		11378F5520DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
+		11378F5620DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
+		11378F5720DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
+		11378F5820DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
 		1179B97D20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B97F20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
@@ -245,6 +255,8 @@
 		11BC329A20DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
 		11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */; };
 		11BC329F20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */; };
+		11BC32A120DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */; };
+		11BC32A220DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
@@ -282,6 +294,9 @@
 		11221BB920A36D01003888E2 /* RemoteProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProject.swift; sourceTree = "<group>"; };
 		11221BBE20A36D6E003888E2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		11221BCE20A3A123003888E2 /* AbstractRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
+		11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableIndexPathCalculator.swift; sourceTree = "<group>"; };
+		11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableIndexPathCalculatorTest.swift; sourceTree = "<group>"; };
+		11378F5420DFBCED00561758 /* IndexPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtensions.swift; sourceTree = "<group>"; };
 		1179B97C20D1B820006ED736 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -354,6 +369,7 @@
 		11BB155120A85C47002FCC2A /* ColumnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnExtension.swift; sourceTree = "<group>"; };
 		11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequest.swift; sourceTree = "<group>"; };
 		11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequestTest.swift; sourceTree = "<group>"; };
+		11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColoriOSExtension.swift; sourceTree = "<group>"; };
 		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1C20A301760060536B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -477,6 +493,14 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		11378F4E20DFBC6600561758 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1179B98120D1BE72006ED736 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				1192FB9920DC574A0033D9DD /* BoardTaskDataSource.swift */,
+				11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */,
 				1192FB9820DC574A0033D9DD /* ResultsSnapshot.swift */,
 			);
 			path = Utils;
@@ -561,6 +586,7 @@
 			children = (
 				11B7B70720B4CEC60039716E /* StringExtension.swift */,
 				1179B99020D1CA19006ED736 /* UserDefaultsManagerExtension.swift */,
+				11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				11BB14DF20A6539B002FCC2A /* RealmExtension.swift */,
+				11378F5420DFBCED00561758 /* IndexPathExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -654,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				11BB153120A84E44002FCC2A /* Networking */,
+				11378F4E20DFBC6600561758 /* Utils */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1089,6 +1117,7 @@
 				11BB151C20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
 				11BB152220A84708002FCC2A /* Column.swift in Sources */,
 				11B7B69920A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
+				11378F5520DFBCED00561758 /* IndexPathExtensions.swift in Sources */,
 				11B7B67420A895030039716E /* GetAllTasksRequest.swift in Sources */,
 				1179B98920D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */,
 				11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
@@ -1114,6 +1143,7 @@
 				1179B98620D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */,
 				1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */,
+				11BC32A120DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */,
 				11BC329720DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
 				11B7B68C20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
@@ -1128,6 +1158,7 @@
 				1189D0B920B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11B7B6F120B4CAF00039716E /* BoardViewController.swift in Sources */,
 				11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */,
+				11378F4A20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
 				11B7B6FE20B4CC400039716E /* Coordinator.swift in Sources */,
 				1192FB9E20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */,
 				11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */,
@@ -1161,6 +1192,7 @@
 				11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
 				1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */,
+				11378F5620DFBCED00561758 /* IndexPathExtensions.swift in Sources */,
 				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
 				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
 				11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
@@ -1170,12 +1202,14 @@
 				1192FB9B20DC574A0033D9DD /* ResultsSnapshot.swift in Sources */,
 				11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
 				1192FB9F20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */,
+				11378F4B20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
 				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,
 				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
 				11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
 				1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
 				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
 				11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */,
+				11BC32A220DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */,
 				11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
 				11B7B6FF20B4CC400039716E /* Coordinator.swift in Sources */,
 				11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */,
@@ -1183,6 +1217,7 @@
 				11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */,
 				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
 				11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
+				11378F5120DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */,
 				11BB152320A84708002FCC2A /* Column.swift in Sources */,
 				11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */,
 				11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */,
@@ -1229,6 +1264,8 @@
 				11B7B68E20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
 				11BB154F20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
 				11BB149D20A44F39002FCC2A /* Logger.swift in Sources */,
+				11378F5720DFBCED00561758 /* IndexPathExtensions.swift in Sources */,
+				11378F4C20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
 				1189D0C020B4372F005BA02D /* UploadRequest.swift in Sources */,
 				1189D0BB20B4372A005BA02D /* DownloadRequest.swift in Sources */,
 				11B7B6B520B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
@@ -1277,6 +1314,7 @@
 			files = (
 				11BB14DD20A6422C002FCC2A /* RemoteObject.swift in Sources */,
 				1179B98020D1B820006ED736 /* DownloadManager.swift in Sources */,
+				11378F5320DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */,
 				11221BC220A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11BB155520A85C47002FCC2A /* ColumnExtension.swift in Sources */,
 				11B7B67C20A895420039716E /* RemoteTask.swift in Sources */,
@@ -1328,6 +1366,8 @@
 				11BB154320A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
 				11B7B6C320B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */,
 				11BB153A20A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
+				11378F5820DFBCED00561758 /* IndexPathExtensions.swift in Sources */,
+				11378F4D20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
 				11B7B6D620B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
 				1192FBA120DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */,
 				11BB14F220A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,

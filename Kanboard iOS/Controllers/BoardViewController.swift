@@ -17,6 +17,7 @@ class BoardViewController: UIViewController {
     private let synchronizationService: SynchronizationService
     private let projectId: String
 
+    private var layout: BoardCollectionViewLayout!
     private var dataSource: BoardCollectionViewDataSource!
     private var collectionView: UICollectionView!
 
@@ -56,12 +57,15 @@ extension BoardViewController {
                 break
             }
             collectionView.beginInteractiveMovementForItem(at: indexPath)
+            layout.isMovingItem = true
         case .changed:
             collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
         case .ended:
             collectionView.endInteractiveMovement()
+            layout.isMovingItem = false
         default:
             collectionView.cancelInteractiveMovement()
+            layout.isMovingItem = false
         }
     }
 }
@@ -108,9 +112,18 @@ extension BoardViewController: BoardCollectionViewDataSourceDelegate {
     }
 }
 
+extension BoardViewController: BoardCollectionViewLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        heightForItemAt indexPath: IndexPath,
+                        forWidth width: CGFloat) -> CGFloat {
+        return dataSource.heightForItem(at: indexPath, forWidth: width)
+    }
+}
+
 private extension BoardViewController {
     func createSubviews() {
-        let layout = BoardCollectionViewLayout(horizontalOffsetFromEdge: Constants.horizontalOffsetFromEdge)
+        layout = BoardCollectionViewLayout(horizontalOffsetFromEdge: Constants.horizontalOffsetFromEdge)
+        layout.delegate = self
 
         collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: layout)
         collectionView.delegate = self

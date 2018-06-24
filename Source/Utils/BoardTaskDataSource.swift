@@ -43,12 +43,7 @@ class BoardTaskDataSource {
     }
 
     func item(at indexPath: IndexPath) -> Task {
-        #if os(OSX)
-        let row = indexPath.item
-        #else
-        let row = indexPath.row
-        #endif
-        return tasksByColumns[indexPath.section].snapshot[row]
+        return tasksByColumns[indexPath.section].snapshot[indexPath.row]
     }
 
     func column(at index: Int) -> Column {

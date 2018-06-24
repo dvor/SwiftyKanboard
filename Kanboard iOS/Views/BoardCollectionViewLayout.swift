@@ -8,17 +8,36 @@
 import UIKit
 
 private struct Constants {
-    static let minimalCellHeight: CGFloat = 100.0
-
     static let verticalOffset: CGFloat = 5.0
     static let horizontalOffset: CGFloat = 5.0
 }
 
+protocol BoardCollectionViewLayoutDelegate: class {
+    func collectionView(_ collectionView: UICollectionView,
+                        heightForItemAt indexPath: IndexPath,
+                        forWidth width: CGFloat) -> CGFloat
+}
+
 class BoardCollectionViewLayout: UICollectionViewLayout {
+    weak var delegate: BoardCollectionViewLayoutDelegate!
+
     private let horizontalOffsetFromEdge: CGFloat
 
     private var contentSize = CGSize()
     private var attributes = [[UICollectionViewLayoutAttributes]]()
+
+    private var movingItemOriginalIndexPath: IndexPath?
+    private var movingItemCurrentIndexPath: IndexPath?
+
+    // This property is changed by user of layout.
+    var isMovingItem = false {
+        didSet {
+            if !isMovingItem {
+                movingItemOriginalIndexPath = nil
+                movingItemCurrentIndexPath = nil
+            }
+        }
+    }
 
     init(horizontalOffsetFromEdge: CGFloat) {
         self.horizontalOffsetFromEdge = horizontalOffsetFromEdge
@@ -44,12 +63,14 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
 
             for row in 0..<collectionView.numberOfItems(inSection: section) {
                 let indexPath = IndexPath(row: row, section: section)
+                let dataSourceIndexPath = self.dataSourceIndexPath(for: row, in: section)
+
                 let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 
                 let x = currentOrigin.x + Constants.horizontalOffset
                 let y = currentOrigin.y + Constants.verticalOffset
                 let width = screenWidth - 2 * Constants.horizontalOffset - 2 * horizontalOffsetFromEdge
-                let height = Constants.minimalCellHeight
+                let height = delegate.collectionView(collectionView, heightForItemAt: dataSourceIndexPath, forWidth: width)
 
                 attr.frame = CGRect(x: x, y: y, width: width, height: height)
                 attributes[section].append(attr)
@@ -104,9 +125,16 @@ class BoardCollectionViewLayout: UICollectionViewLayout {
                        y: proposedContentOffset.y)
     }
 
+    override func targetIndexPath(forInteractivelyMovingItem previousIndexPath: IndexPath, withPosition position: CGPoint) -> IndexPath {
+        let targetPath = super.targetIndexPath(forInteractivelyMovingItem: previousIndexPath, withPosition: position)
 
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
+        if movingItemOriginalIndexPath == nil {
+            // This is first call of this method for this movement. Let's save original index path.
+            movingItemOriginalIndexPath = previousIndexPath
+        }
+        movingItemCurrentIndexPath = targetPath
+
+        return targetPath
     }
 }
 
@@ -127,5 +155,24 @@ private extension BoardCollectionViewLayout {
         }
 
         return selected
+    }
+
+    // When moving item UICollectionView temporarely updates it's row/sections without notifying dataSource.
+    // When calculating layout we still want to use correct data from dataSource.
+    //
+    // In this method we convert UICollectionView's indexPath to one in the dataSource.
+    func dataSourceIndexPath(for row: Int, in section: Int) -> IndexPath {
+        let indexPath = IndexPath(row: row, section: section)
+
+        guard isMovingItem,
+              let originalIndexPath = movingItemOriginalIndexPath,
+              let currentIndexPath = movingItemCurrentIndexPath else {
+            // Not moving item, indexPaths are same.
+            return indexPath
+        }
+
+        return MovableIndexPathCalculator.originalIndexPath(from: indexPath,
+                                                            movingItemOriginalIndexPath: originalIndexPath,
+                                                            movingItemCurrentIndexPath: currentIndexPath)
     }
 }
