@@ -51,7 +51,7 @@ class SynchronizationService {
 
         self.requestsQueue = requestsQueue
         self.genericSettingsDownloadManager = GenericSettingsDownloadManager(downloadQueue: requestsQueue)
-        self.projectDownloadManagers = projectIds.map{ ProjectDownloadManager(projectId: $0, downloadQueue: requestsQueue) }
+        self.projectDownloadManagers = projectIds.map{ ProjectDownloadManager(projectId: $0, strategy: strategy, dispatchQueue: serviceQueue, downloadQueue: requestsQueue) }
         self.projectUploadManagers = projectIds.map{ ProjectUploadManager(projectId: $0, uploadQueue: requestsQueue) }
 
         requestsQueue.delegate = self

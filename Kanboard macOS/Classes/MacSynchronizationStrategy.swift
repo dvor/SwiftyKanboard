@@ -10,5 +10,7 @@ import Foundation
 struct MacSynchronizationStrategy: SynchronizationStrategy {
     let idleDelay: TimeInterval = 1.0
 
+    let downloadSyncDelay: TimeInterval = 60.0
+
     let retryOnFailureDelays: [TimeInterval] = [2.0, 5.0, 20.0, 60.0]
 }
