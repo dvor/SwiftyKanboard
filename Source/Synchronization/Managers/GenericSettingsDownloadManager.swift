@@ -45,6 +45,7 @@ private extension GenericSettingsDownloadManager {
 
             let updater: DatabaseUpdater<RemoteTaskColor, TaskColor> = DatabaseUpdater(realm: realm)
             updater.updateDatabase(with: colors)
+            updater.removeObjects(notFoundIn: colors)
 
             completion?()
         },

@@ -28,6 +28,31 @@ class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
             updateDatabase(with: $0)
         }
 
+        realmSafeCommitWrite()
+    }
+
+    func removeObjects(notFoundIn remotes: [RemoteType], filteredWithPredicate predicate: NSPredicate? = nil) {
+        let ids = Set(remotes.map{ $0.id })
+        var allPredicates = [NSPredicate(format: "NOT (id IN %@)", ids)]
+
+        if let predicate = predicate {
+            allPredicates.append(predicate)
+        }
+
+        let compound = NSCompoundPredicate(andPredicateWithSubpredicates: allPredicates)
+        log.infoMessage("Removing objects matching predicate: \(compound)")
+
+        let toDelete = realm.objects(LocalType.self).filter(compound)
+        log.infoMessage("Removing objects: \(toDelete)")
+
+        realm.beginWrite()
+        realm.delete(toDelete)
+        realmSafeCommitWrite()
+    }
+}
+
+private extension DatabaseUpdater {
+    func realmSafeCommitWrite() {
         do {
             try realm.commitWrite()
         }
@@ -36,9 +61,6 @@ class DatabaseUpdater<RemoteType: RemoteObject, LocalType: Object & Updatable> {
         }
     }
 
-}
-
-private extension DatabaseUpdater {
     func updateDatabase(with remote: RemoteType) {
         let predicate = NSPredicate(format: "id = %@", remote.id)
         let locals = realm.objects(LocalType.self).filter(predicate)

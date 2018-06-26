@@ -14,11 +14,14 @@ protocol ResultsSnapshotDelegate: class {
                                            modifications: [Int])
 }
 
+// Whole idea of snapshoting is (sort of) terrible hack.
+// It should be removed as soon as Realm will have grouping mechanism.
+// See https://github.com/realm/realm-cocoa/issues/3384
 class ResultsSnapshot<T: Object> {
     private let results: Results<T>
     var token: NotificationToken!
 
-    private(set) var snapshot = [T]()
+    private var snapshot = [T]()
     weak var delegate: ResultsSnapshotDelegate?
 
     init(results: Results<T>) {
@@ -41,6 +44,25 @@ class ResultsSnapshot<T: Object> {
         }
 
         updateSnapshot()
+    }
+
+    var count: Int {
+        get {
+            return snapshot.count
+        }
+    }
+
+    func object(atIndex index: Int) -> T {
+        var object = snapshot[index]
+
+        if object.isInvalidated {
+            // Snapshot may contain invalidated object.
+            // Probably this object will be removed soon with updateSnapshot call.
+            // Meanwhile we return a dummy empty object which is not added to the Realm.
+            object = T()
+        }
+
+        return object
     }
 
     func updateSnapshot() {

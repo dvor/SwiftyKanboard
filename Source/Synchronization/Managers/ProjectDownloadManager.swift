@@ -168,11 +168,15 @@ private extension ProjectDownloadManager {
     }
 
     func syncColumns(completion: @escaping (() -> Void), failure: @escaping ((NetworkServiceError) -> Void)) -> GetColumnsRequest {
+        let projectId = self.projectId
+
         return GetColumnsRequest(projectId: projectId, completion: { columns in
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteColumn, Column> = DatabaseUpdater(realm: realm)
             updater.updateDatabase(with: columns)
+            updater.removeObjects(notFoundIn: columns,
+                                  filteredWithPredicate: NSPredicate(format: "projectId == %@", projectId))
 
             completion()
         },
@@ -180,11 +184,15 @@ private extension ProjectDownloadManager {
     }
 
     func syncTasks(active: Bool, completion: @escaping (() -> Void), failure: @escaping ((NetworkServiceError) -> Void)) -> GetAllTasksRequest {
+        let projectId = self.projectId
+
         return GetAllTasksRequest(projectId: projectId, active: active, completion: { tasks in
             let realm = try! Realm.default()
 
             let updater: DatabaseUpdater<RemoteTask, Task> = DatabaseUpdater(realm: realm)
             updater.updateDatabase(with: tasks)
+            updater.removeObjects(notFoundIn: tasks,
+                                  filteredWithPredicate: NSPredicate(format: "projectId == %@", projectId))
 
             completion()
         },

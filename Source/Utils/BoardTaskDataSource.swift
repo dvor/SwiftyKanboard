@@ -39,11 +39,11 @@ class BoardTaskDataSource {
     }
 
     func numberOfItemsInSection(_ section: Int) -> Int {
-        return tasksByColumns[section].snapshot.count
+        return tasksByColumns[section].count
     }
 
     func item(at indexPath: IndexPath) -> Task {
-        return tasksByColumns[indexPath.section].snapshot[indexPath.row]
+        return tasksByColumns[indexPath.section].object(atIndex: indexPath.row)
     }
 
     func column(at index: Int) -> Column {
