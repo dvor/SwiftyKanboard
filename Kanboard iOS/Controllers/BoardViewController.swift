@@ -105,13 +105,13 @@ extension BoardViewController: UICollectionViewDelegate {
         guard let oldContentOffset = oldContentOffset else { return }
 
         if abs(scrollView.contentOffset.x - oldContentOffset.x) > abs(scrollView.contentOffset.y - oldContentOffset.y) {
-            scrollView.decelerationRate = UIScrollViewDecelerationRateFast
+            scrollView.decelerationRate = UIScrollView.DecelerationRate.fast
             scrollView.contentOffset.y = oldContentOffset.y
             scrollView.showsHorizontalScrollIndicator = true
             scrollView.showsVerticalScrollIndicator = false
         }
         else {
-            scrollView.decelerationRate = UIScrollViewDecelerationRateNormal
+            scrollView.decelerationRate = UIScrollView.DecelerationRate.normal
             scrollView.contentOffset.x = oldContentOffset.x
             scrollView.showsHorizontalScrollIndicator = false
             scrollView.showsVerticalScrollIndicator = true

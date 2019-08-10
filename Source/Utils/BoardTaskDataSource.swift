@@ -70,7 +70,7 @@ extension BoardTaskDataSource: ResultsSnapshotDelegate {
                                            modifications: [Int]) {
 
         guard let tasks = snapshot as? ResultsSnapshot<Task> else { return }
-        guard let section = tasksByColumns.index(of: tasks) else { return }
+        guard let section = tasksByColumns.firstIndex(of: tasks) else { return }
 
         delegate?.boardTaskUpdate(deleteSections: IndexSet(),
                                   insertSections: IndexSet(),
