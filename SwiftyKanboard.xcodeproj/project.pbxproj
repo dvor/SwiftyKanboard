@@ -1034,23 +1034,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm-macOS/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift-macOS/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit-macOS/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Willow-macOS/Willow.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Willow.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA235EB051E95ADD59012DF4 /* [CP] Check Pods Manifest.lock */ = {
@@ -1076,25 +1069,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm-iOS/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Willow-iOS/Willow.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Willow.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */ = {
