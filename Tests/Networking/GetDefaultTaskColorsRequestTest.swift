@@ -29,7 +29,15 @@ class GetDefaultTaskColorsRequestTest: XCTestCase {
         let request = GetDefaultTaskColorsRequest(completion: { colors in
             XCTAssertEqual(colors.count, 2)
 
-            let c0 = colors[0]
+            var c0 = colors[0]
+            var c1 = colors[1]
+
+            // Colors in dictionary are in random order.
+            if c0.id == "yellow" {
+                c0 = colors[1]
+                c1 = colors[0]
+            }
+
             XCTAssertEqual(c0.id, "amber")
             XCTAssertEqual(c0.name, "Amber")
             XCTAssertEqual(c0.backgroundRed, 1.0, accuracy: 0.001)
@@ -39,7 +47,6 @@ class GetDefaultTaskColorsRequestTest: XCTestCase {
             XCTAssertEqual(c0.borderGreen, 0.6274, accuracy: 0.001)
             XCTAssertEqual(c0.borderBlue, 0.0, accuracy: 0.001)
 
-            let c1 = colors[1]
             XCTAssertEqual(c1.id, "yellow")
             XCTAssertEqual(c1.name, "Yellow")
             XCTAssertEqual(c1.backgroundRed, 0.9608, accuracy: 0.001)
