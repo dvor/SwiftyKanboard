@@ -2,9 +2,9 @@ ENV['COCOAPODS_DISABLE_STATS'] = "true"
 inhibit_all_warnings!
 
 def common_pods
-    pod 'RealmSwift', '~> 3.5.0'
-    pod 'SnapKit', '~> 4.0.0'
-    pod 'Willow', '~> 5.0.2'
+    pod 'RealmSwift', '~> 3.17.3'
+    pod 'SnapKit', '~> 5.0.1'
+    pod 'Willow', '~> 5.2.1'
 end
 
 target 'Kanboard iOS' do
@@ -12,7 +12,7 @@ target 'Kanboard iOS' do
   use_frameworks!
 
   common_pods
-  pod 'JGProgressHUD', '~> 2.0.3'
+  pod 'JGProgressHUD', '~> 2.0.4'
 
   target 'Kanboard iOSTests' do
     inherit! :search_paths
