@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Kanboard
 
 class GetColumnsRequestTest: XCTestCase {
     func testParsing() {

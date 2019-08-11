@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Kanboard
 
 class GetDefaultTaskColorsRequestTest: XCTestCase {
     func testParsing() {

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Kanboard
 
 class GetAllProjectsRequestTest: XCTestCase {
     func testParsing() {

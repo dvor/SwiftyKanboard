@@ -8,141 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		11221BBA20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
-		11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BB920A36D01003888E2 /* RemoteProject.swift */; };
 		11221BBF20A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
-		11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BBE20A36D6E003888E2 /* NetworkService.swift */; };
 		11221BCF20A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
-		11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11221BCE20A3A123003888E2 /* AbstractRequest.swift */; };
 		11378F4A20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
-		11378F4B20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4920DFBA2F00561758 /* MovableIndexPathCalculator.swift */; };
 		11378F5120DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F4F20DFBC7400561758 /* MovableIndexPathCalculatorTest.swift */; };
 		11378F5520DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
-		11378F5620DFBCED00561758 /* IndexPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5420DFBCED00561758 /* IndexPathExtensions.swift */; };
 		11378F5B20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
-		11378F5C20E0323200561758 /* ProjectLocalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5A20E0323200561758 /* ProjectLocalInfo.swift */; };
 		11378F6020E0443000561758 /* SyncAnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5F20E0443000561758 /* SyncAnimatedButton.swift */; };
-		11378F6120E0443100561758 /* SyncAnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11378F5F20E0443000561758 /* SyncAnimatedButton.swift */; };
 		1179B97D20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
-		1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B97C20D1B820006ED736 /* DownloadManager.swift */; };
 		1179B98320D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */; };
-		1179B98420D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98220D1BE9E006ED736 /* BoardCollectionViewCell.swift */; };
 		1179B98620D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */; };
-		1179B98720D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98520D1BEAF006ED736 /* BoardCollectionViewLayout.swift */; };
 		1179B98920D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */; };
-		1179B98A20D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98820D1BEB8006ED736 /* BoardCollectionViewDataSource.swift */; };
 		1179B98C20D1C9D0006ED736 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98B20D1C9D0006ED736 /* UserDefaultsManager.swift */; };
-		1179B98D20D1C9D0006ED736 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B98B20D1C9D0006ED736 /* UserDefaultsManager.swift */; };
 		1179B99120D1CA19006ED736 /* UserDefaultsManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B99020D1CA19006ED736 /* UserDefaultsManagerExtension.swift */; };
-		1179B99220D1CA19006ED736 /* UserDefaultsManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179B99020D1CA19006ED736 /* UserDefaultsManagerExtension.swift */; };
 		1189D0AF20B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
-		1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0AE20B436DE005BA02D /* ProjectDownloadManager.swift */; };
 		1189D0B420B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
-		1189D0B520B436E6005BA02D /* ProjectUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B320B436E6005BA02D /* ProjectUploadManager.swift */; };
 		1189D0B920B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
-		1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0B820B4372A005BA02D /* DownloadRequest.swift */; };
 		1189D0BE20B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
-		1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0BD20B4372F005BA02D /* UploadRequest.swift */; };
 		1189D0C420B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
-		1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189D0C320B44531005BA02D /* GenericSettingsDownloadManager.swift */; };
 		1192FB9A20DC574A0033D9DD /* ResultsSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192FB9820DC574A0033D9DD /* ResultsSnapshot.swift */; };
-		1192FB9B20DC574A0033D9DD /* ResultsSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192FB9820DC574A0033D9DD /* ResultsSnapshot.swift */; };
 		1192FB9E20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192FB9920DC574A0033D9DD /* BoardTaskDataSource.swift */; };
-		1192FB9F20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192FB9920DC574A0033D9DD /* BoardTaskDataSource.swift */; };
 		11B7B67420A895030039716E /* GetAllTasksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67320A895030039716E /* GetAllTasksRequest.swift */; };
-		11B7B67520A895070039716E /* GetAllTasksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67320A895030039716E /* GetAllTasksRequest.swift */; };
 		11B7B67920A895420039716E /* RemoteTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67820A895420039716E /* RemoteTask.swift */; };
-		11B7B67A20A895420039716E /* RemoteTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67820A895420039716E /* RemoteTask.swift */; };
 		11B7B67E20A8954B0039716E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67D20A8954B0039716E /* Task.swift */; };
-		11B7B67F20A8954B0039716E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B67D20A8954B0039716E /* Task.swift */; };
 		11B7B68420A8956F0039716E /* TaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B68320A8956F0039716E /* TaskExtension.swift */; };
-		11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B68320A8956F0039716E /* TaskExtension.swift */; };
 		11B7B68920A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B68820A89D4A0039716E /* GetAllTasksRequestTest.swift */; };
 		11B7B68C20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B68B20A8A4660039716E /* GetProjectByIdRequest.swift */; };
-		11B7B68D20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B68B20A8A4660039716E /* GetProjectByIdRequest.swift */; };
 		11B7B69120A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69020A8A4FE0039716E /* GetProjectByIdRequestTest.swift */; };
 		11B7B69420A8A7030039716E /* GetProjectActivityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69320A8A7030039716E /* GetProjectActivityRequest.swift */; };
-		11B7B69520A8A7030039716E /* GetProjectActivityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69320A8A7030039716E /* GetProjectActivityRequest.swift */; };
 		11B7B69920A8A72F0039716E /* RemoteProjectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */; };
-		11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B69820A8A72F0039716E /* RemoteProjectActivity.swift */; };
 		11B7B6B320B2E2A20039716E /* RemoteTaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */; };
-		11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B220B2E2A20039716E /* RemoteTaskColor.swift */; };
 		11B7B6B820B2E3870039716E /* TaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B720B2E3870039716E /* TaskColor.swift */; };
-		11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6B720B2E3870039716E /* TaskColor.swift */; };
 		11B7B6BD20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6BC20B2ED680039716E /* GetDefaultTaskColorsRequest.swift */; };
-		11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6BC20B2ED680039716E /* GetDefaultTaskColorsRequest.swift */; };
 		11B7B6C220B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C120B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift */; };
 		11B7B6C520B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
-		11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6C420B2FB7B0039716E /* TaskColorExtension.swift */; };
 		11B7B6CE20B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
-		11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6CD20B35FC50039716E /* SynchronizationService.swift */; };
 		11B7B6D320B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
-		11B7B6D420B35FE80039716E /* SynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6D220B35FE80039716E /* SynchronizationStrategy.swift */; };
 		11B7B6E120B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
-		11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6E020B378CA0039716E /* RequestsQueue.swift */; };
 		11B7B6EB20B4CADA0039716E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6EA20B4CADA0039716E /* LoginViewController.swift */; };
-		11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6EA20B4CADA0039716E /* LoginViewController.swift */; };
 		11B7B6EE20B4CAE80039716E /* SelectProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */; };
-		11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6ED20B4CAE80039716E /* SelectProjectViewController.swift */; };
 		11B7B6F120B4CAF00039716E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F020B4CAF00039716E /* BoardViewController.swift */; };
-		11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F020B4CAF00039716E /* BoardViewController.swift */; };
 		11B7B6F520B4CB310039716E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F420B4CB310039716E /* AppCoordinator.swift */; };
-		11B7B6F620B4CB310039716E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F420B4CB310039716E /* AppCoordinator.swift */; };
 		11B7B6F820B4CC0A0039716E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */; };
-		11B7B6F920B4CC0A0039716E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6F720B4CC0A0039716E /* LoginCoordinator.swift */; };
 		11B7B6FB20B4CC110039716E /* RunningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */; };
-		11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FA20B4CC110039716E /* RunningCoordinator.swift */; };
 		11B7B6FE20B4CC400039716E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FD20B4CC400039716E /* Coordinator.swift */; };
-		11B7B6FF20B4CC400039716E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B6FD20B4CC400039716E /* Coordinator.swift */; };
 		11B7B70420B4CE900039716E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B70320B4CE900039716E /* Localizable.strings */; };
-		11B7B70520B4CE900039716E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11B7B70320B4CE900039716E /* Localizable.strings */; };
 		11B7B70820B4CEC60039716E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70720B4CEC60039716E /* StringExtension.swift */; };
-		11B7B70920B4CEC60039716E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70720B4CEC60039716E /* StringExtension.swift */; };
 		11B7B70C20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */; };
-		11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B70B20C4210D0039716E /* iOSSynchronizationStrategy.swift */; };
 		11B7B71220C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
-		11B7B71320C426520039716E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71120C426520039716E /* ProgressHUD.swift */; };
 		11B7B71520C47CCE0039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
-		11B7B71620C47CCE0039716E /* CallbackBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7B71420C47CCE0039716E /* CallbackBarrier.swift */; };
 		11BB149620A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
-		11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149520A44D89002FCC2A /* KeychainManager.swift */; };
 		11BB149B20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
-		11BB149C20A44F39002FCC2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB149A20A44F39002FCC2A /* Logger.swift */; };
 		11BB14C520A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
-		11BB14C620A4AB94002FCC2A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14C420A4AB94002FCC2A /* Project.swift */; };
 		11BB14D520A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
-		11BB14D620A64106002FCC2A /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D420A64106002FCC2A /* DatabaseUpdater.swift */; };
 		11BB14DA20A6422C002FCC2A /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D920A6422C002FCC2A /* RemoteObject.swift */; };
-		11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14D920A6422C002FCC2A /* RemoteObject.swift */; };
 		11BB14E020A6539B002FCC2A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14DF20A6539B002FCC2A /* RealmExtension.swift */; };
-		11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14DF20A6539B002FCC2A /* RealmExtension.swift */; };
 		11BB14E520A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
-		11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14E420A75C3F002FCC2A /* RequestIdFactory.swift */; };
 		11BB14EF20A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
-		11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14EE20A75FD7002FCC2A /* GetAllProjectsRequest.swift */; };
 		11BB14F420A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
-		11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB14F320A75FDF002FCC2A /* GetVersionRequest.swift */; };
 		11BB151220A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
-		11BB151320A7985B002FCC2A /* Decoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151120A7985B002FCC2A /* Decoders.swift */; };
 		11BB151C20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */; };
-		11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB151B20A84180002FCC2A /* JSONRPCEncoder.swift */; };
 		11BB152220A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
-		11BB152320A84708002FCC2A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152120A84708002FCC2A /* Column.swift */; };
 		11BB152720A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
-		11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152620A84717002FCC2A /* RemoteColumn.swift */; };
 		11BB152C20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
-		11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB152B20A84826002FCC2A /* GetColumnsRequest.swift */; };
 		11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153820A84E88002FCC2A /* GetAllProjectsRequestTest.swift */; };
 		11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB153B20A853A9002FCC2A /* GetColumnsRequestTest.swift */; };
 		11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154120A854F4002FCC2A /* GetVersionRequestTest.swift */; };
 		11BB154D20A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
-		11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB154C20A85A5F002FCC2A /* ProjectExtension.swift */; };
 		11BB155220A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
-		11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB155120A85C47002FCC2A /* ColumnExtension.swift */; };
 		11BC329720DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
-		11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */; };
 		11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */; };
 		11BC32A120DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */; };
-		11BC32A220DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */; };
 		11F85F1620A301750060536B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F1520A301750060536B /* AppDelegate.swift */; };
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
@@ -773,7 +709,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B7B70520B4CE900039716E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,78 +846,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11221BC020A36D6E003888E2 /* NetworkService.swift in Sources */,
 				11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */,
-				1179B98A20D1BEB8006ED736 /* BoardCollectionViewDataSource.swift in Sources */,
-				11BB151320A7985B002FCC2A /* Decoders.swift in Sources */,
-				11BB152820A84717002FCC2A /* RemoteColumn.swift in Sources */,
-				11BB151D20A84180002FCC2A /* JSONRPCEncoder.swift in Sources */,
-				11B7B6D420B35FE80039716E /* SynchronizationStrategy.swift in Sources */,
-				11BB14F020A75FD7002FCC2A /* GetAllProjectsRequest.swift in Sources */,
-				11BB14E120A6539B002FCC2A /* RealmExtension.swift in Sources */,
-				11B7B6B420B2E2A20039716E /* RemoteTaskColor.swift in Sources */,
-				11B7B69520A8A7030039716E /* GetProjectActivityRequest.swift in Sources */,
-				11B7B70D20C4210D0039716E /* iOSSynchronizationStrategy.swift in Sources */,
-				1179B98420D1BE9E006ED736 /* BoardCollectionViewCell.swift in Sources */,
-				11BB154E20A85A5F002FCC2A /* ProjectExtension.swift in Sources */,
-				11B7B6F220B4CAF00039716E /* BoardViewController.swift in Sources */,
-				11B7B67A20A895420039716E /* RemoteTask.swift in Sources */,
 				11BC329D20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift in Sources */,
 				11BB153920A84E88002FCC2A /* GetAllProjectsRequestTest.swift in Sources */,
-				1189D0BA20B4372A005BA02D /* DownloadRequest.swift in Sources */,
-				11378F5620DFBCED00561758 /* IndexPathExtensions.swift in Sources */,
 				11BB154220A854F4002FCC2A /* GetVersionRequestTest.swift in Sources */,
-				11BB14C620A4AB94002FCC2A /* Project.swift in Sources */,
-				11B7B6C620B2FB7B0039716E /* TaskColorExtension.swift in Sources */,
-				11BB14F520A75FDF002FCC2A /* GetVersionRequest.swift in Sources */,
-				1179B98720D1BEAF006ED736 /* BoardCollectionViewLayout.swift in Sources */,
-				11BB149C20A44F39002FCC2A /* Logger.swift in Sources */,
-				1192FB9B20DC574A0033D9DD /* ResultsSnapshot.swift in Sources */,
-				11B7B6EF20B4CAE80039716E /* SelectProjectViewController.swift in Sources */,
-				1192FB9F20DC574A0033D9DD /* BoardTaskDataSource.swift in Sources */,
-				11378F4B20DFBA2F00561758 /* MovableIndexPathCalculator.swift in Sources */,
-				11B7B68520A8956F0039716E /* TaskExtension.swift in Sources */,
-				11378F6120E0443100561758 /* SyncAnimatedButton.swift in Sources */,
-				11221BD020A3A123003888E2 /* AbstractRequest.swift in Sources */,
-				11B7B69A20A8A72F0039716E /* RemoteProjectActivity.swift in Sources */,
-				1189D0C520B44531005BA02D /* GenericSettingsDownloadManager.swift in Sources */,
-				11BB152D20A84826002FCC2A /* GetColumnsRequest.swift in Sources */,
-				11B7B6E220B378CA0039716E /* RequestsQueue.swift in Sources */,
-				11BC32A220DECAB900009BFD /* TaskColoriOSExtension.swift in Sources */,
 				11BB153C20A853A9002FCC2A /* GetColumnsRequestTest.swift in Sources */,
-				11B7B6FF20B4CC400039716E /* Coordinator.swift in Sources */,
-				11B7B6EC20B4CADA0039716E /* LoginViewController.swift in Sources */,
-				11B7B6BE20B2ED680039716E /* GetDefaultTaskColorsRequest.swift in Sources */,
-				11B7B6FC20B4CC110039716E /* RunningCoordinator.swift in Sources */,
-				11378F5C20E0323200561758 /* ProjectLocalInfo.swift in Sources */,
-				1189D0BF20B4372F005BA02D /* UploadRequest.swift in Sources */,
-				11BC329820DDA92400009BFD /* MoveTaskPositionRequest.swift in Sources */,
 				11378F5120DFBC7400561758 /* MovableIndexPathCalculatorTest.swift in Sources */,
-				11BB152320A84708002FCC2A /* Column.swift in Sources */,
-				11B7B6CF20B35FC50039716E /* SynchronizationService.swift in Sources */,
-				11B7B6B920B2E3870039716E /* TaskColor.swift in Sources */,
 				11B7B68920A89D4A0039716E /* GetAllTasksRequestTest.swift in Sources */,
-				1179B98D20D1C9D0006ED736 /* UserDefaultsManager.swift in Sources */,
-				11B7B71320C426520039716E /* ProgressHUD.swift in Sources */,
-				11221BBB20A36D01003888E2 /* RemoteProject.swift in Sources */,
-				11B7B67520A895070039716E /* GetAllTasksRequest.swift in Sources */,
-				1189D0B020B436DE005BA02D /* ProjectDownloadManager.swift in Sources */,
-				11BB149720A44D89002FCC2A /* KeychainManager.swift in Sources */,
-				11BB14D620A64106002FCC2A /* DatabaseUpdater.swift in Sources */,
-				11B7B68D20A8A4660039716E /* GetProjectByIdRequest.swift in Sources */,
-				11BB155320A85C47002FCC2A /* ColumnExtension.swift in Sources */,
-				11B7B6F920B4CC0A0039716E /* LoginCoordinator.swift in Sources */,
-				11BB14DB20A6422C002FCC2A /* RemoteObject.swift in Sources */,
-				11B7B71620C47CCE0039716E /* CallbackBarrier.swift in Sources */,
 				11B7B6C220B2F6EC0039716E /* GetDefaultTaskColorsRequestTest.swift in Sources */,
-				1179B99220D1CA19006ED736 /* UserDefaultsManagerExtension.swift in Sources */,
-				11B7B67F20A8954B0039716E /* Task.swift in Sources */,
-				11B7B70920B4CEC60039716E /* StringExtension.swift in Sources */,
-				1179B97E20D1B820006ED736 /* DownloadManager.swift in Sources */,
 				11B7B69120A8A4FE0039716E /* GetProjectByIdRequestTest.swift in Sources */,
-				11BB14E620A75C3F002FCC2A /* RequestIdFactory.swift in Sources */,
-				1189D0B520B436E6005BA02D /* ProjectUploadManager.swift in Sources */,
-				11B7B6F620B4CB310039716E /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

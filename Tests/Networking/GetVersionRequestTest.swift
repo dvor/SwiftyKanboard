@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Kanboard
 
 class GetVersionRequestTest: XCTestCase {
     func testParsing() {
