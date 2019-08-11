@@ -203,6 +203,7 @@
 		2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		441A17CAF1B2748F70944427 /* Pods-Kanboard Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard Tests/Pods-Kanboard Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		49B34DC923003795009E494D /* Kanboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kanboard.entitlements; sourceTree = "<group>"; };
 		513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOSTests/Pods-Kanboard macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -529,6 +530,7 @@
 		11F85F0720A300EF0060536B = {
 			isa = PBXGroup;
 			children = (
+				49B34DC923003795009E494D /* Kanboard.entitlements */,
 				11221B9B20A310CE003888E2 /* Source */,
 				11BB153020A84E32002FCC2A /* Tests */,
 				11F85F1420A301750060536B /* Kanboard iOS */,
@@ -1007,10 +1009,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Kanboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = NHVF8NSG3J;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1039,10 +1043,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.Kanboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1080,10 +1085,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Kanboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = NHVF8NSG3J;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1105,10 +1112,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.Kanboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
