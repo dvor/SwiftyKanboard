@@ -11,7 +11,6 @@ target 'Kanboard' do
 
   pod 'SnapKit', '~> 5.0.1'
   pod 'Willow', '~> 5.2.1'
-  pod 'JGProgressHUD', '~> 2.0.4'
 
   target 'Kanboard Tests' do
     inherit! :search_paths
