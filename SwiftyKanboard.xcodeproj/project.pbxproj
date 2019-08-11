@@ -147,8 +147,8 @@
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
 		11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F2A20A301770060536B /* Kanboard_iOSTests.swift */; };
-		C461C85F7CBE652E9FB41439 /* Pods_Kanboard_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */; };
-		EE138FBD0D07043316A8BDA0 /* Pods_Kanboard_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */; };
+		675EDD96BD73D09DC2C2EAE7 /* Pods_Kanboard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDD7930BF9BA678BFE73DE /* Pods_Kanboard_Tests.framework */; };
+		6D672D7A665ABC1510347AE6 /* Pods_Kanboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB81E9019B60380B70F8F6C6 /* Pods_Kanboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,12 +245,12 @@
 		11BC329620DDA92400009BFD /* MoveTaskPositionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequest.swift; sourceTree = "<group>"; };
 		11BC329B20DDAAF900009BFD /* MoveTaskPositionRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTaskPositionRequestTest.swift; sourceTree = "<group>"; };
 		11BC32A020DECAB900009BFD /* TaskColoriOSExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColoriOSExtension.swift; sourceTree = "<group>"; };
-		11F85F1220A301750060536B /* Kanboard iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanboard iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F85F1220A301750060536B /* Kanboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F1520A301750060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F85F1C20A301760060536B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F85F1F20A301760060536B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F85F2120A301760060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11F85F2620A301770060536B /* Kanboard iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanboard iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F85F2620A301770060536B /* Kanboard Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanboard Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F85F2A20A301770060536B /* Kanboard_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanboard_iOSTests.swift; sourceTree = "<group>"; };
 		11F85F2C20A301770060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F85F3920A3018B0060536B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -259,16 +259,20 @@
 		11F85F4020A3018C0060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F85F4A20A3018C0060536B /* Kanboard_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanboard_macOSTests.swift; sourceTree = "<group>"; };
 		11F85F4C20A3018C0060536B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		200A1A596793B970A8715663 /* Pods-Kanboard macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		441A17CAF1B2748F70944427 /* Pods-Kanboard Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard Tests/Pods-Kanboard Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOSTests/Pods-Kanboard iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOSTests/Pods-Kanboard macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FEE6A01E362B30A4734E54 /* Pods-Kanboard macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOSTests/Pods-Kanboard macOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7C2E54CDCDFF848C7ED0E0 /* Pods-Kanboard Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard Tests/Pods-Kanboard Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B43B112A5F559C1DB84F0EE9 /* Pods-Kanboard macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard macOS/Pods-Kanboard macOS.release.xcconfig"; sourceTree = "<group>"; };
+		BFFDD7930BF9BA678BFE73DE /* Pods_Kanboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB81E9019B60380B70F8F6C6 /* Pods_Kanboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kanboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68AA69B65194EF210FC7481 /* Pods-Kanboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard/Pods-Kanboard.release.xcconfig"; sourceTree = "<group>"; };
+		DAB90119C9CED841F097E555 /* Pods-Kanboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard/Pods-Kanboard.debug.xcconfig"; sourceTree = "<group>"; };
 		F7140E7C8DEF8F0DB714F500 /* Pods-Kanboard iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kanboard iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,7 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C461C85F7CBE652E9FB41439 /* Pods_Kanboard_iOS.framework in Frameworks */,
+				6D672D7A665ABC1510347AE6 /* Pods_Kanboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE138FBD0D07043316A8BDA0 /* Pods_Kanboard_iOSTests.framework in Frameworks */,
+				675EDD96BD73D09DC2C2EAE7 /* Pods_Kanboard_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,8 +600,8 @@
 		11F85F1320A301750060536B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11F85F1220A301750060536B /* Kanboard iOS.app */,
-				11F85F2620A301770060536B /* Kanboard iOSTests.xctest */,
+				11F85F1220A301750060536B /* Kanboard.app */,
+				11F85F2620A301770060536B /* Kanboard Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -655,6 +659,10 @@
 				B43B112A5F559C1DB84F0EE9 /* Pods-Kanboard macOS.release.xcconfig */,
 				5233EF2C47502F74369C2442 /* Pods-Kanboard macOSTests.debug.xcconfig */,
 				80FEE6A01E362B30A4734E54 /* Pods-Kanboard macOSTests.release.xcconfig */,
+				DAB90119C9CED841F097E555 /* Pods-Kanboard.debug.xcconfig */,
+				D68AA69B65194EF210FC7481 /* Pods-Kanboard.release.xcconfig */,
+				441A17CAF1B2748F70944427 /* Pods-Kanboard Tests.debug.xcconfig */,
+				AA7C2E54CDCDFF848C7ED0E0 /* Pods-Kanboard Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -662,10 +670,10 @@
 		680DAFF6C967F4718E90C21A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1667E70A1495A2BCDEBD675A /* Pods_Kanboard_iOS.framework */,
-				8E85A08C4C23AC30CAE5C828 /* Pods_Kanboard_iOSTests.framework */,
 				3D94EBB39A1B19C8FF54C199 /* Pods_Kanboard_macOS.framework */,
 				63423ACFCA6D9E69846E77C0 /* Pods_Kanboard_macOSTests.framework */,
+				CB81E9019B60380B70F8F6C6 /* Pods_Kanboard.framework */,
+				BFFDD7930BF9BA678BFE73DE /* Pods_Kanboard_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -673,9 +681,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11F85F1120A301750060536B /* Kanboard iOS */ = {
+		11F85F1120A301750060536B /* Kanboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11F85F2D20A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOS" */;
+			buildConfigurationList = 11F85F2D20A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard" */;
 			buildPhases = (
 				F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */,
 				11F85F0E20A301750060536B /* Sources */,
@@ -687,14 +695,14 @@
 			);
 			dependencies = (
 			);
-			name = "Kanboard iOS";
+			name = Kanboard;
 			productName = "Kanboard iOS";
-			productReference = 11F85F1220A301750060536B /* Kanboard iOS.app */;
+			productReference = 11F85F1220A301750060536B /* Kanboard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11F85F2520A301770060536B /* Kanboard iOSTests */ = {
+		11F85F2520A301770060536B /* Kanboard Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11F85F3020A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOSTests" */;
+			buildConfigurationList = 11F85F3020A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard Tests" */;
 			buildPhases = (
 				37624BA2062F076823DC57C0 /* [CP] Check Pods Manifest.lock */,
 				11F85F2220A301770060536B /* Sources */,
@@ -706,9 +714,9 @@
 			dependencies = (
 				11F85F2820A301770060536B /* PBXTargetDependency */,
 			);
-			name = "Kanboard iOSTests";
+			name = "Kanboard Tests";
 			productName = "Kanboard iOSTests";
-			productReference = 11F85F2620A301770060536B /* Kanboard iOSTests.xctest */;
+			productReference = 11F85F2620A301770060536B /* Kanboard Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -744,8 +752,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11F85F1120A301750060536B /* Kanboard iOS */,
-				11F85F2520A301770060536B /* Kanboard iOSTests */,
+				11F85F1120A301750060536B /* Kanboard */,
+				11F85F2520A301770060536B /* Kanboard Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -783,7 +791,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kanboard iOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -796,15 +804,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard/Pods-Kanboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kanboard/Pods-Kanboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kanboard iOS/Pods-Kanboard iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kanboard/Pods-Kanboard-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7BFD00777FF5294563B05CD /* [CP] Check Pods Manifest.lock */ = {
@@ -818,7 +826,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kanboard iOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Kanboard-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -983,7 +991,7 @@
 /* Begin PBXTargetDependency section */
 		11F85F2820A301770060536B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11F85F1120A301750060536B /* Kanboard iOS */;
+			target = 11F85F1120A301750060536B /* Kanboard */;
 			targetProxy = 11F85F2720A301770060536B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1074,7 +1082,7 @@
 		};
 		11F85F2E20A301770060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CD3C666E7F0AEA8A88FF9FD /* Pods-Kanboard iOS.debug.xcconfig */;
+			baseConfigurationReference = DAB90119C9CED841F097E555 /* Pods-Kanboard.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1147,7 +1155,7 @@
 		};
 		11F85F2F20A301770060536B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7140E7C8DEF8F0DB714F500 /* Pods-Kanboard iOS.release.xcconfig */;
+			baseConfigurationReference = D68AA69B65194EF210FC7481 /* Pods-Kanboard.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1214,7 +1222,7 @@
 		};
 		11F85F3120A301770060536B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EC35ACA581240B54B28F28D /* Pods-Kanboard iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 441A17CAF1B2748F70944427 /* Pods-Kanboard Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1284,13 +1292,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanboard iOS.app/Kanboard iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanboard.app/Kanboard";
 			};
 			name = Debug;
 		};
 		11F85F3220A301770060536B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 513D38065C29316049516BEE /* Pods-Kanboard iOSTests.release.xcconfig */;
+			baseConfigurationReference = AA7C2E54CDCDFF848C7ED0E0 /* Pods-Kanboard Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1353,7 +1361,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanboard iOS.app/Kanboard iOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanboard.app/Kanboard";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1370,7 +1378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11F85F2D20A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOS" */ = {
+		11F85F2D20A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11F85F2E20A301770060536B /* Debug */,
@@ -1379,7 +1387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11F85F3020A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard iOSTests" */ = {
+		11F85F3020A301770060536B /* Build configuration list for PBXNativeTarget "Kanboard Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11F85F3120A301770060536B /* Debug */,
