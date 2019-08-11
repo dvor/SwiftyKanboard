@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -83,6 +83,10 @@
 		11F85F1D20A301760060536B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1C20A301760060536B /* Assets.xcassets */; };
 		11F85F2020A301760060536B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F85F1E20A301760060536B /* LaunchScreen.storyboard */; };
 		11F85F2B20A301770060536B /* Kanboard_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F85F2A20A301770060536B /* Kanboard_iOSTests.swift */; };
+		49B34DC223003737009E494D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 49B34DC123003737009E494D /* Realm */; };
+		49B34DC423003737009E494D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49B34DC323003737009E494D /* RealmSwift */; };
+		49B34DC623003770009E494D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 49B34DC523003770009E494D /* Realm */; };
+		49B34DC823003770009E494D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49B34DC723003770009E494D /* RealmSwift */; };
 		675EDD96BD73D09DC2C2EAE7 /* Pods_Kanboard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFDD7930BF9BA678BFE73DE /* Pods_Kanboard_Tests.framework */; };
 		6D672D7A665ABC1510347AE6 /* Pods_Kanboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB81E9019B60380B70F8F6C6 /* Pods_Kanboard.framework */; };
 /* End PBXBuildFile section */
@@ -217,6 +221,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B34DC423003737009E494D /* RealmSwift in Frameworks */,
+				49B34DC223003737009E494D /* Realm in Frameworks */,
 				6D672D7A665ABC1510347AE6 /* Pods_Kanboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +231,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B34DC823003770009E494D /* RealmSwift in Frameworks */,
+				49B34DC623003770009E494D /* Realm in Frameworks */,
 				675EDD96BD73D09DC2C2EAE7 /* Pods_Kanboard_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +640,10 @@
 			dependencies = (
 			);
 			name = Kanboard;
+			packageProductDependencies = (
+				49B34DC123003737009E494D /* Realm */,
+				49B34DC323003737009E494D /* RealmSwift */,
+			);
 			productName = "Kanboard iOS";
 			productReference = 11F85F1220A301750060536B /* Kanboard.app */;
 			productType = "com.apple.product-type.application";
@@ -651,6 +663,10 @@
 				11F85F2820A301770060536B /* PBXTargetDependency */,
 			);
 			name = "Kanboard Tests";
+			packageProductDependencies = (
+				49B34DC523003770009E494D /* Realm */,
+				49B34DC723003770009E494D /* RealmSwift */,
+			);
 			productName = "Kanboard iOSTests";
 			productReference = 11F85F2620A301770060536B /* Kanboard Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -684,6 +700,9 @@
 				Base,
 			);
 			mainGroup = 11F85F0720A300EF0060536B;
+			packageReferences = (
+				49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 11F85F1320A301750060536B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1271,6 +1290,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = exactVersion;
+				version = 3.17.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49B34DC123003737009E494D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		49B34DC323003737009E494D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		49B34DC523003770009E494D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		49B34DC723003770009E494D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49B34DC023003737009E494D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11F85F0820A300EF0060536B /* Project object */;
 }

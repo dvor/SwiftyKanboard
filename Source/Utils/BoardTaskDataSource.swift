@@ -5,6 +5,7 @@
 //  Created by Dmytro Vorobiov on 21/06/2018.
 //
 
+import Realm
 import RealmSwift
 
 protocol BoardTaskDataSourceDelegate: class {

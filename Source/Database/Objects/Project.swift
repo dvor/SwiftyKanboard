@@ -5,6 +5,7 @@
 //  Created by Dmytro Vorobiov on 10/05/2018.
 //
 
+import Realm
 import RealmSwift
 
 class Project: Object {

@@ -5,6 +5,7 @@
 //  Created by Dmytro Vorobiov on 24/06/2018.
 //
 
+import Realm
 import RealmSwift
 
 class ProjectLocalInfo: Object {
