@@ -7,8 +7,8 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
     scan(
-        scheme: "Kanboard iOS",
-        device: "iPhone 8"
+        scheme: "Kanboard",
+        device: "iPhone Xs"
     )
   end
 end
@@ -20,7 +20,8 @@ platform :mac do
   desc "Runs all the tests"
   lane :test do
     scan(
-        scheme: "Kanboard macOS"
+        scheme: "Kanboard",
+        device: "My Mac"
     )
   end
 end
