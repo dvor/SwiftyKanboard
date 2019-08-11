@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Kanboard_iOS
+@testable import Kanboard
 
 class Kanboard_iOSTests: XCTestCase {
     
